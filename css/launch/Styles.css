@@ -1,0 +1,295 @@
+@charset "UTF-8";
+/* CSS Document */
+
+@import url(https://fonts.googleapis.com/css?family=Lato);
+.navtext a {
+	color: white;
+}
+.paddingnone {
+	padding: none!important;
+}
+.bodywrap .jumbotron {
+	background: url(/Images/photo-1434064511983-18c6dae20ed5.jpeg);
+	background-size: cover;
+	width: 100%;
+	height: 100vh;
+	padding-top: 0px;
+	margin-bottom: 0px!important;
+}
+.navigation {
+	height: 60px;
+	padding-top: 5px;
+	background-color: rgba(23, 23, 23,.302);
+}
+.yourguide {
+	font-size: 20px;
+	font-family: "Lato";
+	color: rgb(255, 255, 255);
+	font-style: italic;
+	text-transform: uppercase;
+}
+.btn-orange {
+	background-color: rgb(226, 88, 51)!important;
+	font-family: "lato"!important;
+	font-weight: 100!important;
+	font-style: normal;
+	text-transform: uppercase;
+	letter-spacing: 0.040em;
+	height: 50px;
+	overflow: hidden;
+}
+.text-center.yourguide .input-group.col-md-4.col-md-offset-4.col-sm-4.col-sm-offset-4.col-xs-6.col-xs-offset-4 .form-control.form-control-camptureme {
+	font-style: normal;
+	font-family: "lato";
+	font-weight: 100;
+	letter-spacing: .040em;
+}
+.floating-icons i {
+	margin-top: 20px;
+	font-size: 40px;
+	color: rgb(226, 88, 51);
+	list-style: none;
+}
+.herologo {
+	margin: auto;
+	width: 70%;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	max-width: 1000px!important
+}
+.nav .text-center .navtext {
+	font-size: 16px;
+	font-family: 'lato', san serif;
+	font-weight: 200;
+	color: #FFFFFF;
+	text-transform: uppercase;
+	letter-spacing: 0.16em;
+	margin-left: 50px;
+}
+.secondsection {
+	background-color: #f4f5f9;
+	;
+	padding: 70px;
+}
+.third-section {
+	padding: 70px;
+	background-color: #e9eef3;
+}
+.headerfour {
+	padding-top: 70px;
+	background-color: white;
+}
+.fourthsection {
+	padding-top: 40px;
+    padding-bottom: 3px;
+	background-color: #e9eef3;
+}
+.outdoor {
+	font-size: 28px;
+	font-family: 'lato';
+	font-weight: 700;
+	color: rgb(106, 106, 106);
+	text-transform: uppercase;
+	line-height: 1.429;
+	letter-spacing: .1em;
+}
+.campturelets {
+	margin: 30px;
+	font-size: 20px;
+	font-family: "lato";
+	font-weight: 500;
+	color: rgb(153, 153, 153);
+	letter-spacing: .02em;
+}
+.features {
+	font-size: 20px;
+	font-family: "lato";
+	font-weight: 600;
+	color: rgb(106, 106, 106);
+	letter-spacing: 0.10em;
+}
+.marginauto {
+	margin: auto!important;
+}
+.headerfourbg {
+	background-image: url(../Images/Map.jpg);
+	padding-bottom: 20px;
+}
+.ladhakpreview {
+	background-image: url(/Images/Get%20camptured%20img.png);
+	height: 580px;
+	background-size: cover;
+}
+#ladhak {
+	font-family: "lato";
+	font-weight: 300;
+	color: #FFFFFF;
+	font-size: 32px;
+}
+#temprature {
+	font-family: lato;
+	font-weight: 100;
+	color: #FFFFFF;
+	font-size: 32px;
+}
+.thumbs {
+	padding-right: 24px;
+}
+.contactform {
+	width: 40%;
+	margin: auto;
+	padding: 42px;
+	border: solid rgb(190, 190, 190) 1px;
+	border-radius: 3px;
+	background-color: #FFFFFF;
+}
+.formcomponent {
+	margin-bottom: 20px!important;
+	border-top: none!important;
+	border-left: none!important;
+	border-right: none!important;
+	border-radius: 0px!important;
+	-webkit-box-shadow: none!important;
+	border-bottom: solid 1px rgb(190, 190, 190) !important;
+}
+.sectionfive.text-center .form-group.contactform p {
+	font-size: 14px;
+	font-family: lato;
+	color: rgb(153, 153, 153);
+	text-align: left;
+}
+.form-group.contactform .btn.btn-orange span {
+	font-family: lato;
+	color: white;
+}
+.sectionfive {
+	background-color: #f4f5f9;
+	padding-bottom: 100px;
+	padding-top: 100px;
+}
+.sectionsix {
+	padding: 60px;
+	background-color: #e9eef3;
+	background-image: url(/Images/Footer%20img.png);
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.angellist img {
+	padding-left: 71px;
+	margin-top: 20px;
+}
+.angellist {
+	padding-bottom: 80px;
+}
+.footer {
+	background-color: rgb(32, 32, 32);
+	height: 80px;
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+.footersocial {
+	font-size: 28px!important;
+	margin-right: 27px;
+	color: rgb(153, 153, 153);
+}
+.footer span {
+	font-size: 16px;
+	font-family: lato;
+	color: rgba(153, 153, 153, 0.749);
+}
+.mockups {
+}
+.mockups img {
+	margin-right: 5%;
+	max-width: 700px;
+}
+.joincommunity {
+	margin-top: 30px!important;
+	width: 33.3%;
+	margin: auto;
+	margin-bottom: 26px!important;
+}
+.form-control-camptureme {
+	height: 50px!important;
+}
+.maxwidth {
+	max-width: 700px!important;
+	margin-left: auto!important;
+	margin-right: auto!important;
+	min-width: 300px;
+}
+.mockups.container p {
+	font-size: 36px;
+}
+.asfeatured {
+	background-color: #e9eef3;
+	padding-top: 20px;
+}
+html, body {
+	width: 100%;
+	height: 100%;
+	margin: 0px;
+	padding: 0px;
+	overflow-x: hidden;
+}
+
+@media (max-width: 991px) {
+.mac {
+	display: none!important;
+}
+}
+.yourexpert {
+	font-family: lato;
+	font-weight: 100;
+	text-transform: none;
+	font-size: 30px;
+	margin-bottom: 40px;
+}
+/*GearChecklist*/
+.gearListWrap{
+    font-size:24px;
+    padding-top:20px;
+    padding-bottom:20px;
+    text-align:center;
+}
+.gearListWrap input{
+    border-top:none;
+    border-left:none;
+    border-right:none;
+    border-bottom:solid 2px;
+    text-align:center;
+}
+.gearListWrap input:focus{
+    border-bottom-color:#f56c36;
+    outline:none;
+}
+.gearFormInput{
+    display:inline-block;
+}
+.gearListResults{
+    padding-top:40px;
+}
+.map-mask{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.7);
+}
+.map{
+    position:relative;
+}
+.destinationDetails{
+    position:absolute;
+    top:150px;
+    margin-left:auto;
+    margin-right:auto;
+}
+.destinationDetails span{
+    font-size:20px;
+}
+.angular-google-map-container{
+    height: 400px;
+}

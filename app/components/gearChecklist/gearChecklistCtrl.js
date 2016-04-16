@@ -8,7 +8,7 @@
         //================================
         $scope.coordinates = new Object();
         $scope.map = { center: { latitude: 28.6139, longitude: 77.2090 }, zoom: 4 };
-        $scope.marker = { id: 0, bounds: {} };
+        $scope.marker = { id: 0 ,bounds: {}};
         $scope.frameSrc = 'http://forecast.io/embed/#lat=28.6139&lon=77.2090';
         $scope.location;
         $scope.options;
@@ -30,11 +30,11 @@
                 id: 1,
                 coords: $scope.coordinates
             }
-            $scope.map = { center: { latitude: $scope.coordinates.latitude, longitude: $scope.coordinates.longitude }, zoom: 12 }
-
+            $scope.map={center :{latitude: $scope.coordinates.latitude, longitude: $scope.coordinates.longitude},zoom:12}
+            
         };
-
-
+        
+        
         $scope.open = function ($event) {
             $scope.status.opened = true;
         };
@@ -56,7 +56,6 @@
                         gearService.getGearList(temperatureGrade, durationGrade, function (data) {
                             if (data) {
                                 $scope.gearList = data;
-                                $scope.$apply();
                             }
                         });
                     }

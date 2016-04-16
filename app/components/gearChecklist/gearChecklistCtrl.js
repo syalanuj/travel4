@@ -20,6 +20,7 @@
         $scope.gearList;
         var temperatureGrade;
         var durationGrade;
+        $scope.isResultsShown = false;
 
         $scope.details = function (details) {
             $scope.location = new Object();
@@ -56,12 +57,16 @@
                         gearService.getGearList(temperatureGrade, durationGrade, function (data) {
                             if (data) {
                                 $scope.gearList = data;
+                                $scope.isResultsShown = true;
                                 $scope.$apply();
                             }
                         });
                     }
                 }
             });
+        }
+        $scope.updateTabPos = function (pos) {
+            $scope.profileTabPos = pos;
         }
         function getTemperatureGrade(temp) {
             var grade

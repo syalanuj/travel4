@@ -13,13 +13,20 @@
 	background-size: cover;
 	width: 100%;
 	height: 100vh;
-	padding-top: 0px;
+	padding-top: 100px;
 	margin-bottom: 0px!important;
 }
 .navigation {
+	z-index:2000;
+	width:100%;
+	position:absolute;
 	height: 60px;
 	padding-top: 5px;
 	background-color: rgba(23, 23, 23,.302);
+}
+.navigation span{
+	padding-left:30px;
+	padding-right:30px;
 }
 .yourguide {
 	font-size: 20px;
@@ -176,7 +183,8 @@
 	background-size: cover;
 }
 .angellist img {
-	padding-left: 71px;
+	padding-left: 20px;
+	padding-right:20px;
 	margin-top: 20px;
 }
 .angellist {
@@ -292,4 +300,60 @@ html, body {
 }
 .angular-google-map-container{
     height: 400px;
+}
+/*GearChecklist*/
+.gearListWrap{
+	font-size:24px;
+	padding-top:20px;
+	padding-bottom:20px;
+	text-align:center;
+    margin-top: 100px;
+    height: 50vh;
+}
+.gearListWrap input{
+	border-top:none;
+	border-left:none;
+	border-right:none;
+	border-bottom:solid 2px;
+	text-align:center;
+}
+.gearListWrap input:focus{
+	border-bottom-color:#f56c36;
+	outline:none;
+}
+.gearFormInput{
+	display:inline-block;
+}
+.gearListResults{
+	padding-top:40px;
+}
+.map-mask{
+	position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.7);
+}
+.map{
+	position:relative;
+}
+.destinationDetails{
+	position:absolute;
+	top:150px;
+	margin-left:auto;
+	margin-right:auto;
+}
+.destinationDetails span{
+	font-size:20px;
+}
+.itemName{
+	text-align:left;
+	font-weight:bold;
+	width:300px;
+}
+.itemDesc{
+	text-align:left;
+}
+.tempurature{
 }

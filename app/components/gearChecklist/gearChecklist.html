@@ -1,3 +1,4 @@
+
 <div class="text-center">
 	<div class="map">
     <ui-gmap-google-map center="map.center" zoom="map.zoom"  options="options" bounds="map.bounds">
@@ -9,34 +10,19 @@
     <div class="destinationDetails col-md-12 text-center container">
     <h2>Location Name</h2>
     <span>Low Temp: </span> <span>High Temp:</span><div class="tempurature"><i class="fa fa-sun-o" style="font-size:22px;"></i></div><br>
-    <button class="btn btn-primary">Modify Trip</button>
-    <button class="btn btn-primary">New Trip</button>
+    <button class="btn btn-primary"><i class="fa fa-pencil-square-o" aria-hidden="true"> </i> Modify Trip</button>
+    <button class="btn btn-primary"><i class="fa fa-plus-circle" aria-hidden="true"></i> New Trip</button>
     </div>
-    <div class="gearListWrap container">
- I am travelling to
-        <div class="gearFormInput ">
-            <input name="location" type="text" placeholder="Enter Location" ng-autocomplete ng-model="location" options="options" details="details" required>
-        </div>
- in the month of
-        <div class="gearFormInput">
-            <input name="date" type="text" placeholder="Enter Month" uib-datepicker-popup="dd-MMMM-yyyy" ng-model="date" is-open="status.opened" min-date="minDate" max-date="maxDate" datepicker-options="dateOptions" ng-required="true" close-text="Close" ng-click="open($event)" id="date" required>
-        </div>
-for
-        <div class="gearFormInput">
-            <input type="number" placeholder="No of days" ng-model="duration" required>.
-        </div>
- Show me what to pack in my backpack.
-    </div>
-    <button class="btn btn-success" ng-click="getGearCheckList()">Let's Go!</button>
+    
         
     <div class="container">
   <ul class="nav nav-pills">
-    <li class="active"><a data-toggle="pill" href="#menu1">List View</a></li>
-    <li><a data-toggle="pill" href="#menu2">Thumbnail View</a></li>
-    <li><a data-toggle="pill" href="#menu3">Download List</a></li>
+    <li class="active"><a data-toggle="pill" ng-click="updateTabPos(0)">List View</a></li>
+    <li><a data-toggle="pill" ng-click="updateTabPos(1)">Thumbnail View</a></li>
+    <li><a data-toggle="pill">Download List</a></li>
   </ul>
   <div class="tab-content">
-    <div id="menu1" class="tab-pane fade in active">            
+    <div id="menu1" ng-show="profileTabPos == 0" class="tab-pane fade in active">            
   <table class="table">
     <thead>
       <tr>
@@ -46,26 +32,16 @@ for
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td class="itemName">Item Name</td>
-        <td class="itemDesc">item Desc</td>
-        <td><button class="btn btn-primary disabled">Buy Now</button></td>
-      </tr>
-      <tr>
-        <td class="itemName">Item NameItem NameItem NameItem NameItem NameItem NameItem Name</td>
-        <td class="itemDesc">item Desc</td>
-        <td><button class="btn btn-primary disabled">Buy Now</button></td>
-      </tr>
-		<tr>
-        <td class="itemName">Item Name</td>
-        <td class="itemDesc">item Desc</td>
+      <tr ng-repeat="gear in gearList">
+        <td class="itemName">{{gear.name}}</td>
+        <td class="itemDesc">{{gear.description}}</td>
         <td><button class="btn btn-primary disabled">Buy Now</button></td>
       </tr>
 
       </tbody>
   </table>
     </div>
-    <div id="menu2" class="tab-pane fade">
+    <div id="menu2" ng-show="profileTabPos == 1"class="tab-pane fade">
       <h3>Thumbnail View</h3>
       <div  class="gearListResults">
         <div class="row">
@@ -88,4 +64,23 @@ for
     </div>
   </div>
 </div>
+</div>
+<div ng-show="!isResultsShown" class="text-center" >
+<div class="gearListWrap container">
+ I am travelling to
+        <div class="gearFormInput ">
+            <input name="location" type="text" placeholder="Enter Location" ng-autocomplete ng-model="location" options="options" details="details" required>
+        </div>
+ in the month of
+        <div class="gearFormInput">
+            <input name="date" type="text" placeholder="Enter Month" uib-datepicker-popup="dd-MMMM-yyyy" ng-model="date" is-open="status.opened" min-date="minDate" max-date="maxDate" datepicker-options="dateOptions" ng-required="true" close-text="Close" ng-click="open($event)" id="date" required>
+        </div>
+for
+        <div class="gearFormInput">
+            <input type="number" placeholder="No of days" ng-model="duration" required>.
+        </div>
+ Show me what to pack in my backpack.
+  <br>  <button style="margin-top: 20px" class="btn btn-success" ng-click="getGearCheckList()">Let's Go!</button>
+    </div>
+    
 </div>

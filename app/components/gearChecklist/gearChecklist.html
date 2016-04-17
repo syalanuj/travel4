@@ -22,7 +22,8 @@
     <li><a data-toggle="pill">Download List</a></li>
   </ul>
   <div class="">
-    <div id="menu1" ng-show="profileTabPos == 0" class="">            
+    <div id="menu1" ng-show="profileTabPos == 0" class="">
+  Carrying Gear
   <table class="table">
     <thead>
       <tr>
@@ -31,21 +32,188 @@
     	<th>Buy Now</th>
       </tr>
     </thead>
-    <tbody>
-      <tr ng-repeat="gear in gearList">
+    <tbody>        
+      <tr ng-repeat="gear in gearList" ng-if="gear.category_id == 0">
         <td class="itemName">{{gear.name}}</td>
         <td class="itemDesc">{{gear.description}}</td>
         <td><button class="btn btn-primary disabled">Buy Now</button></td>
       </tr>
-
       </tbody>
   </table>
+    Sleeping Gear
+    <table class="table">
+    <thead>
+        <tr>
+        <th>Item Name</th>
+        <th>Item Description</th>
+    	<th>Buy Now</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="gear in gearList" ng-if="gear.category_id == 1">
+        <td class="itemName">{{gear.name}}</td>
+        <td class="itemDesc">{{gear.description}}</td>
+        <td><button class="btn btn-primary disabled">Buy Now</button></td>
+        </tr>
+        </tbody>
+    </table>
+    Footware
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Item Name</th>
+        <th>Item Description</th>
+    	<th>Buy Now</th>
+      </tr>
+    </thead>
+    <tbody>        
+      <tr ng-repeat="gear in gearList" ng-if="gear.category_id == 2">
+        <td class="itemName">{{gear.name}}</td>
+        <td class="itemDesc">{{gear.description}}</td>
+        <td><button class="btn btn-primary disabled">Buy Now</button></td>
+      </tr>
+      </tbody>
+  </table>
+    Clothing Items
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Item Name</th>
+        <th>Item Description</th>
+    	<th>Buy Now</th>
+      </tr>
+    </thead>
+    <tbody>        
+      <tr ng-repeat="gear in gearList" ng-if="gear.category_id == 3">
+        <td class="itemName">{{gear.name}}</td>
+        <td class="itemDesc">{{gear.description}}</td>
+        <td><button class="btn btn-primary disabled">Buy Now</button></td>
+      </tr>
+      </tbody>
+  </table>
+         Accessories & Essentials
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Item Name</th>
+        <th>Item Description</th>
+    	<th>Buy Now</th>
+      </tr>
+    </thead>
+    <tbody>        
+      <tr ng-repeat="gear in gearList" ng-if="gear.category_id == 4">
+        <td class="itemName">{{gear.name}}</td>
+        <td class="itemDesc">{{gear.description}}</td>
+        <td><button class="btn btn-primary disabled">Buy Now</button></td>
+      </tr>
+      </tbody>
+  </table>
+         Cooking Essential
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Item Name</th>
+        <th>Item Description</th>
+    	<th>Buy Now</th>
+      </tr>
+    </thead>
+    <tbody>        
+      <tr ng-repeat="gear in gearList" ng-if="gear.category_id == 5">
+        <td class="itemName">{{gear.name}}</td>
+        <td class="itemDesc">{{gear.description}}</td>
+        <td><button class="btn btn-primary disabled">Buy Now</button></td>
+      </tr>
+      </tbody>
+  </table>
+        <!--Safety & Emergency Gear
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Item Name</th>
+        <th>Item Description</th>
+    	<th>Buy Now</th>
+      </tr>
+    </thead>
+    <tbody>        
+      <tr ng-repeat="gear in gearList" ng-if="gear.category_id == 6">
+        <td class="itemName">{{gear.name}}</td>
+        <td class="itemDesc">{{gear.description}}</td>
+        <td><button class="btn btn-primary disabled">Buy Now</button></td>
+      </tr>
+      </tbody>
+  </table>-->
     </div>
     <div id="menu2" ng-show="profileTabPos == 1" class="ng-hide" >
       <h3>Thumbnail View</h3>
       <div  class="gearListResults">
-        <div class="row">
-            <div class="col-sm-6 col-md-3" ng-repeat="gear in gearList">
+          Carrying Gear
+        <div class="row">            
+            <div class="col-sm-6 col-md-3" ng-repeat="gear in gearList" ng-if="gear.category_id == 0">
+                <div class="thumbnail">
+                    <img ng-src="{{gear.image_url}}" alt="...">
+                    <div class="caption">
+                        <h3>{{gear.name}}</h3>
+                        <p>{{gear.description}}</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+          Sleeping Gear
+        <div class="row">            
+            <div class="col-sm-6 col-md-3" ng-repeat="gear in gearList" ng-if="gear.category_id == 1">
+                <div class="thumbnail">
+                    <img ng-src="{{gear.image_url}}" alt="...">
+                    <div class="caption">
+                        <h3>{{gear.name}}</h3>
+                        <p>{{gear.description}}</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+          Footware
+        <div class="row">            
+            <div class="col-sm-6 col-md-3" ng-repeat="gear in gearList" ng-if="gear.category_id == 2">
+                <div class="thumbnail">
+                    <img ng-src="{{gear.image_url}}" alt="...">
+                    <div class="caption">
+                        <h3>{{gear.name}}</h3>
+                        <p>{{gear.description}}</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+          Clothing Items
+        <div class="row">            
+            <div class="col-sm-6 col-md-3" ng-repeat="gear in gearList" ng-if="gear.category_id == 3">
+                <div class="thumbnail">
+                    <img ng-src="{{gear.image_url}}" alt="...">
+                    <div class="caption">
+                        <h3>{{gear.name}}</h3>
+                        <p>{{gear.description}}</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+          Accessories & Essentials
+        <div class="row">            
+            <div class="col-sm-6 col-md-3" ng-repeat="gear in gearList" ng-if="gear.category_id == 4">
+                <div class="thumbnail">
+                    <img ng-src="{{gear.image_url}}" alt="...">
+                    <div class="caption">
+                        <h3>{{gear.name}}</h3>
+                        <p>{{gear.description}}</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+          Cooking Essential
+        <div class="row">            
+            <div class="col-sm-6 col-md-3" ng-repeat="gear in gearList" ng-if="gear.category_id == 5">
                 <div class="thumbnail">
                     <img ng-src="{{gear.image_url}}" alt="...">
                     <div class="caption">

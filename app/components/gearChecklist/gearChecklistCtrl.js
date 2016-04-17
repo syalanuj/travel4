@@ -8,10 +8,10 @@
         //================================
         $scope.coordinates = { latitude: $routeParams.lat, longitude: $routeParams.lon };
         $scope.map = { center: $scope.coordinates, zoom: 12 };
-        $scope.marker = { id: 0, bounds: {},coords: $scope.coordinates };
+        $scope.marker = { id: 0, bounds: {}, coords: $scope.coordinates };
         $scope.frameSrc = 'http://forecast.io/embed/#lat=28.6139&lon=77.2090';
         $scope.location = $routeParams.formattedAddress;
-        $scope.dateValue = $routeParams.
+        $scope.dateValue = $routeParams.dateString;
         $scope.options;
         $scope.date;
         $scope.duration;
@@ -44,12 +44,9 @@
         $scope.dateOptions = {
             formatYear: 'yy',
             startingDay: 1
-        };
-
+        };        
         $scope.getGearCheckList = function () {
-            var dateString = $scope.date.toISOString();
-            var dateString = dateString.substr(0, dateString.indexOf('T')) + 'T12:00:00-0400';
-            gearService.getWeatherData($scope.coordinates, dateString).then(function (weatherData) {
+            gearService.getWeatherData($scope.coordinates, $scope.dateValue).then(function (weatherData) {
                 if (weatherData && weatherData.status == 200) {
                     if (weatherData.data.daily && weatherData.data.daily.data[0]) {
                         $scope.maxTemp = (weatherData.data.daily.data[0].temperatureMax - 32) * (5 / 9);
@@ -67,6 +64,7 @@
                 }
             });
         }
+        $scope.getGearCheckList();
         $scope.updateTabPos = function (pos) {
             $scope.profileTabPos = pos;
         }

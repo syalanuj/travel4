@@ -2,7 +2,7 @@
     'use strict';
 
     var app = angular.module('campture');
-    app.controller('GearChecklistFormCtrl', ['$scope', '$cookies', '$rootScope', 'uiGmapIsReady','$location' 'GearService', controller]);
+    app.controller('GearChecklistFormCtrl', ['$scope', '$cookies', '$rootScope', 'uiGmapIsReady','$location' ,'GearService', controller]);
     function controller($scope, $cookies, $rootScope, uiGmapIsReady,$location, gearService) {
         //====== Scope Variables==========
         //================================
@@ -47,7 +47,7 @@
         $scope.getCheckList = function (){
             var dateString = $scope.date.toISOString();
             var dateString = dateString.substr(0, dateString.indexOf('T')) + 'T12:00:00-0400';
-            $location.path('/feed/' + $location.coordinates.latitude + '/' +$location.coordinates.longitude + '/' + $scope.location.formatted_address + '/' + dateString);
+            $location.path('/gearChecklistResults/' + $scope.coordinates.latitude + '/' +$scope.coordinates.longitude + '/' + 'asd' + '/'+ $scope.duration +'/' + dateString);
         }
         $scope.getGearCheckList = function () {
             var dateString = $scope.date.toISOString();

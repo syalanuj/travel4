@@ -47,7 +47,7 @@
         $scope.getCheckList = function (){
             var dateString = $scope.date.toISOString();
             var dateString = dateString.substr(0, dateString.indexOf('T')) + 'T12:00:00-0400';
-            $location.path('/gearChecklistResults/' + $scope.coordinates.latitude + '/' +$scope.coordinates.longitude + '/' + 'asd' + '/'+ $scope.duration +'/' + dateString);
+            $location.path('/gearChecklistResults/' + $scope.coordinates.latitude + '/' +$scope.coordinates.longitude + '/' + $scope.location + '/'+ $scope.duration +'/' + dateString);
         }
         $scope.getGearCheckList = function () {
             var dateString = $scope.date.toISOString();

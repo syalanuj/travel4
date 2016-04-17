@@ -21,6 +21,7 @@
         var temperatureGrade;
         var durationGrade;
         $scope.isResultsShown = false;
+        $scope.profileTabPos = 0;
 
         $scope.details = function (details) {
             $scope.location = new Object();
@@ -50,9 +51,9 @@
             gearService.getWeatherData($scope.coordinates, dateString).then(function (weatherData) {
                 if (weatherData && weatherData.status == 200) {
                     if (weatherData.data.daily && weatherData.data.daily.data[0]) {
-                        var maxTemp = (weatherData.data.daily.data[0].temperatureMax - 32) * (5 / 9);
-                        var minTemp = (weatherData.data.daily.data[0].temperatureMin - 32) * (5 / 9);
-                        temperatureGrade = getTemperatureGrade(minTemp);
+                        $scope.maxTemp = (weatherData.data.daily.data[0].temperatureMax - 32) * (5 / 9);
+                        $scope.minTemp = (weatherData.data.daily.data[0].temperatureMin - 32) * (5 / 9);
+                        temperatureGrade = getTemperatureGrade($scope.minTemp);
                         durationGrade = getDurationGrade($scope.duration);
                         gearService.getGearList(temperatureGrade, durationGrade, function (data) {
                             if (data) {

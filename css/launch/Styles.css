@@ -357,3 +357,7 @@ html, body {
 }
 .tempurature{
 }
+
+.active-section{
+    display: block;
+}

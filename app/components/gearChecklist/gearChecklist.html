@@ -7,22 +7,22 @@
     </ui-gmap-google-map>
     <div class="map-mask"></div>
     </div>
-    <div class="destinationDetails col-md-12 text-center container">
-    <h2>Location Name</h2>
-    <span>Low Temp: </span> <span>High Temp:</span><div class="tempurature"><i class="fa fa-sun-o" style="font-size:22px;"></i></div><br>
+    <div ng-show="isResultsShown" class="destinationDetails col-md-12 text-center container">
+    <h2>{{location}}</h2>
+    <span>Low Temp: {{minTemp | number:2}}  </span>   <span>High Temp: {{maxTemp | number:2}}</span><div class="tempurature"><i class="fa fa-sun-o" style="font-size:22px;"></i></div><br>
     <button class="btn btn-primary"><i class="fa fa-pencil-square-o" aria-hidden="true"> </i> Modify Trip</button>
     <button class="btn btn-primary"><i class="fa fa-plus-circle" aria-hidden="true"></i> New Trip</button>
     </div>
     
         
-    <div class="container">
+    <div ng-show="isResultsShown" class="container">
   <ul class="nav nav-pills">
     <li class="active"><a data-toggle="pill" ng-click="updateTabPos(0)">List View</a></li>
     <li><a data-toggle="pill" ng-click="updateTabPos(1)">Thumbnail View</a></li>
     <li><a data-toggle="pill">Download List</a></li>
   </ul>
-  <div class="tab-content">
-    <div id="menu1" ng-show="profileTabPos == 0" class="tab-pane fade in active">            
+  <div class="">
+    <div id="menu1" ng-show="profileTabPos == 0" class="">            
   <table class="table">
     <thead>
       <tr>
@@ -41,7 +41,7 @@
       </tbody>
   </table>
     </div>
-    <div id="menu2" ng-show="profileTabPos == 1"class="tab-pane fade">
+    <div id="menu2" ng-show="profileTabPos == 1" class="ng-hide" >
       <h3>Thumbnail View</h3>
       <div  class="gearListResults">
         <div class="row">

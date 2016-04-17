@@ -9,8 +9,11 @@
     .when('/', {
         controller: 'TempLandingCtrl',
         templateUrl: 'app/components/tempLanding/tempLanding.html'
-    })
-        .when('/gearChecklist/',{
+    }).when('/gearChecklistForm/',{
+            controller: 'GearChecklistFormCtrl',
+            templateUrl:'app/components/gearChecklist/gearChecklistForm/gearChecklistForm.html'
+        })
+        .when('/gearChecklistResults/:lat/:lon/:formattedAddress/:numberOfDays/:dateString',{
             controller: 'GearChecklistCtrl',
             templateUrl:'app/components/gearChecklist/gearChecklist.html'
         })

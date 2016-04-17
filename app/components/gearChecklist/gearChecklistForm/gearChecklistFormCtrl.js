@@ -2,16 +2,15 @@
     'use strict';
 
     var app = angular.module('campture');
-    app.controller('GearChecklistCtrl', ['$scope', '$cookies', '$rootScope', 'uiGmapIsReady', '$routeParams', 'GearService', controller]);
-    function controller($scope, $cookies, $rootScope, uiGmapIsReady, $routeParams, gearService) {
+    app.controller('GearChecklistFormCtrl', ['$scope', '$cookies', '$rootScope', 'uiGmapIsReady','$location' 'GearService', controller]);
+    function controller($scope, $cookies, $rootScope, uiGmapIsReady,$location, gearService) {
         //====== Scope Variables==========
         //================================
-        $scope.coordinates = { latitude: $routeParams.lat, longitude: $routeParams.lon };
-        $scope.map = { center: $scope.coordinates, zoom: 12 };
-        $scope.marker = { id: 0, bounds: {},coords: $scope.coordinates };
+        $scope.coordinates = new Object();
+        $scope.map = { center: { latitude: 28.6139, longitude: 77.2090 }, zoom: 4 };
+        $scope.marker = { id: 0, bounds: {} };
         $scope.frameSrc = 'http://forecast.io/embed/#lat=28.6139&lon=77.2090';
-        $scope.location = $routeParams.formattedAddress;
-        $scope.dateValue = $routeParams.
+        $scope.location;
         $scope.options;
         $scope.date;
         $scope.duration;
@@ -21,7 +20,7 @@
         $scope.gearList;
         var temperatureGrade;
         var durationGrade;
-        $scope.isResultsShown = true;
+        $scope.isResultsShown = false;
         $scope.profileTabPos = 0;
 
         $scope.details = function (details) {
@@ -45,7 +44,11 @@
             formatYear: 'yy',
             startingDay: 1
         };
-
+        $scope.getCheckList = function (){
+            var dateString = $scope.date.toISOString();
+            var dateString = dateString.substr(0, dateString.indexOf('T')) + 'T12:00:00-0400';
+            $location.path('/feed/' + $location.coordinates.latitude + '/' +$location.coordinates.longitude + '/' + $scope.location.formatted_address + '/' + dateString);
+        }
         $scope.getGearCheckList = function () {
             var dateString = $scope.date.toISOString();
             var dateString = dateString.substr(0, dateString.indexOf('T')) + 'T12:00:00-0400';

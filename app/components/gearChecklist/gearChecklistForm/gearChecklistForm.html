@@ -1,4 +1,5 @@
 <div ng-show="!isResultsShown" class="text-center" >
+    <form action="" ng-submit="getCheckList()">
 <div class="gearListWrap container">
 <p>Finger Licking Gear</p>
  I am travelling to
@@ -14,7 +15,7 @@ for
             <input type="number" placeholder="No of days" ng-model="duration" required>.
         </div>
  Show me what to pack in my backpack.
-  <br>  <button style="margin-top: 20px" class="btn btn-campture btn-lg" ng-click="getCheckList()">Let's Go!</button>
+  <br>  <button type="submit" style="margin-top: 20px" class="btn btn-campture btn-lg" ng-click="getCheckList()">Let's Go!</button>
   <div class="gearPhotos">
   <img src="../../../../css/images/backpack.jpg">
   <img src="../../../../css/images/tent.jpg" style="
@@ -24,5 +25,6 @@ for
   <img src="../../../../css/images/poles.jpg" style="
     margin-top: 42px;">
   </div>
-    </div>    
+    </div> 
+        </form>   
 </div>

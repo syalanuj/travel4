@@ -2,8 +2,8 @@
     'use strict';
 
     var app = angular.module('campture');
-    app.controller('GearChecklistFormCtrl', ['$scope', '$cookies', '$rootScope', 'uiGmapIsReady','$location' ,'GearService', controller]);
-    function controller($scope, $cookies, $rootScope, uiGmapIsReady,$location, gearService) {
+    app.controller('GearChecklistFormCtrl', ['$scope', '$cookies', '$rootScope', 'uiGmapIsReady', '$location', 'GearService', controller]);
+    function controller($scope, $cookies, $rootScope, uiGmapIsReady, $location, gearService) {
         //====== Scope Variables==========
         //================================
         $scope.coordinates = new Object();
@@ -44,10 +44,12 @@
             formatYear: 'yy',
             startingDay: 1
         };
-        $scope.getCheckList = function (){
-            var dateString = $scope.date.toISOString();
-            var dateString = dateString.substr(0, dateString.indexOf('T')) + 'T12:00:00-0400';
-            $location.path('/gearChecklistResults/' + $scope.coordinates.latitude + '/' +$scope.coordinates.longitude + '/' + $scope.location + '/'+ $scope.duration +'/' + dateString);
+        $scope.getCheckList = function () {
+            if ($scope.location && $scope.date && $scope.duration) {
+                var dateString = $scope.date.toISOString();
+                var dateString = dateString.substr(0, dateString.indexOf('T')) + 'T12:00:00-0400';
+                $location.path('/gearChecklistResults/' + $scope.coordinates.latitude + '/' + $scope.coordinates.longitude + '/' + $scope.location + '/' + $scope.duration + '/' + dateString);
+            }
         }
         $scope.getGearCheckList = function () {
             var dateString = $scope.date.toISOString();

@@ -21,7 +21,7 @@
         $scope.gearList;
         var temperatureGrade;
         var durationGrade;
-        $scope.isResultsShown = true;
+        $scope.isResultsShown = false;
         $scope.profileTabPos = 0;
 
         $scope.details = function (details) {

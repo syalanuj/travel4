@@ -13,8 +13,6 @@
     <!--<a href="#/gearChecklistForm/" class="btn btn-primary" ><i class="fa fa-pencil-square-o" aria-hidden="true"> </i> Modify Trip</a>-->
     <a href="#/gearChecklistForm/" class="btn btn-primary"><i class="fa fa-plus-circle" aria-hidden="true"></i> New Trip</a>
     </div>
-    
-        
     <div ng-show="isResultsShown" class="container text-center gearResults">
   <ul class="nav nav-pills nav-justified">
     <li class="active"><a data-toggle="pill" ng-click="updateTabPos(0)">List View</a></li>
@@ -225,4 +223,16 @@
     </div>
   </div>
 </div>
+
+    <div ng-show="!isResultsShown" class="site-loader site-loader-center" style="margin-top: 50px;">
+            <div>
+                <div class="stick"></div>
+                <div class="stick"></div>
+                <div class="stick"></div>
+                <div class="stick"></div>
+                <div class="stick"></div>
+                <div class="stick"></div>
+            </div>
+            <p>I travel, therefore I am</p>
+        </div>
 </div>

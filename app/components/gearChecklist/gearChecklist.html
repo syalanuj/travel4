@@ -148,12 +148,11 @@
           <span class="gearCategory">Carrying Gear</span>
         <div class="row">            
             <div class="col-sm-6 col-md-3" ng-repeat="gear in gearList" ng-if="gear.category_id == 0">
-                <div class="thumbnail">
+                <div class="thumbnail" data-toggle="tooltip" data-placement="left" title={{gear.description}}>
                     <img ng-src="{{gear.image_url}}" alt="...">
                     <div class="caption">
                         <h3>{{gear.name}}</h3>
-                        <p>{{gear.description}}</p>
-                    </div>
+                        </div>
                 </div>
             </div>
 
@@ -161,12 +160,11 @@
           <span class="gearCategory">Sleeping Gear</span>
         <div class="row">            
             <div class="col-sm-6 col-md-3" ng-repeat="gear in gearList" ng-if="gear.category_id == 1">
-                <div class="thumbnail">
+                <div class="thumbnail" data-toggle="tooltip" data-placement="left" title={{gear.description}}>
                     <img ng-src="{{gear.image_url}}" alt="...">
                     <div class="caption">
                         <h3>{{gear.name}}</h3>
-                        <p>{{gear.description}}</p>
-                    </div>
+                        </div>
                 </div>
             </div>
 
@@ -174,12 +172,11 @@
           <span class="gearCategory">Footwear</span>
         <div class="row">            
             <div class="col-sm-6 col-md-3" ng-repeat="gear in gearList" ng-if="gear.category_id == 2">
-                <div class="thumbnail">
+                <div class="thumbnail" data-toggle="tooltip" data-placement="left" title={{gear.description}}>
                     <img ng-src="{{gear.image_url}}" alt="...">
                     <div class="caption">
                         <h3>{{gear.name}}</h3>
-                        <p>{{gear.description}}</p>
-                    </div>
+                        </div>
                 </div>
             </div>
 
@@ -187,12 +184,11 @@
           <span class="gearCategory">Clothing Items</span>
         <div class="row">            
             <div class="col-sm-6 col-md-3" ng-repeat="gear in gearList" ng-if="gear.category_id == 3">
-                <div class="thumbnail">
+                <div class="thumbnail" data-toggle="tooltip" data-placement="left" title={{gear.description}}>
                     <img ng-src="{{gear.image_url}}" alt="...">
                     <div class="caption">
                         <h3>{{gear.name}}</h3>
-                        <p>{{gear.description}}</p>
-                    </div>
+                        </div>
                 </div>
             </div>
 
@@ -200,12 +196,11 @@
           <span class="gearCategory">Accessories &amp; Essentials</span>
         <div class="row">            
             <div class="col-sm-6 col-md-3" ng-repeat="gear in gearList" ng-if="gear.category_id == 4">
-                <div class="thumbnail">
+                <div class="thumbnail" data-toggle="tooltip" data-placement="left" title={{gear.description}}>
                     <img ng-src="{{gear.image_url}}" alt="...">
                     <div class="caption">
                         <h3>{{gear.name}}</h3>
-                        <p>{{gear.description}}</p>
-                    </div>
+                        </div>
                 </div>
             </div>
 
@@ -213,12 +208,11 @@
           <span class="gearCategory">Cooking Essential</span>
         <div class="row">            
             <div class="col-sm-6 col-md-3" ng-repeat="gear in gearList" ng-if="gear.category_id == 5">
-                <div class="thumbnail">
+                <div class="thumbnail" data-toggle="tooltip" data-placement="left" title={{gear.description}}>
                     <img ng-src="{{gear.image_url}}" alt="...">
                     <div class="caption">
                         <h3>{{gear.name}}</h3>
-                        <p>{{gear.description}}</p>
-                    </div>
+                        </div>
                 </div>
             </div>
 

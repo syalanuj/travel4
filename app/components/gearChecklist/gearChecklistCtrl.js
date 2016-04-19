@@ -12,9 +12,9 @@
         $scope.frameSrc = 'http://forecast.io/embed/#lat=28.6139&lon=77.2090';
         $scope.location = $routeParams.formattedAddress;
         $scope.dateValue = $routeParams.dateString;
+        $scope.duration = $routeParams.numberOfDays;
         $scope.options;
-        $scope.date;
-        $scope.duration;
+        $scope.date;        
         $scope.status = {
             opened: false
         };

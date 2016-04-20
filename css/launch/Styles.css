@@ -326,6 +326,9 @@ html, body {
 	letter-spacing:2px;
 	font-family:lato;
 	}
+.gearListWrap p{
+	font-size:36px;
+}
 .gearListWrap input{
     border-top:none;
     border-left:none;
@@ -443,7 +446,7 @@ html, body {
 	padding:40px;
 }
 .gearCategory{
-	font-size:22px;
+	font-size:3rem;
 	margin-bottom:5px;
 	padding:5px;
 	text-decoration:underline;
@@ -576,4 +579,29 @@ transform:rotate(-30deg);
 .site-loader-center{
     width: 152px;
     margin: auto;
+}
+
+.productThumbnail{
+	min-height:350px;
+	position:relative;
+	overflow:hidden;
+}
+.productCaption{
+	position:absolute;
+	padding: 2%;
+    top: -100%;
+    width: 100%;
+    right: 0;
+    text-align: center;
+    color: #fff !important;
+    z-index: 2;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    background: rgba(66, 139, 202, 0.75);
+}
+.productThumbnail:hover .productCaption {
+    top:0%;
 }

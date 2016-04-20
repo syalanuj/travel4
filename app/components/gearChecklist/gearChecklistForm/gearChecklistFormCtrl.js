@@ -2,19 +2,18 @@
     'use strict';
 
     var app = angular.module('campture');
-    app.controller('GearChecklistCtrl', ['$scope', '$cookies', '$rootScope', 'uiGmapIsReady', '$routeParams', 'GearService', controller]);
-    function controller($scope, $cookies, $rootScope, uiGmapIsReady, $routeParams, gearService) {
+    app.controller('GearChecklistFormCtrl', ['$scope', '$cookies', '$rootScope', 'uiGmapIsReady', '$location', 'GearService', controller]);
+    function controller($scope, $cookies, $rootScope, uiGmapIsReady, $location, gearService) {
         //====== Scope Variables==========
         //================================
-        $scope.coordinates = { latitude: $routeParams.lat, longitude: $routeParams.lon };
-        $scope.map = { center: $scope.coordinates, zoom: 12 };
-        $scope.marker = { id: 0, bounds: {}, coords: $scope.coordinates };
+        $scope.coordinates = new Object();
+        $scope.map = { center: { latitude: 28.6139, longitude: 77.2090 }, zoom: 4 };
+        $scope.marker = { id: 0, bounds: {} };
         $scope.frameSrc = 'http://forecast.io/embed/#lat=28.6139&lon=77.2090';
-        $scope.location = $routeParams.formattedAddress;
-        $scope.dateValue = $routeParams.dateString;
-        $scope.duration = $routeParams.numberOfDays;
+        $scope.location;
         $scope.options;
-        $scope.date;        
+        $scope.date;
+        $scope.duration;
         $scope.status = {
             opened: false
         };
@@ -44,9 +43,18 @@
         $scope.dateOptions = {
             formatYear: 'yy',
             startingDay: 1
-        };        
+        };
+        $scope.getCheckList = function () {
+            if ($scope.location && $scope.date && $scope.duration) {
+                var dateString = $scope.date.toISOString();
+                var dateString = dateString.substr(0, dateString.indexOf('T')) + 'T12:00:00-0400';
+                $location.path('/gearChecklistResults/' + $scope.coordinates.latitude + '/' + $scope.coordinates.longitude + '/' + $scope.location + '/' + $scope.duration + '/' + dateString);
+            }
+        }
         $scope.getGearCheckList = function () {
-            gearService.getWeatherData($scope.coordinates, $scope.dateValue).then(function (weatherData) {
+            var dateString = $scope.date.toISOString();
+            var dateString = dateString.substr(0, dateString.indexOf('T')) + 'T12:00:00-0400';
+            gearService.getWeatherData($scope.coordinates, dateString).then(function (weatherData) {
                 if (weatherData && weatherData.status == 200) {
                     if (weatherData.data.daily && weatherData.data.daily.data[0]) {
                         $scope.maxTemp = (weatherData.data.daily.data[0].temperatureMax - 32) * (5 / 9);
@@ -64,7 +72,6 @@
                 }
             });
         }
-        $scope.getGearCheckList();
         $scope.updateTabPos = function (pos) {
             $scope.profileTabPos = pos;
         }

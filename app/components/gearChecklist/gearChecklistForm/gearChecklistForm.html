@@ -1,0 +1,30 @@
+<div ng-show="!isResultsShown" class="text-center" >
+    <form action="" ng-submit="getCheckList()">
+<div class="gearListWrap container">
+<p>Finger Licking Gear</p>
+ I am travelling to
+        <div class="gearFormInput ">
+            <input class="locationInput" name="location" type="text" placeholder="Enter Location" ng-autocomplete ng-model="location" options="options" details="details" required>
+        </div><br>
+ on
+        <div class="gearFormInput">
+            <input name="date" type="text" placeholder="Enter Date" uib-datepicker-popup="dd-MMMM-yyyy" ng-model="date" is-open="status.opened" min-date="minDate" max-date="maxDate" datepicker-options="dateOptions" ng-required="true" close-text="Close" ng-click="open($event)" id="date" required>
+        </div>
+for
+        <div class="gearFormInput">
+            <input type="number" placeholder="No of days" ng-model="duration" required>.
+        </div>
+ Show me what to pack in my backpack.
+  <br>  <button type="submit" style="margin-top: 20px" class="btn btn-campture btn-lg" ng-click="getCheckList()">Let's Go!</button>
+  <div class="gearPhotos">
+  <img src="../../../../css/images/backpack.jpg">
+  <img src="../../../../css/images/tent.jpg" style="
+    margin-top: 70px;">
+  <img src="../../../../css/images/shoes.jpg" style="
+    margin-top: 82px;">
+  <img src="../../../../css/images/poles.jpg" style="
+    margin-top: 42px;">
+  </div>
+    </div> 
+        </form>   
+</div>

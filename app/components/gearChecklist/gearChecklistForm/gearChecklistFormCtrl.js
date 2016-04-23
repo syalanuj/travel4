@@ -77,17 +77,20 @@
         }
         function getTemperatureGrade(temp) {
             var grade
-            if (temp < 10) {
+            if (temp < -10) {
                 grade = 0;
             }
             else if (temp < 0) {
                 grade = 1;
             }
-            else if (temp < 15) {
+            else if (temp < 10) {
                 grade = 2;
             }
-            else {
+            else if (temp < 20) {
                 grade = 3;
+            }
+            else {
+                grade = 4;
             }
             return grade;
         }

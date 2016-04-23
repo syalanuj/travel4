@@ -17,7 +17,7 @@
   <ul class="nav nav-pills nav-justified">
     <li class="active"><a data-toggle="pill" ng-click="updateTabPos(0)">List View</a></li>
     <li><a data-toggle="pill" ng-click="updateTabPos(1)">Thumbnail View</a></li>
-    <li><a data-toggle="pill">Download List</a></li>
+    <!--<li><a data-toggle="pill">Download List</a></li>-->
   </ul>
   <div class="">
     <div id="menu1" ng-show="profileTabPos == 0" class="">
@@ -38,7 +38,7 @@
       </tr>
       </tbody>
   </table>
-    <span class="gearCategory pull-left">Sleeping Gear</span>
+    <span class="gearCategory pull-left">Camping Gear</span>
     <table class="table">
     <thead>
         <tr>
@@ -55,7 +55,7 @@
         </tr>
         </tbody>
     </table>
-    <span class="gearCategory pull-left">Footware</span>
+    <span class="gearCategory pull-left">Walking & Hiking</span>
   <table class="table">
     <thead>
       <tr>
@@ -155,7 +155,7 @@
             </div>
 
         </div>
-          <span class="gearCategory">Sleeping Gear</span>
+          <span class="gearCategory">Camping Gear</span>
         <div class="row">            
             <div class="col-sm-6 col-md-3" ng-repeat="gear in gearList" ng-if="gear.category_id == 1">
                 <div class="thumbnail" data-toggle="tooltip" data-placement="left" title={{gear.description}}>
@@ -167,7 +167,7 @@
             </div>
 
         </div>
-          <span class="gearCategory">Footwear</span>
+          <span class="gearCategory">Walking & Hiking</span>
         <div class="row">            
             <div class="col-sm-6 col-md-3" ng-repeat="gear in gearList" ng-if="gear.category_id == 2">
                 <div class="thumbnail" data-toggle="tooltip" data-placement="left" title={{gear.description}}>

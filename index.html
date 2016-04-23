@@ -36,10 +36,12 @@
     <body>
         <div id="fb-root"></div>
         <div class="text-center navigation">
-            <span class="navtext">Gear Checklist</span><span><img src="Images/Logo.png" alt="logo" class="navtext"></span><span class="navtext"><a href="http://www.campture.com/blog/">Blog</a></span>
+            <span class="navtext navtext-left"><a href="#/gearChecklistForm">Gear Checklist</a></span>
+            <span class="navLogo"><img src="Images/Logo.png" alt="logo" ></span>
+            <span class="navtext navtext-right"><a href="http://www.campture.com/blog/">Blog</a></span>
         </div>
 
-        <main class="top-margin">
+        <main style="min-height: 100vh" class="top-margin">
             <div ng-view autoscroll="true"></div>
         </main>
 
@@ -49,11 +51,11 @@
                 <img src="Images/Angel list/Logos/AngelList_White_Lockup-62a6d2396ec4758d26016fc9b65d6cb1.png"> <img src="Images/Angel list/Logos/Lets venture.png"> <img src="Images/Angel list/Logos/Beta List.png"> <img src="Images/Angel list/Logos/Launching Next.png">
             </div>
         </div>
-        <div class="sectionsix text-center">
+        <div ng-controller="TempLandingCtrl" class="sectionsix text-center">
             <div class="input-group col-md-4 col-md-offset-4 col-sm-5 col-sm-offset-5 col-xs-11  col-xs-offset-2 maxwidth">
-                <input type="text" class="form-control form-control-camptureme" placeholder="Your email address">
+                <input ng-model="emailField1" type="text" class="form-control form-control-camptureme" placeholder="Your email address">
                 <span class="input-group-btn">
-                    <button class="btn btn-orange" type="button">Campture Me!</button>
+                    <button class="btn btn-orange" ng-click="sendUserEmail()" type="button">Campture Me!</button>
                 </span>
             </div>
             <!-- /input-group -->
@@ -114,6 +116,7 @@
 
         <script src="app/components/gearChecklist/gearChecklistCtrl.js"></script>
         <script src="app/components/tempLanding/tempLandingCtrl.js"></script>
+        <script src="app/components/gearChecklist/gearChecklistForm/gearChecklistFormCtrl.js"></script>
         <!--Main Route-->
         <script src="app.route.js"></script>
         <script src="configMap.js"></script>

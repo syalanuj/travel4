@@ -446,11 +446,10 @@ html, body {
 	padding:40px;
 }
 .gearCategory{
-	font-size:3rem;
+	font-size:4.2rem;
 	margin-bottom:5px;
-	padding:5px;
-	text-decoration:underline;
-}
+	padding:10px;
+	}
 /*Loader Css*/
 
 
@@ -604,4 +603,12 @@ transform:rotate(-30deg);
 }
 .productThumbnail:hover .productCaption {
     top:0%;
+}
+.nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover{
+	background:transparent;
+	color:#f56c36;
+	border:solid 1px black;
+}
+a{
+	color:black;
 }

@@ -3,7 +3,7 @@
 	<section class="map">
     <ui-gmap-google-map center="map.center" zoom="map.zoom"  options="options" bounds="map.bounds">
         <ui-gmap-marker coords="marker.coords"  idkey="marker.id">
-        </ui-gmap-marker>
+        </ui-gmap-marker>        
     </ui-gmap-google-map>
     <div class="map-mask"></div>
     </section>
@@ -11,8 +11,9 @@
     <h2>{{location}}</h2>
     <span>Low Temp: {{minTemp | number:2}}  </span>   <span>High Temp: {{maxTemp | number:2}}</span><div class="tempurature"><i class="fa fa-sun-o" style="font-size:22px;"></i></div><br>
     <!--<a href="#/gearChecklistForm/" class="btn btn-primary" ><i class="fa fa-pencil-square-o" aria-hidden="true"> </i> Modify Trip</a>-->
-    <a href="#/gearChecklistForm/" class="btn btn-primary"><i class="fa fa-plus-circle" aria-hidden="true"></i> New Trip</a>
-    </div>
+    <a href="#/gearChecklistForm/" class="btn btn-campture"><i class="fa fa-plus-circle" aria-hidden="true"></i> New Trip</a>
+   <p style="font-size:10px;" class="pull-left;"><strong>*</strong>Temperature might vary and might be different from our data base, please check the local temperature before you get packing.</p>
+    </div>    
     <div ng-show="isResultsShown" class="container text-center gearResults">
   <ul class="nav nav-pills nav-justified">
     <li class="active"><a data-toggle="pill" ng-click="updateTabPos(0)">List View</a></li>
@@ -25,102 +26,69 @@
   <table class="table">
     <thead>
       <tr>
-        <th>Item Name</th>
-        <th>Item Description</th>
-    	<th>Buy Now</th>
+        <th><strong>Item Name</strong></th>
+        <th><strong>Item Description</strong></th>
+    	<!--<th>Buy Now</th>-->
       </tr>
     </thead>
     <tbody>        
       <tr ng-repeat="gear in gearList" ng-if="gear.category_id == 0">
         <td class="itemName">{{gear.name}}</td>
         <td class="itemDesc">{{gear.description}}</td>
-        <td><button class="btn btn-primary disabled">Buy Now</button></td>
+        <!--<td><button class="btn btn-primary disabled">Buy Now</button></td>-->
       </tr>
       </tbody>
   </table>
     <span class="gearCategory pull-left">Camping Gear</span>
     <table class="table">
-    <thead>
-        <tr>
-        <th>Item Name</th>
-        <th>Item Description</th>
-    	<th>Buy Now</th>
-        </tr>
-    </thead>
+    
     <tbody>
         <tr ng-repeat="gear in gearList" ng-if="gear.category_id == 1">
         <td class="itemName">{{gear.name}}</td>
         <td class="itemDesc">{{gear.description}}</td>
-        <td><button class="btn btn-primary disabled">Buy Now</button></td>
+        <!--<td><button class="btn btn-primary disabled">Buy Now</button></td>-->
         </tr>
         </tbody>
     </table>
     <span class="gearCategory pull-left">Walking & Hiking</span>
   <table class="table">
-    <thead>
-      <tr>
-        <th>Item Name</th>
-        <th>Item Description</th>
-    	<th>Buy Now</th>
-      </tr>
-    </thead>
+    
     <tbody>        
       <tr ng-repeat="gear in gearList" ng-if="gear.category_id == 2">
         <td class="itemName">{{gear.name}}</td>
         <td class="itemDesc">{{gear.description}}</td>
-        <td><button class="btn btn-primary disabled">Buy Now</button></td>
-      </tr>
+        <!--<td><button class="btn btn-primary disabled">Buy Now</button></td>-->
+        </tr>
       </tbody>
   </table>
     <span class="gearCategory pull-left">Clothing Items</span>
   <table class="table">
-    <thead>
-      <tr>
-        <th>Item Name</th>
-        <th>Item Description</th>
-    	<th>Buy Now</th>
-      </tr>
-    </thead>
     <tbody>        
       <tr ng-repeat="gear in gearList" ng-if="gear.category_id == 3">
         <td class="itemName">{{gear.name}}</td>
         <td class="itemDesc">{{gear.description}}</td>
-        <td><button class="btn btn-primary disabled">Buy Now</button></td>
-      </tr>
+        <!--<td><button class="btn btn-primary disabled">Buy Now</button></td>-->
+        </tr>
       </tbody>
   </table>
        <span class="gearCategory pull-left">  Accessories &amp; Essentials</span>
   <table class="table">
-    <thead>
-      <tr>
-        <th>Item Name</th>
-        <th>Item Description</th>
-    	<th>Buy Now</th>
-      </tr>
-    </thead>
     <tbody>        
       <tr ng-repeat="gear in gearList" ng-if="gear.category_id == 4">
         <td class="itemName">{{gear.name}}</td>
         <td class="itemDesc">{{gear.description}}</td>
-        <td><button class="btn btn-primary disabled">Buy Now</button></td>
-      </tr>
+        <!--<td><button class="btn btn-primary disabled">Buy Now</button></td>-->
+        </tr>
       </tbody>
   </table>
         <span class="gearCategory pull-left"> Cooking Essential</span>
   <table class="table">
-    <thead>
-      <tr>
-        <th>Item Name</th>
-        <th>Item Description</th>
-    	<th>Buy Now</th>
-      </tr>
-    </thead>
     <tbody>        
       <tr ng-repeat="gear in gearList" ng-if="gear.category_id == 5">
         <td class="itemName">{{gear.name}}</td>
         <td class="itemDesc">{{gear.description}}</td>
-        <td><button class="btn btn-primary disabled">Buy Now</button></td>
-      </tr>
+        <!--<td><button class="btn btn-primary disabled">Buy Now</button></td>-->
+        </tr>
       </tbody>
   </table>
         <!--Safety & Emergency Gear
@@ -129,17 +97,17 @@
       <tr>
         <th>Item Name</th>
         <th>Item Description</th>
-    	<th>Buy Now</th>
+    	<!--<th>Buy Now</th>-->
       </tr>
     </thead>
     <tbody>        
       <tr ng-repeat="gear in gearList" ng-if="gear.category_id == 6">
         <td class="itemName">{{gear.name}}</td>
         <td class="itemDesc">{{gear.description}}</td>
-        <td><button class="btn btn-primary disabled">Buy Now</button></td>
+        <!--<td><button class="btn btn-primary disabled">Buy Now</button></td>-->
       </tr>
       </tbody>
-  </table>-->
+  </table>
     </div>
     <div id="menu2" ng-show="profileTabPos == 1" class="ng-hide" >
       <div  class="gearListResults">
@@ -240,6 +208,7 @@
       <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
     </div>
   </div>
+  <p><strong>Note:</strong> Not every camping party will bring every item on this list, this is only for reference purposes. Always use your common sense and be prepared.</p>
 </div>
 
     <div ng-show="!isResultsShown" class="site-loader site-loader-center" style="margin-top: 50px;">

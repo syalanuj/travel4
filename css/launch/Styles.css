@@ -183,8 +183,7 @@ body{
 .marginauto {
 	margin: auto!important;
 }
-.headerfourbg {
-	background-image: url(../Images/Map.jpg);
+.headerfourbg {	
 	padding-bottom: 20px;
 }
 .ladhakpreview {

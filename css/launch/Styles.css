@@ -1,9 +1,16 @@
 @charset "UTF-8";
 /* CSS Document */
 
+html{
+	overflow-y: scroll; /* has to be scroll, not auto */
+  -webkit-overflow-scrolling: touch;
+
+}
 body{
 	font-family:"lato";
 	position:relative;
+	overflow-y: scroll; /* has to be scroll, not auto */
+  -webkit-overflow-scrolling: touch;
 }
 .navtext{
 	top:15px;
@@ -331,7 +338,7 @@ html, body {
 	font-family:lato;
 	}
 .gearListWrap p{
-	font-size:36px;
+	font-size:24px;
 	font-family:lato-light;
 }
 .gearListWrap input{

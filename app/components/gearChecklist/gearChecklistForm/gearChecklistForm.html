@@ -2,7 +2,7 @@
     <form action="" ng-submit="getCheckList()">
         <div class="gearListWrap container">
             <p>Gear Checklist Simplified</p>
-            <p style="font-size:20px;">Check Your Camping & Hiking Gear for Your Next Trip</p>
+            <p style="font-size:40px;">Check Your Camping & Hiking Gear<br> for Your Next Trip</p>
  I am travelling to
             <div class="gearFormInput ">
                 <input class="locationInput" name="location" type="text" placeholder="Enter Location" ng-autocomplete ng-model="location" options="options" details="details" required>
@@ -16,8 +16,7 @@ for
         <div class="gearFormInput">
             <input type="number" placeholder="No of days" ng-model="duration" min="1" required>
         </div><br>
- Show me what to pack.
-            <br>  <button type="submit" style="margin-top: 20px" class="btn btn-campture btn-lg" ng-click="getCheckList()">Let's Go!</button>
+            <button type="submit" style="margin-top: 20px" class="btn btn-campture btn-lg" ng-click="getCheckList()">Show Me What to Pack</button>
             <div class="gearPhotos">
                 <img src="../../../../css/images/backpack.jpg">
                 <img src="../../../../css/images/tent.jpg" style="

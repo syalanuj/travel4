@@ -12,9 +12,10 @@
                 <input name="date" type="text" placeholder="Enter Date" uib-datepicker-popup="dd-MMMM-yyyy" ng-model="date" is-open="status.opened" min-date="minDate" max-date="maxDate" datepicker-options="dateOptions" ng-required="true" close-text="Close" ng-click="open($event)" id="date" required>
             </div>
 for
-            <div class="gearFormInput">
-                <input type="number" placeholder="No of days" ng-model="duration" min="1" required>.
-            </div><br>
+
+        <div class="gearFormInput">
+            <input type="number" placeholder="No of days" ng-model="duration" min="1" required>
+        </div><br>
  Show me what to pack.
             <br>  <button type="submit" style="margin-top: 20px" class="btn btn-campture btn-lg" ng-click="getCheckList()">Let's Go!</button>
             <div class="gearPhotos">

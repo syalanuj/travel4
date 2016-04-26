@@ -22,6 +22,7 @@
         var durationGrade;
         $scope.isResultsShown = false;
         $scope.profileTabPos = 0;
+        $scope.minDate = new Date();
 
         $scope.details = function (details) {
             $scope.location = new Object();

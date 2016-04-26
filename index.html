@@ -13,14 +13,15 @@
         
         <!--third party-->
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="css/colorbox.css" media="screen" />
-        <link rel="stylesheet" href="css/dropzone.css">
+        
         <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.0.0/normalize.min.css">
         <!--in house-->
+        <!--build:css css/styles.min.css-->
+        <link rel="stylesheet" type="text/css" href="css/colorbox.css" media="screen" />
         <link rel="stylesheet" href="css/launch/Styles.css">
+        <!--endbuild-->
 
-        <!--Parse Dependencies-->
-        <!--<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>-->
+        <!--Parse Dependencies-->        
         <!--Meta-->
         <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
         <meta name="keywords" content="Campture, adventure, camping" />
@@ -35,11 +36,6 @@
     </head>
     <body>
         <div id="fb-root"></div>
-        <!--<div class="text-center navigation">
-            <span class="navtext navtext-left"><a href="#/gearChecklistForm">Gear Checklist</a></span>
-            <span class="navLogo"><img src="Images/Logo.png" alt="logo" ></span>
-            <span class="navtext navtext-right"><a href="http://www.campture.com/blog/">Blog</a></span>
-        </div>-->
         <div >
             <nav id="headerId" style="display: none; background-color: rgba(23, 23, 23,.302); border-bottom:0;" class="navbar navbar-default no-margin no-background on-top navbar-fixed-top" ">
                 <div class="container-fluid">
@@ -51,46 +47,14 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a class="navbar-brand" href="#/"><img src="css/images/logo-beta.png" alt="logo"></a>
-                        <!--<div class="navbar-form navbar-left no-margin pc-no-display paddingnone" role="search">
-                            <div class="wrap searchbar-input">
-                                <form action="" ng-submit="searchTrips()" autocomplete="on">
-                                    <input id="searchId" ng-model="query[queryBy]" class="campture-search" name="search1" type="text" placeholder="Search...">
-                                    <button type="submit" ng-click="searchTrips()" ng-hide="true"></button>
-                                </form>
-                            </div>
-                        </div>-->
+                        <a class="navbar-brand" href="#/"><img src="css/images/logo-beta.png" alt="logo"></a>                        
                     </div>
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                         <ul class="nav navbar-nav">
-                            <!-- <li><a href="#/explore/" class="navbar-fonts navbar-link">EXPLORE</a></li> -->
-                            <!-- <li class="dropdown">
-                                <a class="dropdown-toggle navbar-fonts" data-toggle="dropdown" style="padding:15px!important;">TAGS<span class="caret"></span></a>
-                                <ul class="dropdown-menu tags tag-window-width paddingnone" role="menu">
-                                    <div class="col-md-6 col-lg-6 col-sm-6 col-xs-6 paddingnone" ng-repeat="headerTag in topTags">
-                                        <a ng-href="#/feed/{{headerTag.tag}}" class="thumbnail no-margin">
-                                            <img ng-src="{{headerTag.image_url}}">
-                                        </a>
-                                    </div>
-                                </ul>
-                            </li> -->
-                            <!-- <li><a href="#/howTo/" class="navbar-fonts navbar-link">HOW TO</a></li> -->
                             <li><a href="http://www.campture.com/blog/" target="_blank" class="navbar-fonts" style="color:white;">BLOG</a></li>
                             <li><a href="#/gearChecklistForm" class="navbar-fonts" style="color:white;">GEAR CHECKLIST</a></li>
                         </ul>
-                        <!--<ul class="nav navbar-nav navbar-right">
-                            <div class="input-group search-box mobile-no-display">
-                                <input ng-model="query[queryBy]" type="text" class="form-control" placeholder="Search for...">
-                                <span class="input-group-btn">
-                                    <button ng-click="searchTrips()" class="btn btn-default" type="button" style="border-left: 0;"><i class="fa fa-search"></i></button>
-                                </span>
-                            </div><!-- /input-group -->
-                            <!-- <li><a ng-show="isPageHeaderLoaded && userObj == undefined" href="" class="header-elements loginwithfacebook" ng-click="loginWithFacebook()"><i class="fa fa-facebook-square"></i> <span>Login with Facebook</span></a></li>
-                            <li><a ng-if="isPageHeaderLoaded && userObj" href="#/account/postTrip/" class="header-elements add_trip"><i class="fa fa-pencil-square-o" style="color:#FFFFFF;">&nbsp;</i><span>Add Trip</span></a></li>
-                            <li><a href="" ng-if="isPageHeaderLoaded && userObj" ng-click="logout()" class="header-elements power_switch navbar-link" style="color: color: rgb(106, 106, 106)!important;"><i class="fa fa-power-off"></i></a></li>
-                            <li><a ng-if="isPageHeaderLoaded && userObj" href="" ng-href="#/account/profile/{{userObj.objectId}}" class="header-elements paddingnone"><img ng-src="{{userObj.facebook_profile.picture.data.url}}" class="img-circle profile_topleft"></a></li>
-                        </ul> -->
                     </div><!-- /.navbar-collapse -->
                 </div><!-- /.container-fluid -->
             </nav>
@@ -168,21 +132,17 @@
             <!--<span class="footersocial"><i class="fa fa-instagram"></i></span>!-->
             <a href="https://www.pinterest.com/campture/"><span class="footersocial"><i class="fa fa-pinterest"></i></span></a> <span class="pull-right">Campture 2015 &copy; All Rights Reserved</span>
         </div>
+
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
         <!--Parse-->
         <script type="text/javascript" src="http://www.parsecdn.com/js/parse-latest.min.js"></script><!--http://www.parsecdn.com/js/parse-latest.min.js-->
-        <!--Dropzone dependencies-->
-        <script src="js/dropzone/dropzone.js"></script>
         <!--Map API Dependencies-->
         <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCRpJLhktqH2XbHlB4WLvZ169ECwqOG-BE&libraries=places"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.8.0/lodash.min.js"></script>
+        
         <script src="js/bootstrap-datepicker.js"></script>
         <script src="js/bootstrap-timepicker.js"></script>
-        <script src="js/tweet.js"></script>
-        <script src="js/exif/exif.js"></script>
-        <script src="js/linkify/linkified.js"></script>
-        <script src="js/linkify/jquery.linkify.min.js"></script>
 
         <!-- Angular Dependencies -->
         <!-- JS-->
@@ -190,7 +150,7 @@
         <script src="js/angular-route.min.js"></script>
         <script src="js/angular-cookies.js"></script>
         <script src="js/ui-bootstrap-tpls-0.14.3.js"></script>
-        <script src="js/angular-animate.js"></script>
+        <script src="js/angular-animate.min.js"></script>
         <!--New Dependencies-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-touch.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/ngStorage/0.3.6/ngStorage.min.js"></script>
@@ -200,14 +160,13 @@
         <script src="js/angular-simple-logger.js"></script>
         <script src="js/angular-google-maps.min.js"></script>
         <script src="js/ngAutocomplete/ngAutocomplete.js"></script>
-        <!--Drop zone directive-->
-        <script src="js/dropzone/dropzone-directive.js"></script>
+
+        <!--build:js js/main.min.js -->
         <!--Angular Routing-->
         <!--Main-->
         <script src="app.js"></script>
         <!--Services-->
         <script src="app/services/gearService.js"></script>
-        <script src="app/services/parse-angular/FacebookAngularPatch.js"></script>
         <script src="app/services/parse-angular/ParseServices.js"></script>
 
         <!--Directives-->
@@ -222,7 +181,7 @@
         <!--Main Route-->
         <script src="app.route.js"></script>
         <script src="configMap.js"></script>
-
+        <!-- endbuild -->
         <script type="text/javascript">
             $(document).ready(function () {
                 $('#headerId').css("display", "block");

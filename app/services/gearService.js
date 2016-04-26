@@ -1,8 +1,5 @@
 var app = angular.module('campture');
 app.factory('GearService', ['$http', '$q', function ($http, $q) {
-    var Gear = Parse.Object.extend("Gears");
-
-    var gear = new Gear();
 
     return {
         getWeatherDataFromCloud: getWeatherDataFromCloud

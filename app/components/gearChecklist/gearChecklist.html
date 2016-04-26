@@ -6,6 +6,9 @@
     </ui-gmap-google-map>
     <div class="map-mask"></div>
     </section>
+    <br>
+    <br>
+    <br>
      <div ng-show="isResultsShown" class="destinationDetails col-md-12 text-center container">
     <h2>{{location}}</h2>
     <span>Low Temp: {{minTemp | number:2}}  </span>   <span>High Temp: {{maxTemp | number:2}}</span><div class="tempurature"><i class="fa fa-sun-o" style="font-size:22px;"></i></div><br>
@@ -124,7 +127,7 @@
           <span class="gearCategory">Carrying Gear</span>
         <div class="row">            
             <div class="col-sm-6 col-md-3" ng-repeat="gear in gearList" ng-if="gear.category_id == 0">
-                <div class="thumbnail productThumbnail" data-toggle="tooltip" data-placement="left" title={{gear.description}}>
+                <div class="thumbnail productThumbnail" >
                     <img ng-src="{{gear.image_url}}" alt="...">
                     <div class="caption">
                         <h3>{{gear.name}}</h3>
@@ -138,7 +141,7 @@
           <span class="gearCategory">Camping Gear</span>
         <div class="row">            
             <div class="col-sm-6 col-md-3" ng-repeat="gear in gearList" ng-if="gear.category_id == 1">
-                <div class="thumbnail productThumbnail" data-toggle="tooltip" data-placement="left" title={{gear.description}}>
+                <div class="thumbnail productThumbnail" >
                     <img ng-src="{{gear.image_url}}" alt="...">
                     <div class="caption">
                         <h3>{{gear.name}}</h3>
@@ -152,7 +155,7 @@
           <span class="gearCategory">Walking & Hiking</span>
         <div class="row">            
             <div class="col-sm-6 col-md-3" ng-repeat="gear in gearList" ng-if="gear.category_id == 2">
-                <div class="thumbnail productThumbnail" data-toggle="tooltip" data-placement="left" title={{gear.description}}>
+                <div class="thumbnail productThumbnail" >
                     <img ng-src="{{gear.image_url}}" alt="...">
                     <div class="caption">
                         <h3>{{gear.name}}</h3>
@@ -166,7 +169,7 @@
           <span class="gearCategory">Clothing Items</span>
         <div class="row">            
             <div class="col-sm-6 col-md-3" ng-repeat="gear in gearList" ng-if="gear.category_id == 3">
-                <div class="thumbnail productThumbnail" data-toggle="tooltip" data-placement="left" title={{gear.description}}>
+                <div class="thumbnail productThumbnail" >
                     <img ng-src="{{gear.image_url}}" alt="...">
                     <div class="caption">
                         <h3>{{gear.name}}</h3>
@@ -180,7 +183,7 @@
           <span class="gearCategory">Accessories &amp; Essentials</span>
         <div class="row">            
             <div class="col-sm-6 col-md-3" ng-repeat="gear in gearList" ng-if="gear.category_id == 4">
-                <div class="thumbnail productThumbnail" data-toggle="tooltip" data-placement="left" title={{gear.description}}>
+                <div class="thumbnail productThumbnail" >
                     <img ng-src="{{gear.image_url}}" alt="...">
                     <div class="caption">
                         <h3>{{gear.name}}</h3>
@@ -194,7 +197,7 @@
           <span class="gearCategory">Cooking Essential</span>
         <div class="row">            
             <div class="col-sm-6 col-md-3" ng-repeat="gear in gearList" ng-if="gear.category_id == 5">
-                <div class="thumbnail productThumbnail" data-toggle="tooltip" data-placement="left" title={{gear.description}}>
+                <div class="thumbnail productThumbnail" >
                     <img ng-src="{{gear.image_url}}" alt="...">
                     <div class="caption">
                         <h3>{{gear.name}}</h3>

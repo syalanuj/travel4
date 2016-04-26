@@ -1,5 +1,15 @@
 @charset "UTF-8";
 /* CSS Document */
+/*Fonts*/
+@font-face {
+    font-family: Lato;
+    src:url(../../fonts/Lato-Regular.woff);
+}
+@font-face {
+    font-family: Lato-Light;
+    src:url(../../fonts/Lato-Light.woff);
+}
+
 body{
 	font-family:"lato";
 	position:relative;
@@ -328,6 +338,7 @@ html, body {
 	}
 .gearListWrap p{
 	font-size:36px;
+	font-family:lato-light;
 }
 .gearListWrap input{
     border-top:none;
@@ -375,7 +386,6 @@ html, body {
 .gearListWrap{
 	position:relative;
 	font-size:20px;
-	padding-top:20px;
 	padding-bottom:20px;
 	text-align:center;
     margin-top: 100px;

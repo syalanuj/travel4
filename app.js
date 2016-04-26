@@ -1,6 +1,6 @@
 (function () {
     'use strict';
-    var app = angular.module('campture', ['ui.bootstrap', 'ngRoute', 'ngCookies', 'uiGmapgoogle-maps', 'ngAutocomplete', 'dropzone','ngAnimate','ngTouch','ngStorage']);
+    var app = angular.module('campture', ['ui.bootstrap', 'ngRoute', 'ngCookies', 'uiGmapgoogle-maps', 'ngAutocomplete', 'ngAnimate','ngTouch','ngStorage']);
     app.run(['$cookies', '$rootScope', '$window', '$location',
         function ($cookies, $rootScope, $window, $location) {
             $rootScope.isPageHeaderLoaded = false;
@@ -19,27 +19,8 @@
                     xfbml: true, // parse XFBML
                     frictionlessRequests: true // recommended
                 });
-                $rootScope.fbInit = true;
-
-                FB.getLoginStatus(function (response) {
-                    if (response.status === 'connected' && $cookies.get('userId') !== undefined) {
-
-                    }
-                });
-            };
-            (function(doc, script) {
-                var js,
-                    fjs = doc.getElementsByTagName(script)[0],
-                    add = function(url, id) {
-                        if (doc.getElementById(id)) {return;}
-                        js = doc.createElement(script);
-                        js.src = url;
-                        id && (js.id = id);
-                        fjs.parentNode.insertBefore(js, fjs);
-                    };
-                // Facebook SDK
-                add('//connect.facebook.net/en_US/all.js', 'facebook-jssdk');
-            }(document, 'script'));
+                $rootScope.fbInit = true;                
+            };            
 
         } ]);
 })();

@@ -1,6 +1,5 @@
-
 <div class="text-center">
-	<section class="map">
+    <section class="map">
     <ui-gmap-google-map center="map.center" zoom="map.zoom"  options="options" bounds="map.bounds">
         <ui-gmap-marker coords="marker.coords"  idkey="marker.id">
         </ui-gmap-marker>        
@@ -16,7 +15,18 @@
     <!--<a href="#/gearChecklistForm/" class="btn btn-primary" ><i class="fa fa-pencil-square-o" aria-hidden="true"> </i> Modify Trip</a>-->
     <a href="#/gearChecklistForm/" class="btn btn-campture"><i class="fa fa-plus-circle" aria-hidden="true"></i> New Trip</a>
    <p style="font-size:10px;" class="pull-left;"><strong>*</strong>Temperature might vary and might be different from our data base, please check the local temperature before you get packing.</p>
-    </div>    
+    </div>
+     <div ng-show="!isResultsShown" class="site-loader site-loader-center" style="margin-top: 50px;">
+            <div>
+                <div class="stick"></div>
+                <div class="stick"></div>
+                <div class="stick"></div>
+                <div class="stick"></div>
+                <div class="stick"></div>
+                <div class="stick"></div>
+            </div>
+            <p>I travel, therefore I am</p>
+        </div>    
     <div ng-show="isResultsShown" class="container text-center gearResults">
   <ul class="nav nav-pills nav-justified">
     <li class="active"><a data-toggle="pill" ng-click="updateTabPos(0)">List View</a></li>
@@ -29,9 +39,15 @@
   <table class="table">
     <thead>
       <tr>
+<<<<<<< HEAD
         <th class="col-sm-4 col-xs-4"><strong>Item Name</strong></th>
         <th class="col-sm-8 col-xs-8"><strong>Item Description</strong></th>
     	<!--<th>Buy Now</th>-->
+=======
+        <th><strong>Item Name</strong></th>
+        <th><strong>Item Description</strong></th>
+        <!--<th>Buy Now</th>-->
+>>>>>>> master
       </tr>
     </thead>
     <tbody>        
@@ -100,7 +116,7 @@
       <tr>
         <th>Item Name</th>
         <th>Item Description</th>
-    	<!--<th>Buy Now</th>-->
+        <!--<th>Buy Now</th>-->
       </tr>
     </thead>
     <tbody>        
@@ -127,7 +143,6 @@
                      </div>   
                 </div>
             </div>
-
         </div>
           <span class="gearCategory">Camping Gear</span>
         <div class="row">            
@@ -142,7 +157,6 @@
                      </div>   
                 </div>
             </div>
-
         </div>
           <span class="gearCategory">Walking & Hiking</span>
         <div class="row">            
@@ -157,7 +171,6 @@
                      </div>   
                 </div>
             </div>
-
         </div>
           <span class="gearCategory">Clothing Items</span>
         <div class="row">            
@@ -172,7 +185,6 @@
                      </div>   
                 </div>
             </div>
-
         </div>
           <span class="gearCategory">Accessories &amp; Essentials</span>
         <div class="row">            
@@ -187,7 +199,6 @@
                      </div>   
                      </div>
             </div>
-
         </div>
           <span class="gearCategory">Cooking Essential</span>
         <div class="row">            
@@ -202,7 +213,6 @@
                      </div>   
                 </div>
             </div>
-
         </div>
     </div>
     </div>
@@ -211,18 +221,4 @@
       <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
     </div>
   </div>
-  <p><strong>Note:</strong> Not every camping party will bring every item on this list, this is only for reference purposes. Always use your common sense and be prepared.</p>
-</div>
-
-    <div ng-show="!isResultsShown" class="site-loader site-loader-center" style="margin-top: 50px;">
-            <div>
-                <div class="stick"></div>
-                <div class="stick"></div>
-                <div class="stick"></div>
-                <div class="stick"></div>
-                <div class="stick"></div>
-                <div class="stick"></div>
-            </div>
-            <p>I travel, therefore I am</p>
-        </div>
-</div>
+  <p><strong>Note:</strong> Not every camping party will bring every item on this list, this is only for reference purposes. Always use 

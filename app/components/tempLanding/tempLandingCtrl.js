@@ -16,7 +16,7 @@
             var data = {
                 email: $scope.emailField1
             }
-            Parse.Cloud.run("sendEmail", data, {
+            Parse.Cloud.run("sendEmailMailgun", data, {
                 success: function (object) {
                     $('#response').html('Email sent!').addClass('success').fadeIn('fast');
                 },

@@ -1,14 +1,5 @@
 @charset "UTF-8";
 /* CSS Document */
-/*Fonts*/
-@font-face {
-    font-family: Lato;
-    src:url(../../fonts/Lato-Regular.woff);
-}
-@font-face {
-    font-family: Lato-Light;
-    src:url(../../fonts/Lato-Light.woff);
-}
 
 body{
 	font-family:"lato";
@@ -197,8 +188,7 @@ body{
 .marginauto {
 	margin: auto!important;
 }
-.headerfourbg {
-	background-image: url(../Images/Map.jpg);
+.headerfourbg {	
 	padding-bottom: 20px;
 }
 .ladhakpreview {

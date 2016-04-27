@@ -6,7 +6,7 @@
  I am travelling to
             <div class="gearFormInput " ng-class="{ 'has-error' : gearForm.location.$invalid && !gearForm.location.$pristine }">
                 <input class="locationInput" name="location" type="text" placeholder="Enter Location" ng-autocomplete ng-model="location" options="options" details="details" required>
-                <p ng-show="gearForm.location.$invalid && !gearForm.location.$pristine" class="help-block">required.</p>                
+                <p ng-show="gearForm.location.$invalid && !gearForm.location.$pristine" class="help-block help-block-position">*required.</p>                
             </div><br>
  on
             <!--<div class="gearFormInput">
@@ -15,13 +15,13 @@
             </div>-->
             <div class="gearFormInput">
             <input id="date2" name="date2" type="date" ng-model="date"  required placeholder="Choose a date">
-                <p ng-show="gearForm.date2.$invalid && !gearForm.date2.$pristine" class="help-block">required.</p>                
+                <p ng-show="gearForm.date2.$invalid && !gearForm.date2.$pristine" class="help-block help-block-position">*required.</p>                
             </div>
 for
 
         <div class="gearFormInput">
             <input name="duration" type="number" placeholder="No of days" ng-model="duration" min="1" required>
-            <p ng-show="gearForm.duration.$invalid && !gearForm.duration.$pristine" class="help-block">required.</p>                
+            <p ng-show="gearForm.duration.$invalid && !gearForm.duration.$pristine" class="help-block help-block-position">*required.</p>                
         </div><br>
             <button type="submit" style="margin-top: 20px" class="btn btn-campture btn-lg" ng-click="getCheckList(gearForm.$valid)" ng-disabled="gearForm.$invalid">Show Me What to Pack</button>
             <div class="gearPhotos">

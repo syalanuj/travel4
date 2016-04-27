@@ -676,7 +676,7 @@ a{
 	font-size:12px!important;
 	color:#a94442;
 }
-<<<<<<< HEAD
+
 .thumbnail {
     padding: 0px;
     display: block;
@@ -691,7 +691,7 @@ a{
     transition: border .2s ease-in-out;
     box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
 }
-=======
+
 
 .pac-container{
     border-bottom-right-radius: 6px;
@@ -736,4 +736,4 @@ a{
     background-repeat: no-repeat;
     background-size: 120px 14px;
 }
->>>>>>> master
+

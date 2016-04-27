@@ -45,8 +45,8 @@
             formatYear: 'yy',
             startingDay: 1
         };
-        $scope.getCheckList = function () {
-            if ($scope.location && $scope.date && $scope.duration) {
+        $scope.getCheckList = function (isValid) {
+            if (isValid && $scope.location && $scope.date && $scope.duration) {
                 var dateString = $scope.date.toISOString();
                 var dateString = dateString.substr(0, dateString.indexOf('T')) + 'T12:00:00-0400';
                 $location.path('/gearChecklistResults/' + $scope.coordinates.latitude + '/' + $scope.coordinates.longitude + '/' + $scope.location + '/' + $scope.duration + '/' + dateString);

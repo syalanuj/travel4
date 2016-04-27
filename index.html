@@ -121,7 +121,8 @@
         </main>
 		<button class="feedbackButton btn btn-lg btn-campture" data-toggle="modal" data-target="#feedbackModal">Feedback</button>
         <!--Feedbackmodal-->
-        <div id="feedbackModal" class="modal fade" role="dialog">
+
+        <div id="feedbackModal" ng-controller="TempLandingCtrl" class="modal fade" role="dialog">
   <div class="modal-dialog">
 
     <!-- Modal content-->
@@ -134,28 +135,29 @@
       <span>
       <label for="feedbackName">Name</label>
       <br>
-      <input type="text" id="feedbackName" class="feedbackInput">
+      <input ng-model="feedback.name" type="text" id="feedbackName" class="feedbackInput">
       </span>
       <br>
       <span>
       <label for="feedbackEmail">Email</label>
       <br>
-      <input type="email" id="feedbackEmail" class="feedbackInput">
+      <input ng-model="feedback.email" type="email" id="feedbackEmail" class="feedbackInput">
       </span>
       <span>
       <br>
       <label for="feedbackEmail">Comments</label>
       <br>
-      <textarea type="email" id="feedbackcomments" class="feedbackInput"></textarea>
+      <textarea ng-model="feedback.comments" id="feedbackcomments" class="feedbackInput"></textarea>
       </span>
       </div>
       <div class="modal-footer text-center">
-        <button type="button" class="btn btn-campture btn-block" data-dismiss="modal">Send</button>
+        <button ng-click="sendFeedback()" type="button" class="btn btn-campture btn-block" data-dismiss="modal">Send</button>
       </div>
     </div>
 
   </div>
 </div>
+
         <div class="asfeatured text-center">
             <p class="outdoor">As featured on</p>
             <div class="angellist">

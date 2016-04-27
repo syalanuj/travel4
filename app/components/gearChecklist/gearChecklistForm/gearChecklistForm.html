@@ -9,11 +9,11 @@
                 <p ng-show="gearForm.location.$invalid && !gearForm.location.$pristine" class="help-block help-block-position">*required.</p>                
             </div><br>
  on
-            <!--<div class="gearFormInput">
+            <div class="gearFormInput hidden-xs hidden-sm">
                 <input name="travelDate" type="text" placeholder="Enter Date" uib-datepicker-popup="dd-MMMM-yyyy" ng-model="date" is-open="status.opened" min-date="minDate" max-date="maxDate" datepicker-options="dateOptions" ng-required="true" close-text="Close" ng-click="open($event)" id="date" required>
                 <p ng-show="gearForm.travelDate.$invalid && !gearForm.travelDate.$pristine" class="help-block">required.</p>                
-            </div>-->
-            <div class="gearFormInput">
+            </div>
+            <div class="gearFormInput hidden-lg hidden-md">
             <input id="date2" name="date2" type="date" ng-model="date"  required placeholder="Choose a date">
                 <p ng-show="gearForm.date2.$invalid && !gearForm.date2.$pristine" class="help-block help-block-position">*required.</p>                
             </div>

@@ -66,7 +66,7 @@ body{
 
 .btn-campture{
 	background-color:#f78539;
-	font:lato;
+	font:lato-light;
 	font-weight:200;
 	color:#FFFFFF;
 }
@@ -233,6 +233,7 @@ body{
 	border-right: none!important;
 	border-radius: 0px!important;
 	-webkit-box-shadow: none!important;
+	box-shadow:none;
 	border-bottom: solid 1px rgb(190, 190, 190) !important;
 }
 .sectionfive.text-center .form-group.contactform p {
@@ -341,13 +342,27 @@ html, body {
 	font-size:24px;
 	font-family:lato-light;
 }
-.gearListWrap input{
-    border-top:none;
-    border-left:none;
-    border-right:none;
-    border-bottom:solid 2px;
-    text-align:center;
+
+.gearListWrap input[type=date]{
+	border-top: solid 2px;
+    border-left: solid 2px;
+    border-right: solid 2px;
+    border-bottom: solid 2px;
+    border-color: #cecece;
+    border-radius: 10px;
+    text-align: center;
+    margin: 10px;
 }
+.gearListWrap input[type=date]::-webkit-datetime-edit-day-field {
+    color: #f78539;
+  }
+  
+.gearListWrap input[type=date]::-webkit-datetime-edit-month-field {
+    color: #f78539;
+  }
+  .gearListWrap input[type=date]::-webkit-datetime-edit-year-field {
+    color: #f78539;
+  }
 .gearListWrap input:focus{
     border-bottom-color:#f56c36;
     outline:none;
@@ -621,4 +636,126 @@ a{
 }
 .nav>li>a:focus, .nav>li>a:hover{
 	color:black;
+}
+.waves-effect {
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+    overflow: hidden;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    vertical-align: middle;
+    z-index: 1;
+    will-change: opacity, transform;
+    transition: all .3s ease-out;
+}
+/*feedback*/
+.feedbackButton{
+	position:fixed;
+	bottom:10px;
+	right:60px;
+	border-radius:30px;
+	font-family:lato-light;
+	letter-spacing:0.02em;
+	font-size:1.1em;
+}
+.input__label-content {
+    position: relative;
+    display: block;
+    padding: 1.6em 0;
+    width: 100%;
+}
+.input__label-content--haruki {
+    -webkit-transition: -webkit-transform 0.3s;
+    transition: transform 0.3s;
+}
+.input__label--haruki::before, .input__label--haruki::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 4px;
+    background: #6a7989;
+    -webkit-transition: -webkit-transform 0.3s;
+    transition: transform 0.3s;
+}
+.input__label--haruki {
+    position: absolute;
+    width: 100%;
+    text-align: left;
+    pointer-events: none;
+}
+.input__label {
+    display: inline-block;
+    float: right;
+    padding: 0 1em;
+    width: 40%;
+    color: #6a7989;
+    font-weight: bold;
+    font-size: 70.25%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.input__field--haruki {
+    padding: 0.4em 0.25em;
+    width: 100%;
+    background: transparent;
+    color: #AFB5BB;
+    font-size: 1.55em;
+}
+.input__field {
+    position: relative;
+    display: block;
+    float: right;
+    padding: 0.8em;
+    width: 60%;
+    border: none;
+    border-radius: 0;
+    background: #f0f0f0;
+    color: #aaa;
+    font-weight: bold;
+    font-family: Lato, Helvetica, Arial, sans-serif;
+    -webkit-appearance: none;
+}
+.feedbackInput{
+	position: relative;
+    z-index: 1;
+    display: inline-block;
+    margin: 1em;
+    max-width: 350px;
+    width: calc(100% - 2em);
+    vertical-align: top;
+}
+.input__label--haruki {
+    position: absolute;
+    width: 100%;
+    text-align: left;
+    pointer-events: none;
+}
+.input__label {
+    display: inline-block;
+    float: right;
+    padding: 0 1em;
+    width: 40%;
+    color: #6a7989;
+    font-weight: bold;
+    font-size: 70.25%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }

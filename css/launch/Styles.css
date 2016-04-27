@@ -682,3 +682,47 @@ a{
 	font-size:12px!important;
 	color:#a94442;
 }
+
+.pac-container{
+    border-bottom-right-radius: 6px;
+    border-bottom-left-radius: 6px;
+    box-shadow: none;
+    box-shadow: 0px 2px 4px -2px rgba(161, 161, 161, 0.47);
+}
+.pac-container:after {
+    background-image: none !important;
+    display: none;
+
+}
+.pac-item{
+    padding: 1em 2em 1em 2.2em;
+    background-color: #F9F9F9;
+}
+.pac-item:hover{
+    background-color: #fff;
+}
+.pac-item:first-child{
+    border-top: none;
+}
+.pac-matched{
+    font-weight: normal;
+}
+.pac-item-query{
+    font-family: lato;
+    font-size: 1.3em;
+    color: #000;
+}
+.pac-icon{
+    display: none;
+}
+.pac-logo:after {
+    content: "";
+    padding: 1px 1px 1px 0;
+    height: 16px;
+    text-align: right;
+    display: block;
+    background-image: url(https://maps.gstatic.com/mapfiles/api-3/images/powered-by-google-on-white3_hdpi.png) !important;
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: 120px 14px;
+}

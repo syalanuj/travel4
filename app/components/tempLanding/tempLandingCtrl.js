@@ -11,12 +11,13 @@
         $scope.emailField2;
         $scope.mailSubject;
         $scope.mailMessage;
+        $scope.feedback = new Object();
 
         $scope.sendUserEmail = function () {
             var data = {
                 email: $scope.emailField1
             }
-            Parse.Cloud.run("sendEmail", data, {
+            Parse.Cloud.run("sendEmailMailgun", data, {
                 success: function (object) {
                     $('#response').html('Email sent!').addClass('success').fadeIn('fast');
                 },
@@ -35,6 +36,24 @@
                 message: $scope.mailMessage
             }
             Parse.Cloud.run("sendUserQuery", data, {
+                success: function (object) {
+                    $('#response').html('Email sent!').addClass('success').fadeIn('fast');
+                },
+
+                error: function (object, error) {
+                    console.log(error);
+                    $('#response').html('Error! Email not sent!').addClass('error').fadeIn('fast');
+                }
+            });
+        }
+        $scope.sendFeedback = function (){
+
+            var data = {
+                name: $scope.feedback.name,
+                email: $scope.feedback.email,
+                comments: $scope.feedback.comments
+            }
+            Parse.Cloud.run("sendFeedback", data, {
                 success: function (object) {
                     $('#response').html('Email sent!').addClass('success').fadeIn('fast');
                 },

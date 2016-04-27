@@ -14,7 +14,7 @@
         $scope.dateValue = $routeParams.dateString;
         $scope.duration = $routeParams.numberOfDays;
         $scope.options;
-        $scope.date;        
+        $scope.date;
         $scope.status = {
             opened: false
         };
@@ -44,64 +44,22 @@
         $scope.dateOptions = {
             formatYear: 'yy',
             startingDay: 1
-        };        
+        };
         $scope.getGearCheckList = function () {
-            gearService.getWeatherData($scope.coordinates, $scope.dateValue).then(function (weatherData) {
-                if (weatherData && weatherData.status == 200) {
-                    if (weatherData.data.daily && weatherData.data.daily.data[0]) {
-                        $scope.maxTemp = (weatherData.data.daily.data[0].temperatureMax - 32) * (5 / 9);
-                        $scope.minTemp = (weatherData.data.daily.data[0].temperatureMin - 32) * (5 / 9);
-                        temperatureGrade = getTemperatureGrade($scope.minTemp);
-                        durationGrade = getDurationGrade($scope.duration);
-                        gearService.getGearList(temperatureGrade, durationGrade, function (data) {
-                            if (data) {
-                                $scope.gearList = data;
-                                $scope.isResultsShown = true;
-                                $scope.$apply();
-                            }
-                        });
-                    }
+            gearService.getWeatherDataFromCloud($scope.coordinates, $scope.dateValue, $scope.duration, function (data) {
+                if (data) {
+                    $scope.gearList = data.gearList;
+                    $scope.minTemp = data.minTemp;
+                    $scope.maxTemp = data.maxTemp;
+                    $scope.isResultsShown = true;
+                    $scope.$apply();
                 }
             });
+
         }
         $scope.getGearCheckList();
         $scope.updateTabPos = function (pos) {
             $scope.profileTabPos = pos;
-        }
-        function getTemperatureGrade(temp) {
-            var grade
-            if (temp < -10) {
-                grade = 0;
-            }
-            else if (temp < 0) {
-                grade = 1;
-            }
-            else if (temp < 10) {
-                grade = 2;
-            }
-            else if(temp < 20){
-                grade = 3;
-            }
-            else{
-                grade = 4;
-            }
-            return grade;
-        }
-        function getDurationGrade(duration) {
-            var grade
-            if (duration <= 1) {
-                grade = 0;
-            }
-            else if (duration <= 3) {
-                grade = 1;
-            }
-            else if (duration <= 6) {
-                grade = 2;
-            }
-            else {
-                grade = 3;
-            }
-            return grade;
         }
 
     };

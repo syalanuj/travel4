@@ -12,10 +12,7 @@
         
         <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.0.0/normalize.min.css">
         <!--in house-->
-        <!--build:css css/styles.min.css-->
-        <link rel="stylesheet" type="text/css" href="css/colorbox.css" media="screen" />
-        <link rel="stylesheet" href="css/launch/Styles.css">
-        <!--endbuild-->
+        <link rel="stylesheet" href="css/main/styles.min.css">
 
         <!--Parse Dependencies-->        
         <!--Meta-->
@@ -29,21 +26,11 @@
         <meta charset="utf-8" />
 
         <title>Campture</title>
-        <style>
-		@font-face {
-    font-family: Lato;
-    src:url(../../fonts/Lato-Regular.woff);
-}
-@font-face {
-    font-family: Lato-Light;
-    src:url(../../fonts/Lato-Light.woff);
-}
-		</style>
     </head>
     <body>
         <div id="fb-root"></div>
         <div >
-            <nav id="headerId" style="display: none; background-color: rgba(23, 23, 23,.302); border-bottom:0;" class="navbar navbar-default no-margin no-background on-top navbar-fixed-top">
+            <nav id="headerId" style="display: none; background-color: rgba(23, 23, 23,.302); border-bottom:0;" class="navbar navbar-default no-margin no-background on-top navbar-fixed-top" ">
                 <div class="container-fluid">
                     <!-- Brand and toggle get grouped for better mobile display -->
                     <div class="navbar-header">
@@ -60,9 +47,6 @@
                         <ul class="nav navbar-nav">
                             <li><a href="http://www.campture.com/blog/" target="_blank" class="navbar-fonts" style="color:white;">BLOG</a></li>
                             <li><a href="#/gearChecklistForm" class="navbar-fonts" style="color:white;">GEAR CHECKLIST</a></li>
-                        </ul>
-                        <ul class="nav navbar-nav navbar-right">
-                        <li class="navbar-fonts" ><a style="color:white;" target="_blank" href="https://sunaljain.typeform.com/to/FHeNgQ">CAMPTURE PARTNERS PROGRAM</a></li>
                         </ul>
                     </div><!-- /.navbar-collapse -->
                 </div><!-- /.container-fluid -->
@@ -119,44 +103,6 @@
         <main style="min-height: 100vh" class="top-margin">
             <div ng-view autoscroll="true"></div>
         </main>
-		<button class="feedbackButton btn btn-lg btn-campture" data-toggle="modal" data-target="#feedbackModal">Feedback</button>
-        <!--Feedbackmodal-->
-
-        <div id="feedbackModal" ng-controller="TempLandingCtrl" class="modal fade" role="dialog">
-  <div class="modal-dialog">
-
-    <!-- Modal content-->
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Feedback</h4>
-      </div>
-      <div class="modal-body">
-      <span>
-      <label for="feedbackName">Name</label>
-      <br>
-      <input ng-model="feedback.name" type="text" id="feedbackName" class="feedbackInput">
-      </span>
-      <br>
-      <span>
-      <label for="feedbackEmail">Email</label>
-      <br>
-      <input ng-model="feedback.email" type="email" id="feedbackEmail" class="feedbackInput">
-      </span>
-      <span>
-      <br>
-      <label for="feedbackEmail">Comments</label>
-      <br>
-      <textarea ng-model="feedback.comments" id="feedbackcomments" class="feedbackInput"></textarea>
-      </span>
-      </div>
-      <div class="modal-footer text-center">
-        <button ng-click="sendFeedback()" type="button" class="btn btn-campture btn-block" data-dismiss="modal">Send</button>
-      </div>
-    </div>
-
-  </div>
-</div>
 
         <div class="asfeatured text-center">
             <p class="outdoor">As featured on</p>
@@ -179,7 +125,7 @@
             <!--<span class="footersocial"><i class="fa fa-instagram"></i></span>!-->
             <a href="https://www.pinterest.com/campture/"><span class="footersocial"><i class="fa fa-pinterest"></i></span></a> <span class="pull-right">Campture 2015 &copy; All Rights Reserved</span>
         </div>
-
+		
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
         <!--Parse-->
@@ -187,60 +133,11 @@
         <!--Map API Dependencies-->
         <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCRpJLhktqH2XbHlB4WLvZ169ECwqOG-BE&libraries=places"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.8.0/lodash.min.js"></script>
-        <!--build:js js/main.min.js -->
-        <script src="js/bootstrap-datepicker.js"></script>
-        <script src="js/bootstrap-timepicker.js"></script>
-
-        <!-- Angular Dependencies -->
-        <!-- JS-->
-        <script src="js/angular.min.js"></script><!--js/angular.js-->
-        <script src="js/angular-messages.min.js"></script>
-        <script src="js/angular-route.min.js"></script>
-        <script src="js/angular-cookies.js"></script>
-        <script src="js/ui-bootstrap-tpls-0.14.3.js"></script>
-        <script src="js/angular-animate.min.js"></script>
-        <!--New Dependencies-->
-        <script src="js/angular-touch.min.js"></script>
-        <script src="js/ngStorage.min.js"></script>
-
-        <!--Timeline Dependencies-->
-        <!--Map API Dependencies-->
-        <script src="js/angular-simple-logger.js"></script>
-        <script src="js/angular-google-maps.min.js"></script>
-        <script src="js/ngAutocomplete/ngAutocomplete.js"></script>
-
-        
-        <!--Angular Routing-->
-        <!--Main-->
-        <script src="app.js"></script>
-        <!--Services-->
-        <script src="app/services/gearService.js"></script>
-        <script src="app/services/parse-angular/ParseServices.js"></script>
-
-        <!--Directives-->
-        <script src="app/components/commentsDirective/dynamicFbCommentBox.js"></script>
-        <script src="app/components/colorbox/modalDialogDirective.js"></script>
-
-        <!--Controller-->
-
-        <script src="app/components/gearChecklist/gearChecklistCtrl.js"></script>
-        <script src="app/components/tempLanding/tempLandingCtrl.js"></script>
-        <script src="app/components/gearChecklist/gearChecklistForm/gearChecklistFormCtrl.js"></script>
-        <!--Main Route-->
-        <script src="app.route.js"></script>
-        <script src="configMap.js"></script>
-        <!-- endbuild -->
+        <script src="js/main/main.min.js"></script>
         <script type="text/javascript">
             $(document).ready(function () {
                 $('#headerId').css("display", "block");
             });           
-        </script>
-        <script src="js/nicescroll.js"></script>
-        <script type="text/javascript">
-            $(document).ready(function() {  
-    $("html").niceScroll();
-});
-
         </script>
     </body>
 </html>

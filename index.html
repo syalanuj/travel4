@@ -129,6 +129,7 @@
 
     <!-- Modal content-->
     <div class="modal-content">
+    <form name="feedbackForm" action="" ng-submit="getCheckList(gearForm.$valid)" novalidate>
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal">&times;</button>
         <h4 class="modal-title">Feedback</h4>
@@ -137,13 +138,18 @@
       <span>
       <label for="feedbackName">Name</label>
       <br>
-      <input ng-model="feedback.name" type="text" id="feedbackName" class="feedbackInput">
+      <input name="feedbackName" ng-model="feedback.name" type="text" id="feedbackName" class="feedbackInput" required>
+      <span ng-show="(feedbackForm.feedbackName.$dirty || submitted) && feedbackForm.feedbackName.$error.required">
+          *required
       </span>
       <br>
       <span>
       <label for="feedbackEmail">Email</label>
       <br>
-      <input ng-model="feedback.email" type="email" id="feedbackEmail" class="feedbackInput">
+      <input name="feedbackEmail" ng-model="feedback.email" type="email" id="feedbackEmail" class="feedbackInput" required>
+      <span ng-show="(feedbackForm.feedbackEmail.$dirty || submitted) && feedbackForm.feedbackEmail.$error.required">
+          *required
+      </span>
       </span>
       <span>
       <br>
@@ -153,14 +159,15 @@
       </span>
       </div>
       <div class="modal-footer text-center">
-        <button ng-click="sendFeedback()" type="button" class="btn btn-campture btn-block" data-dismiss="modal">Send</button>
+        <button ng-click="sendFeedback(feedbackForm.$valid)" type="button" class="btn btn-campture btn-block">Send</button> <!--data-dismiss="modal"-->
       </div>
+    </form>
     </div>
 
   </div>
 </div>
 
-        <div class="asfeatured text-center">
+        <div class="asfeatured tet-center"> 
             <p class="outdoor">As featured on</p>
             <div class="angellist">
                 <img src="Images/Angel list/Logos/AngelList_White_Lockup-62a6d2396ec4758d26016fc9b65d6cb1.png"> <img src="Images/Angel list/Logos/Lets venture.png"> <img src="Images/Angel list/Logos/Beta List.png"> <img src="Images/Angel list/Logos/Launching Next.png">

@@ -46,23 +46,29 @@
                 }
             });
         }
-        $scope.sendFeedback = function (){
-
-            var data = {
-                name: $scope.feedback.name,
-                email: $scope.feedback.email,
-                comments: $scope.feedback.comments
-            }
-            Parse.Cloud.run("sendFeedback", data, {
-                success: function (object) {
-                    $('#response').html('Email sent!').addClass('success').fadeIn('fast');
-                },
-
-                error: function (object, error) {
-                    console.log(error);
-                    $('#response').html('Error! Email not sent!').addClass('error').fadeIn('fast');
+        $scope.sendFeedback = function (isValid) {
+            $scope.submitted = true;
+            if (isValid) {
+                var data = {
+                    name: $scope.feedback.name,
+                    email: $scope.feedback.email,
+                    comments: $scope.feedback.comments
                 }
-            });
+                Parse.Cloud.run("sendFeedback", data, {
+                    success: function (object) {
+                        $scope.submitted = false;
+                         $('#feedbackModal').modal('hide');
+                        $('#response').html('Email sent!').addClass('success').fadeIn('fast');
+                    },
+
+                    error: function (object, error) {
+                        $scope.submitted = false;
+                         $('#feedbackModal').modal('hide');
+                        console.log(error);
+                        $('#response').html('Error! Email not sent!').addClass('error').fadeIn('fast');
+                    }
+                });
+            }
         }
     };
 })();

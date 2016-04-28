@@ -23,6 +23,7 @@
         var durationGrade;
         $scope.isResultsShown = false;
         $scope.profileTabPos = 0;
+        $scope.pollDone = false;
 
         $scope.details = function (details) {
             $scope.location = new Object();
@@ -60,6 +61,14 @@
         $scope.getGearCheckList();
         $scope.updateTabPos = function (pos) {
             $scope.profileTabPos = pos;
+        }
+        $scope.buyGearPoll = function (decision) {
+            gearService.gearBuyPoll(decision, function (data) {
+                if (data) {
+                    $scope.pollDone = true;
+                    $scope.$apply();
+                }
+            });
         }
 
     };

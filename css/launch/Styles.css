@@ -151,7 +151,6 @@ body{
 }
 .secondsection {
 	background-color: #f4f5f9;
-	;
 	padding: 70px;
 }
 .third-section {
@@ -169,7 +168,7 @@ body{
 }
 .outdoor {
 	font-size: 28px;
-	font-family: 'lato';
+	font-family: lato;
 	font-weight: 700;
 	color: rgb(106, 106, 106);
 	text-transform: uppercase;
@@ -178,10 +177,10 @@ body{
 }
 .campturelets {
 	margin: 30px;
-	font-size: 20px;
-	font-family: "lato";
+	font-size: 22px;
+	font-family: lato-light;
 	font-weight: 500;
-	color: rgb(153, 153, 153);
+	color: #525354;
 	letter-spacing: .02em;
 }
 .features {
@@ -651,7 +650,7 @@ a{
 .feedbackButton{
 	position:fixed;
 	bottom:10px;
-	right:60px;
+	left:60px;
 	border-radius:30px;
 	font-family:lato-light;
 	letter-spacing:0.02em;
@@ -798,4 +797,8 @@ a{
  }
 
 }
-
+.checklistShowcase{
+	padding-top:10%;
+	min-height:100vh;
+	font-family:lato-light;
+}

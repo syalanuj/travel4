@@ -651,7 +651,7 @@ a{
 .feedbackButton{
 	position:fixed;
 	bottom:10px;
-	right:60px;
+	left:60px;
 	border-radius:30px;
 	font-family:lato-light;
 	letter-spacing:0.02em;

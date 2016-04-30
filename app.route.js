@@ -17,6 +17,12 @@
             controller: 'GearChecklistCtrl',
             templateUrl:'app/components/gearChecklist/gearChecklist.html'
         })
+        .when('/explore/',{
+            templateUrl:'app/components/exploreComingSoon/exploreComingSoon.html'
+        })
+        .when('/location/',{
+            templateUrl:'app/components/locationComingSoon/locationComingSoon.html'
+        })
         .when('/pageNotFound/',{
             controller: 'ErrorPageCtrl',
             templateUrl:'app/components/error/errorPage.html'

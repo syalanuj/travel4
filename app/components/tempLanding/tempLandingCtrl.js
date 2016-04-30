@@ -2,8 +2,8 @@
     'use strict';
 
     var app = angular.module('campture');
-    app.controller('TempLandingCtrl', ['$scope', '$cookies', '$rootScope', 'GearService', controller]);
-    function controller($scope, $cookies, $rootScope, gearService) {
+    app.controller('TempLandingCtrl', ['$scope', '$cookies', '$rootScope','$route', 'GearService', controller]);
+    function controller($scope, $cookies, $rootScope,$route, gearService) {
         //====== Scope Variables==========
         //================================
         $scope.emailField1;
@@ -20,11 +20,13 @@
             Parse.Cloud.run("sendEmailMailgun", data, {
                 success: function (object) {
                     $('#response').html('Email sent!').addClass('success').fadeIn('fast');
+                    $route.reload();
                 },
 
                 error: function (object, error) {
                     console.log(error);
                     $('#response').html('Error! Email not sent!').addClass('error').fadeIn('fast');
+                     $route.reload();
                 }
             });
         }
@@ -38,11 +40,13 @@
             Parse.Cloud.run("sendUserQuery", data, {
                 success: function (object) {
                     $('#response').html('Email sent!').addClass('success').fadeIn('fast');
+                    $route.reload();
                 },
 
                 error: function (object, error) {
                     console.log(error);
                     $('#response').html('Error! Email not sent!').addClass('error').fadeIn('fast');
+                    $route.reload();
                 }
             });
         }
@@ -57,15 +61,17 @@
                 Parse.Cloud.run("sendFeedback", data, {
                     success: function (object) {
                         $scope.submitted = false;
-                         $('#feedbackModal').modal('hide');
+                        $('#feedbackModal').modal('hide');
                         $('#response').html('Email sent!').addClass('success').fadeIn('fast');
+                         $route.reload();
                     },
 
                     error: function (object, error) {
                         $scope.submitted = false;
-                         $('#feedbackModal').modal('hide');
+                        $('#feedbackModal').modal('hide');
                         console.log(error);
                         $('#response').html('Error! Email not sent!').addClass('error').fadeIn('fast');
+                         $route.reload();
                     }
                 });
             }

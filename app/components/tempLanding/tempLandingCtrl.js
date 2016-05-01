@@ -2,8 +2,8 @@
     'use strict';
 
     var app = angular.module('campture');
-    app.controller('TempLandingCtrl', ['$scope', '$cookies', '$rootScope','$route', 'GearService', controller]);
-    function controller($scope, $cookies, $rootScope,$route, gearService) {
+    app.controller('TempLandingCtrl', ['$scope', '$cookies', '$rootScope', '$route', 'GearService', controller]);
+    function controller($scope, $cookies, $rootScope, $route, gearService) {
         //====== Scope Variables==========
         //================================
         $scope.emailField1;
@@ -12,6 +12,8 @@
         $scope.mailSubject;
         $scope.mailMessage;
         $scope.feedback = new Object();
+        $scope.isemailField1Sent = false;
+        $scope.isContactUsFormSent = false;
 
         $scope.sendUserEmail = function () {
             var data = {
@@ -20,13 +22,15 @@
             Parse.Cloud.run("sendEmailMailgun", data, {
                 success: function (object) {
                     $('#response').html('Email sent!').addClass('success').fadeIn('fast');
-                    $route.reload();
+                    $scope.isemailField1Sent = true;
+                    $scope.emailField1 = undefined;
+                    $scope.$apply();
                 },
 
                 error: function (object, error) {
                     console.log(error);
                     $('#response').html('Error! Email not sent!').addClass('error').fadeIn('fast');
-                     $route.reload();
+                    $route.reload();
                 }
             });
         }
@@ -40,6 +44,11 @@
             Parse.Cloud.run("sendUserQuery", data, {
                 success: function (object) {
                     $('#response').html('Email sent!').addClass('success').fadeIn('fast');
+                    $scope.isContactUsFormSent = true;
+                    $scope.userName = undefined;
+                    $scope.emailField2 = undefined;
+                    $scope.mailSubject = undefined;
+                    $scope.mailMessage = undefined;
                     $route.reload();
                 },
 
@@ -63,7 +72,7 @@
                         $scope.submitted = false;
                         $('#feedbackModal').modal('hide');
                         $('#response').html('Email sent!').addClass('success').fadeIn('fast');
-                         $route.reload();
+                        $route.reload();
                     },
 
                     error: function (object, error) {
@@ -71,7 +80,7 @@
                         $('#feedbackModal').modal('hide');
                         console.log(error);
                         $('#response').html('Error! Email not sent!').addClass('error').fadeIn('fast');
-                         $route.reload();
+                        $route.reload();
                     }
                 });
             }

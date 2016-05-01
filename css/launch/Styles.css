@@ -597,6 +597,7 @@ transform:rotate(-30deg);
 	min-height:350px;
 	position:relative;
 	overflow:hidden;
+    color: #525354 !important;
 }
 .productCaption{
 	position:absolute;

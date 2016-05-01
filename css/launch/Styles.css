@@ -316,8 +316,7 @@ body{
 }
 }
 .yourexpert {
-	font-family: lato;
-	font-weight: 100;
+	font-family: lato-light;
 	text-transform: none;
 	font-size: 30px;
 	margin-bottom: 40px;

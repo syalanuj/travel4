@@ -49,7 +49,7 @@
                     $scope.emailField2 = undefined;
                     $scope.mailSubject = undefined;
                     $scope.mailMessage = undefined;
-                    $route.reload();
+                    $scope.$apply();
                 },
 
                 error: function (object, error) {

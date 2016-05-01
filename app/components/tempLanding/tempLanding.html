@@ -15,7 +15,7 @@
                     </span>                                     
                 </div>
                     </form>
-                    <p style="font-family:lato-light;">
+                    <p ng-show="isemailField1Sent" style="font-family:lato-light;">
                     Thank You!
                     </p> 
                 <!-- /input-group -->
@@ -141,7 +141,7 @@
         <p>Message</p>
         <input ng-model="mailMessage" type="text" class="form-control formcomponent" placeholder="" aria-describedby="basic-addon1">
         <button class="btn btn-orange" type="submit" ng-click=""><span>Send Message</span></button><br>
-        <span>Thank You!</span>
+        <span ng-show="isContactUsFormSent">Thank You!</span>
     </div>
     </form>
 </div>

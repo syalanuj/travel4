@@ -1,6 +1,8 @@
 @charset "UTF-8";
 /* CSS Document */
-
+html{
+    overflow-x: hidden;
+}
 .navtext{
 	top:15px;
 }
@@ -12,6 +14,7 @@
 html{
 	overflow-y: scroll; /* has to be scroll, not auto */
   -webkit-overflow-scrolling:touch;
+  overflow-x: hidden;
 }
 body{
 	font-family:"lato";

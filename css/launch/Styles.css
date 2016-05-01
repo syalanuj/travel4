@@ -802,3 +802,22 @@ a{
 	min-height:100vh;
 	font-family:lato-light;
 }
+/*inspiration board*/
+.insp-panel{
+	padding-left:0px!important;
+	padding-right:0px!important;
+}
+.insp-panel img{
+	width:100%;
+}
+/*coming soon*/
+.comingSoonWrap p{
+	position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    text-align: center;
+    top: 2em;
+    font-size: 8em;
+	font:lato-light;
+	
+	}

@@ -4,7 +4,7 @@
             <div class="text-center yourguide">
                 <img src="Images/Logo 2.png" class="img-responsive herologo">
                 <div class="row" style="margin-bottom: 10px;">
-                    <span class="yourexpert">Your expert guide to everything outdoor</span>
+                    <span class="yourexpert">Your expert guide to everything outdoors</span>
                 </div>
                 <br>
                 <form ng-submit="sendUserEmail()">
@@ -12,12 +12,12 @@
                     <input ng-model="emailField1" type="text" class="form-control form-control-camptureme" placeholder="Your email address" required>
                     <span class="input-group-btn">
                         <button class="btn btn-orange" type="submit">Campture Me!</button>
-                    </span>                    
-                    <span >
-                    Thank You
-                    </span>                    
+                    </span>                                     
                 </div>
                     </form>
+                    <p style="font-family:lato-light;">
+                    Thank You!
+                    </p> 
                 <!-- /input-group -->
                 <a href="https://www.facebook.com/groups/campture/?fref=ts" style="color:white;" target="_blank">
                     <button class="btn btn-orange joincommunity maxwidth" type="button"><span><em class="fa fa-facebook">&nbsp; &nbsp; </em>Join our adventure community</span></button>
@@ -131,7 +131,7 @@
     <p class="outdoor">Contact Us</p>
     <p class="campturelets">Put yourself out there with the people, places and things that make it worth exploring. This is your world. Go, Campture it!</p>
     <form ng-submit="sendUserQuery()">
-    <div class="form-group contactform maxwidth container">
+    <div class="form-group contactform maxwidth container text-center">
         <p>Name</p>
         <input ng-model="userName" type="text" class="form-control formcomponent" placeholder="" aria-describedby="basic-addon1" required>
         <p>Email</p>
@@ -140,8 +140,8 @@
         <input ng-model="mailSubject" type="text" class="form-control formcomponent" placeholder="" aria-describedby="basic-addon1">
         <p>Message</p>
         <input ng-model="mailMessage" type="text" class="form-control formcomponent" placeholder="" aria-describedby="basic-addon1">
-        <button class="btn btn-orange" type="submit" ng-click=""><span>Send Message</span></button>
-        <p  class="text-center">Thank You</p>
+        <button class="btn btn-orange" type="submit" ng-click=""><span>Send Message</span></button><br>
+        <span>Thank You!</span>
     </div>
     </form>
 </div>

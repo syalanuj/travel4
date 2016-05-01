@@ -1,6 +1,14 @@
 @charset "UTF-8";
 /* CSS Document */
 
+.navtext{
+	top:15px;
+}
+.navLogo{
+	left:49%;
+	position:absolute;
+}
+@media screen and (max-width: 768px){
 html{
 	overflow-y: scroll; /* has to be scroll, not auto */
   -webkit-overflow-scrolling:touch;
@@ -11,14 +19,6 @@ body{
 	overflow-y: scroll; /* has to be scroll, not auto */
   -webkit-overflow-scrolling: touch;
 }
-.navtext{
-	top:15px;
-}
-.navLogo{
-	left:49%;
-	position:absolute;
-}
-@media screen and (max-width: 768px){
 	.navLogo{
 	left:47%!important;
 	position:absolute !important;

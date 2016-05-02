@@ -72,7 +72,9 @@
                         $scope.submitted = false;
                         $('#feedbackModal').modal('hide');
                         $('#response').html('Email sent!').addClass('success').fadeIn('fast');
-                        $route.reload();
+                        $scope.feedback.name = undefined;
+                        $scope.feedback.email = undefined;
+                        $scope.feedback.comments = undefined;
                     },
 
                     error: function (object, error) {

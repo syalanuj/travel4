@@ -48,10 +48,12 @@
         };
         $scope.getCheckList = function (isValid) {
             $scope.submitted = true;
-            if (isValid && $scope.location && $scope.date && $scope.duration) {
-                var dateString = $scope.date.toISOString();
-                var dateString = dateString.substr(0, dateString.indexOf('T')) + 'T12:00:00-0400';
-                $location.path('/gearChecklistResults/' + $scope.coordinates.latitude + '/' + $scope.coordinates.longitude + '/' + $scope.location + '/' + $scope.duration + '/' + dateString);
+            if ($scope.coordinates && $scope.coordinates.latitude && $scope.coordinates.longitude) {
+                if (isValid && $scope.location && $scope.date && $scope.duration) {
+                    var dateString = $scope.date.toISOString();
+                    var dateString = dateString.substr(0, dateString.indexOf('T')) + 'T12:00:00-0400';
+                    $location.path('/gearChecklistResults/' + $scope.coordinates.latitude + '/' + $scope.coordinates.longitude + '/' + $scope.location + '/' + $scope.duration + '/' + dateString);
+                }
             }
         }
         $scope.updateTabPos = function (pos) {

@@ -24,6 +24,8 @@
         $scope.isResultsShown = false;
         $scope.profileTabPos = 0;
         $scope.pollDone = false;
+        $scope.gearChecklistFeedback = new Object();
+        $scope.submitted = false;
 
         $scope.details = function (details) {
             $scope.location = new Object();
@@ -69,6 +71,35 @@
                     $scope.$apply();
                 }
             });
+        }
+
+        $scope.postGearChecklistFeedback = function (isValid) {
+            $scope.submitted = true;
+            if (isValid) {
+                var data = {
+                    name: $scope.gearChecklistFeedback.name,
+                    email: $scope.gearChecklistFeedback.email,
+                    location: $scope.gearChecklistFeedback.location,
+                    date: $scope.gearChecklistFeedback.date.toDateString(),
+                    comments: $scope.gearChecklistFeedback.comments
+                }
+                Parse.Cloud.run("sendGearChecklistFeedback", data, {
+                    success: function (object) {
+                        $scope.submitted = false;
+                        $('#checklistFeedback').modal('hide');
+                        $scope.gearChecklistFeedback = undefined;
+                        $('#response').html('Email sent!').addClass('success').fadeIn('fast');
+                    },
+
+                    error: function (object, error) {
+                        $scope.submitted = false;
+                        $('#checklistFeedback').modal('hide');
+                        $scope.gearChecklistFeedback = undefined;
+                        console.log(error);
+                        $('#response').html('Error! Email not sent!').addClass('error').fadeIn('fast');
+                    }
+                });
+            }
         }
 
     };

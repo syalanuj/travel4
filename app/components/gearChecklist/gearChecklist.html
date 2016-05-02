@@ -84,6 +84,13 @@
         </tr>
       </tbody>
   </table>
+  <div ng-show="!pollDone" style="padding-bottom:20px" class="well">
+    <p>Would you like to find best deals on Campture recommended gear?</p>
+  <button class="btn btn-success" ng-click="buyGearPoll(1)">Yes</button> <button class="btn btn-danger" ng-click="buyGearPoll(0)">No</button>
+  </div>
+  <p ng-show="pollDone" style="font-family:lato-light;">
+                    Thank You!
+                    </p>
         <span class="gearCategory pull-left">Personal Items</span>
   <table class="table">
     <tbody>        
@@ -134,7 +141,7 @@
                 <div class="thumbnail productThumbnail" >
                     <img ng-src="{{gear.image_url}}" alt="...">
                     <div class="caption">
-                        <h3>{{gear.name}}</h3>
+                        <h4>{{gear.name}}</h4>
                         </div>
                      <div class="productCaption">
                      {{gear.description}}
@@ -148,7 +155,7 @@
                 <div class="thumbnail productThumbnail" >
                     <img ng-src="{{gear.image_url}}" alt="...">
                     <div class="caption">
-                        <h3>{{gear.name}}</h3>
+                        <h4>{{gear.name}}</h4>
                         </div>
                      <div class="productCaption">
                      {{gear.description}}
@@ -162,7 +169,7 @@
                 <div class="thumbnail productThumbnail" >
                     <img ng-src="{{gear.image_url}}" alt="...">
                     <div class="caption">
-                        <h3>{{gear.name}}</h3>
+                        <h4>{{gear.name}}</h4>
                         </div>
                      <div class="productCaption">
                      {{gear.description}}
@@ -176,7 +183,7 @@
                 <div class="thumbnail productThumbnail" >
                     <img ng-src="{{gear.image_url}}" alt="...">
                     <div class="caption">
-                        <h3>{{gear.name}}</h3>
+                        <h4>{{gear.name}}</h4>
                         </div>
                      <div class="productCaption">
                      {{gear.description}}
@@ -190,7 +197,7 @@
                 <div class="thumbnail productThumbnail" >
                     <img ng-src="{{gear.image_url}}" alt="...">
                     <div class="caption">
-                        <h3>{{gear.name}}</h3>
+                        <h4>{{gear.name}}</h4>
                         </div>
                      <div class="productCaption">
                      {{gear.description}}
@@ -204,7 +211,7 @@
                 <div class="thumbnail productThumbnail" >
                     <img ng-src="{{gear.image_url}}" alt="...">
                     <div class="caption">
-                        <h3>{{gear.name}}</h3>
+                        <h4>{{gear.name}}</h4>
                         </div>
                      <div class="productCaption">
                      {{gear.description}}
@@ -218,7 +225,7 @@
                 <div class="thumbnail productThumbnail" >
                     <img ng-src="{{gear.image_url}}" alt="...">
                     <div class="caption">
-                        <h3>{{gear.name}}</h3>
+                        <h4>{{gear.name}}</h4>
                         </div>
                      <div class="productCaption">
                      {{gear.description}}
@@ -232,7 +239,7 @@
                 <div class="thumbnail productThumbnail" >
                     <img ng-src="{{gear.image_url}}" alt="...">
                     <div class="caption">
-                        <h3>{{gear.name}}</h3>
+                        <h4>{{gear.name}}</h4>
                         </div>
                      <div class="productCaption">
                      {{gear.description}}
@@ -248,16 +255,63 @@
     </div>
     <p><strong>Note:</strong> Not every camping party will bring every item on this list, this is only for reference purposes. Always use your common sense and be prepared.
 </p>
-    <div ng-show="!pollDone" style="padding-bottom:20px" class="well">
-    <p>Would you like to find best deals on Campture recommended gear?</p>
-  <button class="btn btn-success" ng-click="buyGearPoll(1)">Yes</button> <button class="btn btn-danger" ng-click="buyGearPoll(0)">No</button>
+    
+  
+      <div style="font-size: 18px; color: #525354; font-family:lato-light;" class="well"><i><p> We are constantly updating and innovating our platform to provide correct information and improving your experience. We would love some feedback/corrections.
+</p>
+<p>Please help us to improve the platform and send us your ideas and suggestions.</p> </i>
+<button class="btn btn-warning" data-toggle="modal" data-target="#checklistFeedback">Gear Checklist Feedback</button>
+<!-- Gear Feedback Modal -->
+<div id="checklistFeedback" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header" style="background-color: rgb(51, 59, 61);">
+        <button type="button" class="close" data-dismiss="modal" style="color:white;">&times;</button>
+        <h4 class="modal-title" style="font-family:lato; color:white;">Help us improve Gearchecklist</h4>
+      </div>
+      <div class="modal-body">
+      <div class="row">
+      <div class="col-md-6">
+      <div class="input-group input-group-custom">
+  			<span class="input-group-addon input-label-left" id="basic-addon1"><i class="fa fa-user"></i></span>
+  			<input placeholder="Name" type="text" class="feedbackInput2 form-control">
+	  </div>  
+      </div>
+      <div class="col-md-6">
+      <div class="input-group input-group-custom">
+  			<span class="input-group-addon input-label-left"><i class="fa fa-envelope"></i></span>
+  			<input type="email" class="form-control feedbackInput2" placeholder="Email">
+	  </div>  
+      </div> 
+      <div class="col-md-6">
+      <div class="input-group input-group-custom">
+  			<span class="input-group-addon input-label-left"><i class="fa fa-map-marker"></i></span>
+  			<input placeholder="Location" type="text" class="feedbackInput2 form-control">
+	  </div>   
+      </div>
+      <div class="col-md-6">
+      <div class="input-group input-group-custom">
+  			<span class="input-group-addon input-label-left" id="basic-addon1"><i class="fa fa-calendar"></i></span>
+  			<input placeholder="Date" type="date" class="feedbackInput2 form-control">
+	  </div>  
+      </div>
+      <div class="col-md-12">
+      <div class="input-group input-group-custom">
+  			<span class="input-group-addon input-label-left"><i class="fa fa-comment"></i></span>
+  			<textarea placeholder="Did we miss anything?" class="feedbackInput2 form-control" rows="5"></textarea>
+	  </div>   
+      </div> 
+      </div>  
+      <button class="btn btn-campture">SUBMIT</button>
+      </div>
+    </div>
+
   </div>
-  <p ng-show="pollDone" style="font-family:lato-light;">
-                    Thank You!
-                    </p>
-      <div style="font-size: 18px; color: #525354"><i><p> We are constantly updating and innovating our platform to provide correct information and improving your experience. We would love some feedback/corrections.
-</p><p>Please help us to improve the platform and send us your ideas and suggestions.</p> 
-          </i></div> 
+</div>
+          </div> 
+          
   </div>
   
   

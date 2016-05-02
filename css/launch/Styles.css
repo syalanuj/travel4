@@ -1,15 +1,7 @@
 @charset "UTF-8";
 /* CSS Document */
-
 html{
-	overflow-y: scroll; /* has to be scroll, not auto */
-  -webkit-overflow-scrolling:touch;
-}
-body{
-	font-family:"lato";
-	position:relative;
-	overflow-y: scroll; /* has to be scroll, not auto */
-  -webkit-overflow-scrolling: touch;
+    overflow-x: hidden;
 }
 .navtext{
 	top:15px;
@@ -19,6 +11,17 @@ body{
 	position:absolute;
 }
 @media screen and (max-width: 768px){
+html{
+	overflow-y: scroll; /* has to be scroll, not auto */
+  -webkit-overflow-scrolling:touch;
+  overflow-x: hidden;
+}
+body{
+	font-family:"lato";
+	position:relative;
+	overflow-y: scroll; /* has to be scroll, not auto */
+  -webkit-overflow-scrolling: touch;
+}
 	.navLogo{
 	left:47%!important;
 	position:absolute !important;
@@ -64,7 +67,7 @@ body{
 }
 
 .btn-campture{
-	background-color:#f78539;
+	background-color:rgb(226, 88, 51)!important;
 	font:lato-light;
 	font-weight:200;
 	color:#FFFFFF;
@@ -250,8 +253,8 @@ body{
 }
 .footer {
 	background-color: rgb(32, 32, 32);
-	padding-top: 30px;
-	padding-bottom: 30px;
+	padding-top: 50px;
+	padding-bottom: 50px;
 }
 .footersocial {
 	font-size: 28px!important;
@@ -579,6 +582,7 @@ transform:rotate(-30deg);
 	min-height:350px;
 	position:relative;
 	overflow:hidden;
+    color: #525354 !important;
 }
 .productCaption{
 	position:absolute;

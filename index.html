@@ -6,43 +6,51 @@
         <!--FONT Dependencies-->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
         <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet" type="text/css">
-        
+
         <!--third party-->
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
-        
+
         <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.0.0/normalize.min.css">
         <!--in house-->
         <!--build:css css/styles.min.css-->
         <link rel="stylesheet" type="text/css" href="css/colorbox.css" media="screen" />
         <link rel="stylesheet" href="css/launch/Styles.css">
         <!--endbuild-->
-
-        <!--Parse Dependencies-->        
+        <!--Parse Dependencies-->
         <!--Meta-->
         <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
-        <meta name="keywords" content="Campture, adventure, camping" />
+        <meta name="keywords" content="outdoor, camping, hiking, trekking, rafting, scuba, india, campture,  nature, activities, explore, incredible india, photography, landscape , mountain, forest, rock climbing, camping equipment, camping gear, trekking shoes, camping list generator, backpacking list generator, hiking locations, trekking places, offbeat locations, offbeat" />
         <meta property="og:title" content="Campture" />
-        <meta property="og:description" content="This is campture description" />
-        <meta property="og:image" content="http://res.cloudinary.com/dzseog4g3/image/upload/c_fill,h_400,w_960/v1449320744/dumeromf14sv5p3wj9o1.jpg" />
+        <meta property="og:description" content="Your Guide To Everything Outdoors" />
+        <meta property="og:image" content="http://res.cloudinary.com/dzseog4g3/image/upload/v1462101606/gear_list/meta_img-low.jpg" />
         <meta name="author" content="anujs">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta charset="utf-8" />
-
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+            
+            ga('create', 'UA-47282295-2', 'auto');
+            ga('send', 'pageview');
+            
+        </script>
         <title>Campture</title>
         <style>
-		@font-face {
-    font-family: Lato;
-    src:url(../../fonts/Lato-Regular.woff);
-}
-@font-face {
-    font-family: Lato-Light;
-    src:url(../../fonts/Lato-Light.woff);
-}
-		</style>
+                    @font-face {
+                font-family: Lato;
+                src:url(../../fonts/Lato-Regular.woff);
+            }
+            @font-face {
+                font-family: Lato-Light;
+                src:url(../../fonts/Lato-Light.woff);
+            }
+        </style>
     </head>
     <body>
         <div id="fb-root"></div>
-        <div >
+        <div>
             <nav id="headerId" style="display: none; background-color: rgba(23, 23, 23,.302); border-bottom:0;" class="navbar navbar-default no-margin no-background on-top navbar-fixed-top">
                 <div class="container-fluid">
                     <!-- Brand and toggle get grouped for better mobile display -->
@@ -53,18 +61,18 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a class="navbar-brand" href="#/"><img src="css/images/logo-beta.png" alt="logo"></a>                        
+                        <a class="navbar-brand" href="#/"><img src="css/images/logo-beta.png" alt="logo"></a>
                     </div>
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                         <ul class="nav navbar-nav">
                             <li><a href="http://www.campture.com/blog/" target="_blank" class="navbar-fonts" style="color:white;">BLOG</a></li>
                             <li><a href="#/gearChecklistForm" class="navbar-fonts" style="color:white;">GEAR CHECKLIST</a></li>
-                            <li class="disabled"><a style="color:white;" class="navbar-fonts" >EXPLORE<sub>Coming Soon</sub></a></li>
-                            <li class="disabled"><a style="color:white;" class="navbar-fonts" >TRIPS<sub>Coming Soon</sub></a></li>
+                            <li class=""><a href="#/explore" style="color:white;" class="navbar-fonts">EXPLORE</a></li>
+                            <li class=""><a href="#/location" style="color:white;" class="navbar-fonts">TRIPS</a></li>
                         </ul>
                         <ul class="nav navbar-nav navbar-right">
-                        <li class="navbar-fonts" ><a style="color:white;" target="_blank" href="https://sunaljain.typeform.com/to/FHeNgQ">CAMPTURE PARTNERS PROGRAM</a></li>
+                            <li class="navbar-fonts"><a style="color:white;" target="_blank" href="https://sunaljain.typeform.com/to/FHeNgQ">CAMPTURE PARTNERS PROGRAM</a></li>
                         </ul>
                     </div><!-- /.navbar-collapse -->
                 </div><!-- /.container-fluid -->
@@ -90,74 +98,86 @@
                 </div>
             </div>
             <!-- Modal -->
-        <div id="welcomeModal" class="modal fade" role="dialog">
-            <div class="modal-dialog text-center">
-                <!-- Modal content-->
-                <div class="modal-content">
-                    <div class="modal-body">
-                        <h3>Lets get you started</h3>
-                        <div class="row">
-                            <div class="col-md-6 modal-publish-trip text-center">
-                                <img src="../../../css/images/animat-pencil-color.jpg" class="welcome-modal-img-1">
-                                <img src="../../../css/images/animat-pencil-color.gif" class="welcome-modal-img-2">
-                                <h4 style="padding-top:20px;">Publish Trip</h4>
-                                <p>Create your photologues by adding photos and writing caption. Share with your friends or keep your travel memories in one place.</p>
-                                <button ng-click="redirectToPost()" class="btn btn-primary btn-lg" data-target="#welcomeModal" data-dismiss="modal">Let's Do This</button>
-                            </div>
-                            <div class="col-md-6 modal-publish-trip text-center">
-                                <img src="../../../css/images/animat-image-color.jpg" class="welcome-modal-img-1">
-                                <img src="../../../css/images/animat-image-color.gif" class="welcome-modal-img-2">
-                                <h4>Explore Experiences</h4>
-                                <p>Explore amazing experiences shared by our community members. Find hidden gems, itineraries or informative advice for your next travel.</p>
-                                <a ng-click="redirectToExplore()" class="btn btn-blue btn-lg" data-target="#welcomeModal" data-dismiss="modal">I Want To See More</a>
+            <div id="welcomeModal" class="modal fade" role="dialog">
+                <div class="modal-dialog text-center">
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            <h3>Lets get you started</h3>
+                            <div class="row">
+                                <div class="col-md-6 modal-publish-trip text-center">
+                                    <img src="../../../css/images/animat-pencil-color.jpg" class="welcome-modal-img-1">
+                                    <img src="../../../css/images/animat-pencil-color.gif" class="welcome-modal-img-2">
+                                    <h4 style="padding-top:20px;">Publish Trip</h4>
+                                    <p>Create your photologues by adding photos and writing caption. Share with your friends or keep your travel memories in one place.</p>
+                                    <button ng-click="redirectToPost()" class="btn btn-primary btn-lg" data-target="#welcomeModal" data-dismiss="modal">Let's Do This</button>
+                                </div>
+                                <div class="col-md-6 modal-publish-trip text-center">
+                                    <img src="../../../css/images/animat-image-color.jpg" class="welcome-modal-img-1">
+                                    <img src="../../../css/images/animat-image-color.gif" class="welcome-modal-img-2">
+                                    <h4>Explore Experiences</h4>
+                                    <p>Explore amazing experiences shared by our community members. Find hidden gems, itineraries or informative advice for your next travel.</p>
+                                    <a ng-click="redirectToExplore()" class="btn btn-blue btn-lg" data-target="#welcomeModal" data-dismiss="modal">I Want To See More</a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        </div>
 
         <main style="min-height: 100vh" class="top-margin">
             <div ng-view autoscroll="true"></div>
         </main>
+<<<<<<< HEAD
 		<button class="feedbackButton btn btn-xs btn-campture" data-toggle="modal" data-target="#feedbackModal">Feedback</button>
+=======
+        <button class="feedbackButton btn btn-lg btn-campture" data-toggle="modal" data-target="#feedbackModal">Feedback</button>
+>>>>>>> master
         <!--Feedbackmodal-->
-        <div id="feedbackModal" class="modal fade" role="dialog">
-  <div class="modal-dialog">
+        <div id="feedbackModal" ng-controller="TempLandingCtrl" class="modal fade" role="dialog">
+            <div class="modal-dialog">
 
-    <!-- Modal content-->
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Feedback</h4>
-      </div>
-      <div class="modal-body">
-      <span>
-      <label for="feedbackName">Name</label>
-      <br>
-      <input type="text" id="feedbackName" class="feedbackInput">
-      </span>
-      <br>
-      <span>
-      <label for="feedbackEmail">Email</label>
-      <br>
-      <input type="email" id="feedbackEmail" class="feedbackInput">
-      </span>
-      <span>
-      <br>
-      <label for="feedbackEmail">Comments</label>
-      <br>
-      <textarea type="email" id="feedbackcomments" class="feedbackInput"></textarea>
-      </span>
-      </div>
-      <div class="modal-footer text-center">
-        <button type="button" class="btn btn-campture btn-block" data-dismiss="modal">Send</button>
-      </div>
-    </div>
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <form name="feedbackForm" action="" ng-submit="getCheckList(gearForm.$valid)" novalidate>
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">Feedback</h4>
+                        </div>
+                        <div class="modal-body">
+                            <span>
+                                <label for="feedbackName">Name</label>
+                                <br>
+                                <input name="feedbackName" ng-model="feedback.name" type="text" id="feedbackName" class="feedbackInput" required>
+                                <span ng-show="(feedbackForm.feedbackName.$dirty || submitted) && feedbackForm.feedbackName.$error.required">
+          *required
+                                </span>
+                                <br>
+                                <span>
+                                    <label for="feedbackEmail">Email</label>
+                                    <br>
+                                    <input name="feedbackEmail" ng-model="feedback.email" type="email" id="feedbackEmail" class="feedbackInput" required>
+                                    <span ng-show="(feedbackForm.feedbackEmail.$dirty || submitted) && feedbackForm.feedbackEmail.$error.required">
+          *required
+                                    </span>
+                                </span>
+                                <span>
+                                    <br>
+                                    <label for="feedbackEmail">Comments</label>
+                                    <br>
+                                    <textarea ng-model="feedback.comments" id="feedbackcomments" class="feedbackInput"></textarea>
+                                </span>
+                        </div>
+                        <div class="modal-footer text-center">
+                            <button ng-click="sendFeedback(feedbackForm.$valid)" type="button" class="btn btn-campture btn-block">Send</button> <!--data-dismiss="modal"-->
+                        </div>
+                    </form>
+                </div>
 
-  </div>
-</div>
+            </div>
+        </div>
+
         <div class="asfeatured text-center">
             <p class="outdoor">As featured on</p>
             <div class="angellist">
@@ -165,23 +185,23 @@
             </div>
         </div>
         <div ng-controller="TempLandingCtrl" class="sectionsix text-center">
+            <form ng-submit="sendUserEmail()">
             <div class="input-group col-md-4 col-md-offset-4 col-sm-5 col-sm-offset-5 col-xs-11  col-xs-offset-2 maxwidth">
-                <input ng-model="emailField1" type="text" class="form-control form-control-camptureme" placeholder="Your email address">
+                <input ng-model="emailField1" type="text" class="form-control form-control-camptureme" placeholder="Your email address" required>
                 <span class="input-group-btn">
-                    <button class="btn btn-orange" ng-click="sendUserEmail()" type="button">Campture Me!</button>
+                    <button class="btn btn-orange" ng-click="sendUserEmail()" type="submit">Campture Me!</button>
                 </span>
             </div>
-            <p style="font-family:lato-light; color:white;">
+            <p ng-show="isemailField1Sent" style="font-family:lato-light; color:white;">
                     Thank You!
-                    </p>  
+                    </p> 
             <!-- /input-group -->
         </div>
         <div class="footer container-fluid">
             <a href="https://www.facebook.com/CamptureApp/?fref=ts"><span class="footersocial"><i class="fa fa-facebook"></i></span></a> <a href="https://twitter.com/Campture"><span class="footersocial"><i class="fa fa-twitter"></i></span></a>
             <!--<span class="footersocial"><i class="fa fa-google-plus"></i></span>!-->
             <!--<span class="footersocial"><i class="fa fa-instagram"></i></span>!-->
-            <a href="https://www.pinterest.com/campture/"><span class="footersocial"><i class="fa fa-pinterest"></i></span></a> <span class="pull-right">Campture 2016 &copy; All Rights Reserved</span>
-            
+            <a href="https://www.pinterest.com/campture/"><span class="footersocial"><i class="fa fa-pinterest"></i></span></a> <span class="pull-right">Campture 2016 &copy; All Rights Reserved</span>            
         </div>
 
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
@@ -197,7 +217,7 @@
 
         <!-- Angular Dependencies -->
         <!-- JS-->
-        <script src="js/angular.min.js"></script><!--js/angular.js-->
+        <script src="js/angular.js"></script><!--js/angular.js-->
         <script src="js/angular-messages.min.js"></script>
         <script src="js/angular-route.min.js"></script>
         <script src="js/angular-cookies.js"></script>
@@ -213,7 +233,7 @@
         <script src="js/angular-google-maps.min.js"></script>
         <script src="js/ngAutocomplete/ngAutocomplete.js"></script>
 
-        
+
         <!--Angular Routing-->
         <!--Main-->
         <script src="app.js"></script>
@@ -226,7 +246,6 @@
         <script src="app/components/colorbox/modalDialogDirective.js"></script>
 
         <!--Controller-->
-
         <script src="app/components/gearChecklist/gearChecklistCtrl.js"></script>
         <script src="app/components/tempLanding/tempLandingCtrl.js"></script>
         <script src="app/components/gearChecklist/gearChecklistForm/gearChecklistFormCtrl.js"></script>
@@ -238,13 +257,6 @@
             $(document).ready(function () {
                 $('#headerId').css("display", "block");
             });           
-        </script>
-        <script src="js/nicescroll.js"></script>
-        <script type="text/javascript">
-            $(document).ready(function() {  
-    $("html").niceScroll();
-});
-
         </script>
     </body>
 </html>

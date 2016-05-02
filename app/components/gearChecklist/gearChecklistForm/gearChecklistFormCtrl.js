@@ -6,6 +6,7 @@
     function controller($scope, $cookies, $rootScope, uiGmapIsReady, $location, gearService) {
         //====== Scope Variables==========
         //================================
+        //$scope.submitted = false;
         $scope.coordinates = new Object();
         $scope.map = { center: { latitude: 28.6139, longitude: 77.2090 }, zoom: 4 };
         $scope.marker = { id: 0, bounds: {} };
@@ -46,6 +47,7 @@
             startingDay: 1
         };
         $scope.getCheckList = function (isValid) {
+            $scope.submitted = true;
             if (isValid && $scope.location && $scope.date && $scope.duration) {
                 var dateString = $scope.date.toISOString();
                 var dateString = dateString.substr(0, dateString.indexOf('T')) + 'T12:00:00-0400';

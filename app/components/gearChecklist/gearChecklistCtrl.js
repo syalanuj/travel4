@@ -26,6 +26,7 @@
         $scope.pollDone = false;
         $scope.gearChecklistFeedback = new Object();
         $scope.submitted = false;
+        $scope.feedbackSubmitted = false;
 
         $scope.details = function (details) {
             $scope.location = new Object();
@@ -89,6 +90,8 @@
                         $('#checklistFeedback').modal('hide');
                         $scope.gearChecklistFeedback = undefined;
                         $('#response').html('Email sent!').addClass('success').fadeIn('fast');
+                        $scope.feedbackSubmitted = true;
+                        $scope.$apply();
                     },
 
                     error: function (object, error) {

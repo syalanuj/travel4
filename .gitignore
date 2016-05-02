@@ -12,3 +12,5 @@
 *.html
 
 app/components/gearChecklist/gearChecklist.html
+
+*.html

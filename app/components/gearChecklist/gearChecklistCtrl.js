@@ -50,15 +50,17 @@
             startingDay: 1
         };
         $scope.getGearCheckList = function () {
-            gearService.getWeatherDataFromCloud($scope.coordinates, $scope.dateValue, $scope.duration, function (data) {
-                if (data) {
-                    $scope.gearList = data.gearList;
-                    $scope.minTemp = data.minTemp;
-                    $scope.maxTemp = data.maxTemp;
-                    $scope.isResultsShown = true;
-                    $scope.$apply();
-                }
-            });
+            if ($scope.coordinates && $scope.coordinates.latitude && $scope.coordinates.longitude) {
+                gearService.getWeatherDataFromCloud($scope.coordinates, $scope.dateValue, $scope.duration, function (data) {
+                    if (data) {
+                        $scope.gearList = data.gearList;
+                        $scope.minTemp = data.minTemp;
+                        $scope.maxTemp = data.maxTemp;
+                        $scope.isResultsShown = true;
+                        $scope.$apply();
+                    }
+                });
+            }
 
         }
         $scope.getGearCheckList();

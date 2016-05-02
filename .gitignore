@@ -10,3 +10,5 @@
 *.png
 
 *.html
+
+app/components/gearChecklist/gearChecklist.html

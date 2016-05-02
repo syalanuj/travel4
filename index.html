@@ -164,7 +164,7 @@
                                     <br>
                                     <textarea ng-model="feedback.comments" id="feedbackcomments" class="feedbackInput"></textarea>
                                 </span>
-                        </div>
+                        </span></div>
                         <div class="modal-footer text-center">
                             <button ng-click="sendFeedback(feedbackForm.$valid)" type="button" class="btn btn-campture btn-block">Send</button> <!--data-dismiss="modal"-->
                         </div>
@@ -182,7 +182,7 @@
         </div>
         <div ng-controller="TempLandingCtrl" class="sectionsix text-center">
             <form ng-submit="sendUserEmail()">
-            <div class="input-group col-md-4 col-md-offset-4 col-sm-5 col-sm-offset-5 col-xs-11  col-xs-offset-2 maxwidth">
+            <div class="input-group col-md-4 col-md-offset-4 hidden-xs hidden-sm maxwidth">
                 <input ng-model="emailField1" type="text" class="form-control form-control-camptureme" placeholder="Your email address" required>
                 <span class="input-group-btn">
                     <button class="btn btn-orange" ng-click="sendUserEmail()" type="submit">Campture Me!</button>
@@ -192,7 +192,7 @@
                     Thank You!
                     </p> 
             <!-- /input-group -->
-        </div>
+        </form></div>
         <div class="footer container-fluid">
             <a href="https://www.facebook.com/CamptureApp/?fref=ts"><span class="footersocial"><i class="fa fa-facebook"></i></span></a> <a href="https://twitter.com/Campture"><span class="footersocial"><i class="fa fa-twitter"></i></span></a>
             <!--<span class="footersocial"><i class="fa fa-google-plus"></i></span>!-->

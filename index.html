@@ -5,43 +5,174 @@
         <!--CSS-->
         <!--FONT Dependencies-->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-        <link href="https://fonts.googleapis.com/css?family=ABeeZee" rel="stylesheet" type="text/css">
-        <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
-        <link href="http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext" rel="stylesheet" type="text/css">
-        <link href="https://fonts.googleapis.com/css?family=Vollkorn:400italic" rel="stylesheet" type="text/css">
         <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet" type="text/css">
-        
+
         <!--third party-->
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="css/colorbox.css" media="screen" />
-        <link rel="stylesheet" href="css/dropzone.css">
-        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.0.0/normalize.min.css">
-        <!--in house-->
-        <link rel="stylesheet" href="css/launch/Styles.css">
 
+        
+        <!--in house-->
+        <!--build:css css/styles.min.css-->
+        <link rel="stylesheet" type="text/css" href="css/colorbox.css" media="screen" />
+        <link rel="stylesheet" href="css/launch/Styles.css">
+        <!--endbuild-->
         <!--Parse Dependencies-->
-        <!--<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>-->
         <!--Meta-->
         <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
-        <meta name="keywords" content="Campture, adventure, camping" />
+        <meta name="keywords" content="outdoor, camping, hiking, trekking, rafting, scuba, india, campture,  nature, activities, explore, incredible india, photography, landscape , mountain, forest, rock climbing, camping equipment, camping gear, trekking shoes, camping list generator, backpacking list generator, hiking locations, trekking places, offbeat locations, offbeat" />
         <meta property="og:title" content="Campture" />
-        <meta property="og:description" content="This is campture description" />
-        <meta property="og:image" content="http://res.cloudinary.com/dzseog4g3/image/upload/c_fill,h_400,w_960/v1449320744/dumeromf14sv5p3wj9o1.jpg" />
+        <meta property="og:description" content="Your Guide To Everything Outdoors" />
+        <meta property="og:image" content="http://res.cloudinary.com/dzseog4g3/image/upload/v1462101606/gear_list/meta_img-low.jpg" />
         <meta name="author" content="anujs">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta charset="utf-8" />
-
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+            
+            ga('create', 'UA-47282295-2', 'auto');
+            ga('send', 'pageview');
+            
+        </script>
         <title>Campture</title>
+        <style>
+                    @font-face {
+                font-family: Lato;
+                src:url(../../fonts/Lato-Regular.woff);
+            }
+            @font-face {
+                font-family: Lato-Light;
+                src:url(../../fonts/Lato-Light.woff);
+            }
+        </style>
     </head>
     <body>
         <div id="fb-root"></div>
-        <div class="text-center navigation">
-            <span class="navtext">Gear Checklist</span><span><img src="Images/Logo.png" alt="logo" class="navtext"></span><span class="navtext"><a href="http://www.campture.com/blog/">Blog</a></span>
+        <div>
+            <nav id="headerId" style="display: none; background-color: rgba(23, 23, 23,.302); border-bottom:0;" class="navbar navbar-default no-margin no-background on-top navbar-fixed-top">
+                <div class="container-fluid">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#/"><img src="css/images/logo-beta.png" alt="logo"></a>
+                    </div>
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav">
+                            <li><a href="http://www.campture.com/blog/" target="_blank" class="navbar-fonts" style="color:white;">BLOG</a></li>
+                            <li><a href="#/gearChecklistForm" class="navbar-fonts" style="color:white;">GEAR CHECKLIST</a></li>
+                            <li class=""><a href="#/explore" style="color:white;" class="navbar-fonts">EXPLORE</a></li>
+                            <li class=""><a href="#/location" style="color:white;" class="navbar-fonts">TRIPS</a></li>
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="navbar-fonts"><a style="color:white;" target="_blank" href="https://sunaljain.typeform.com/to/FHeNgQ">CAMPTURE PARTNERS PROGRAM</a></li>
+                        </ul>
+                    </div><!-- /.navbar-collapse -->
+                </div><!-- /.container-fluid -->
+            </nav>
+            <div id="facebook-login-modal" class="modal fade" role="dialog" style="display: none;">
+                <div class="modal-dialog">
+                    <!-- Modal content-->
+                    <div class="modal-content facebook-login-prompt">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title text-center">Log in to explore the world of Campture</h4>
+                        </div>
+                        <div class="modal-body text-center">
+                            <img src="css/images/fb-login-popup.jpg" class="img-responsive">
+                        </div>
+                        <div class="modal-footer">
+                            <p class="text-center">*Campture does not post on your Facebook without your permission.</p>
+                            <button class="no-margin loginwithfacebook-two" ng-click="loginToPost()" data-dismiss="modal" data-toggle="modal" data-target="#welcomeModal"><i class="fa fa-facebook-official">&nbsp; </i><span>Login with Facebook</span></button>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!-- Modal -->
+            <div id="welcomeModal" class="modal fade" role="dialog">
+                <div class="modal-dialog text-center">
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            <h3>Lets get you started</h3>
+                            <div class="row">
+                                <div class="col-md-6 modal-publish-trip text-center">
+                                    <img src="../../../css/images/animat-pencil-color.jpg" class="welcome-modal-img-1">
+                                    <img src="../../../css/images/animat-pencil-color.gif" class="welcome-modal-img-2">
+                                    <h4 style="padding-top:20px;">Publish Trip</h4>
+                                    <p>Create your photologues by adding photos and writing caption. Share with your friends or keep your travel memories in one place.</p>
+                                    <button ng-click="redirectToPost()" class="btn btn-primary btn-lg" data-target="#welcomeModal" data-dismiss="modal">Let's Do This</button>
+                                </div>
+                                <div class="col-md-6 modal-publish-trip text-center">
+                                    <img src="../../../css/images/animat-image-color.jpg" class="welcome-modal-img-1">
+                                    <img src="../../../css/images/animat-image-color.gif" class="welcome-modal-img-2">
+                                    <h4>Explore Experiences</h4>
+                                    <p>Explore amazing experiences shared by our community members. Find hidden gems, itineraries or informative advice for your next travel.</p>
+                                    <a ng-click="redirectToExplore()" class="btn btn-blue btn-lg" data-target="#welcomeModal" data-dismiss="modal">I Want To See More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <main class="top-margin">
+        <main style="min-height: 100vh" class="top-margin">
             <div ng-view autoscroll="true"></div>
         </main>
+	<button class="feedbackButton btn btn-xs btn-campture" data-toggle="modal" data-target="#feedbackModal">Feedback</button>
+        <!--Feedbackmodal-->
+        <div id="feedbackModal" ng-controller="TempLandingCtrl" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <form name="feedbackForm" action="" ng-submit="getCheckList(gearForm.$valid)" novalidate>
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">Feedback</h4>
+                        </div>
+                        <div class="modal-body">
+                            <span>
+                                <label for="feedbackName">Name</label>
+                                <br>
+                                <input name="feedbackName" ng-model="feedback.name" type="text" id="feedbackName" class="feedbackInput" required>
+                                <span ng-show="(feedbackForm.feedbackName.$dirty || submitted) && feedbackForm.feedbackName.$error.required">
+          *required
+                                </span>
+                                <br>
+                                <span>
+                                    <label for="feedbackEmail">Email</label>
+                                    <br>
+                                    <input name="feedbackEmail" ng-model="feedback.email" type="email" id="feedbackEmail" class="feedbackInput" required>
+                                    <span ng-show="(feedbackForm.feedbackEmail.$dirty || submitted) && feedbackForm.feedbackEmail.$error.required">
+          *required
+                                    </span>
+                                </span>
+                                <span>
+                                    <br>
+                                    <label for="feedbackEmail">Comments</label>
+                                    <br>
+                                    <textarea ng-model="feedback.comments" id="feedbackcomments" class="feedbackInput"></textarea>
+                                </span>
+                        </span></div>
+                        <div class="modal-footer text-center">
+                            <button ng-click="sendFeedback(feedbackForm.$valid)" type="button" class="btn btn-campture btn-block">Send</button> <!--data-dismiss="modal"-->
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
 
         <div class="asfeatured text-center">
             <p class="outdoor">As featured on</p>
@@ -49,61 +180,61 @@
                 <img src="Images/Angel list/Logos/AngelList_White_Lockup-62a6d2396ec4758d26016fc9b65d6cb1.png"> <img src="Images/Angel list/Logos/Lets venture.png"> <img src="Images/Angel list/Logos/Beta List.png"> <img src="Images/Angel list/Logos/Launching Next.png">
             </div>
         </div>
-        <div class="sectionsix text-center">
-            <div class="input-group col-md-4 col-md-offset-4 col-sm-5 col-sm-offset-5 col-xs-11  col-xs-offset-2 maxwidth">
-                <input type="text" class="form-control form-control-camptureme" placeholder="Your email address">
+        <div ng-controller="TempLandingCtrl" class="sectionsix text-center">
+            <form ng-submit="sendUserEmail()">
+            <div class="input-group col-md-4 col-md-offset-4 hidden-xs hidden-sm maxwidth">
+                <input ng-model="emailField1" type="text" class="form-control form-control-camptureme" placeholder="Your email address" required>
                 <span class="input-group-btn">
-                    <button class="btn btn-orange" type="button">Campture Me!</button>
+                    <button class="btn btn-orange" ng-click="sendUserEmail()" type="submit">Campture Me!</button>
                 </span>
             </div>
+            <p ng-show="isemailField1Sent" style="font-family:lato-light; color:white;">
+                    Thank You!
+                    </p> 
             <!-- /input-group -->
-        </div>
+        </form></div>
         <div class="footer container-fluid">
             <a href="https://www.facebook.com/CamptureApp/?fref=ts"><span class="footersocial"><i class="fa fa-facebook"></i></span></a> <a href="https://twitter.com/Campture"><span class="footersocial"><i class="fa fa-twitter"></i></span></a>
             <!--<span class="footersocial"><i class="fa fa-google-plus"></i></span>!-->
             <!--<span class="footersocial"><i class="fa fa-instagram"></i></span>!-->
-            <a href="https://www.pinterest.com/campture/"><span class="footersocial"><i class="fa fa-pinterest"></i></span></a> <span class="pull-right">Campture 2015 &copy; All Rights Reserved</span>
+            <a href="https://www.pinterest.com/campture/"><span class="footersocial"><i class="fa fa-pinterest"></i></span></a> <span class="pull-right">Campture 2016 &copy; All Rights Reserved</span>            
         </div>
+
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
         <!--Parse-->
         <script type="text/javascript" src="http://www.parsecdn.com/js/parse-latest.min.js"></script><!--http://www.parsecdn.com/js/parse-latest.min.js-->
-        <!--Dropzone dependencies-->
-        <script src="js/dropzone/dropzone.js"></script>
         <!--Map API Dependencies-->
         <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCRpJLhktqH2XbHlB4WLvZ169ECwqOG-BE&libraries=places"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.8.0/lodash.min.js"></script>
+        <!--build:js js/main.min.js -->
         <script src="js/bootstrap-datepicker.js"></script>
         <script src="js/bootstrap-timepicker.js"></script>
-        <script src="js/tweet.js"></script>
-        <script src="js/exif/exif.js"></script>
-        <script src="js/linkify/linkified.js"></script>
-        <script src="js/linkify/jquery.linkify.min.js"></script>
 
         <!-- Angular Dependencies -->
         <!-- JS-->
-        <script src="js/angular.min.js"></script><!--js/angular.js-->
+        <script src="js/angular.js"></script><!--js/angular.js-->
+        <script src="js/angular-messages.min.js"></script>
         <script src="js/angular-route.min.js"></script>
         <script src="js/angular-cookies.js"></script>
         <script src="js/ui-bootstrap-tpls-0.14.3.js"></script>
-        <script src="js/angular-animate.js"></script>
+        <script src="js/angular-animate.min.js"></script>
         <!--New Dependencies-->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-touch.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/ngStorage/0.3.6/ngStorage.min.js"></script>
+        <script src="js/angular-touch.min.js"></script>
+        <script src="js/ngStorage.min.js"></script>
 
         <!--Timeline Dependencies-->
         <!--Map API Dependencies-->
         <script src="js/angular-simple-logger.js"></script>
         <script src="js/angular-google-maps.min.js"></script>
         <script src="js/ngAutocomplete/ngAutocomplete.js"></script>
-        <!--Drop zone directive-->
-        <script src="js/dropzone/dropzone-directive.js"></script>
+
+
         <!--Angular Routing-->
         <!--Main-->
         <script src="app.js"></script>
         <!--Services-->
         <script src="app/services/gearService.js"></script>
-        <script src="app/services/parse-angular/FacebookAngularPatch.js"></script>
         <script src="app/services/parse-angular/ParseServices.js"></script>
 
         <!--Directives-->
@@ -111,17 +242,22 @@
         <script src="app/components/colorbox/modalDialogDirective.js"></script>
 
         <!--Controller-->
-
         <script src="app/components/gearChecklist/gearChecklistCtrl.js"></script>
         <script src="app/components/tempLanding/tempLandingCtrl.js"></script>
+        <script src="app/components/gearChecklist/gearChecklistForm/gearChecklistFormCtrl.js"></script>
         <!--Main Route-->
         <script src="app.route.js"></script>
         <script src="configMap.js"></script>
-
+        <!-- endbuild -->
         <script type="text/javascript">
             $(document).ready(function () {
                 $('#headerId').css("display", "block");
-            });           
+            });
+            $(document).on('click','.navbar-collapse.in',function(e) {
+    if( $(e.target).is('a') && $(e.target).attr('class') != 'dropdown-toggle' ) {
+        $(this).collapse('hide');
+    }
+});           
         </script>
     </body>
 </html>

@@ -403,7 +403,7 @@ body{
 	outline:none;
 }
 .locationInput{
-	width:300px;
+	width:270px;
 }
 .gearFormInput{
 	display:inline-block;
@@ -808,7 +808,7 @@ a{
     transform: translate(-50%, 0);
     text-align: center;
     top: 2em;
-    font-size: 8em;
+    font-size: 6em;
 	font-family:lato-light;
 	
 	}

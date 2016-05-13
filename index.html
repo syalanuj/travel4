@@ -213,7 +213,7 @@
 
         <!-- Angular Dependencies -->
         <!-- JS-->
-        <script src="js/angular.js"></script><!--js/angular.js-->
+        <script src="js/angular.min.js"></script><!--js/angular.js-->
         <script src="js/angular-messages.min.js"></script>
         <script src="js/angular-route.min.js"></script>
         <script src="js/angular-cookies.js"></script>
@@ -252,7 +252,12 @@
         <script type="text/javascript">
             $(document).ready(function () {
                 $('#headerId').css("display", "block");
-            });           
+            });
+            $(document).on('click','.navbar-collapse.in',function(e) {
+    if( $(e.target).is('a') && $(e.target).attr('class') != 'dropdown-toggle' ) {
+        $(this).collapse('hide');
+    }
+});           
         </script>
     </body>
 </html>

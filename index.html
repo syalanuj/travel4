@@ -50,7 +50,7 @@
     </head>
     <body>
         <div id="fb-root"></div>
-        <div>
+        <div ng-controller="HeaderCtrl">
             <nav id="headerId" style="display: none; background-color: rgba(23, 23, 23,.302); border-bottom:0;" class="navbar navbar-default no-margin no-background on-top navbar-fixed-top">
                 <div class="container-fluid">
                     <!-- Brand and toggle get grouped for better mobile display -->
@@ -73,6 +73,9 @@
                         </ul>
                         <ul class="nav navbar-nav navbar-right">
                             <li class="navbar-fonts"><a style="color:white;" target="_blank" href="https://sunaljain.typeform.com/to/FHeNgQ">CAMPTURE PARTNERS PROGRAM</a></li>
+                            <li><a ng-show="isPageHeaderLoaded && userObj == undefined" href="" class="header-elements loginwithfacebook" ng-click="loginWithFacebook()"><i class="fa fa-facebook-square"></i> <span>Login with Facebook</span></a></li>
+                            <li><a href="" ng-if="isPageHeaderLoaded && userObj" ng-click="logout()" class="header-elements power_switch navbar-link" style="color: color: rgb(106, 106, 106)!important;"><i class="fa fa-power-off"></i></a></li>
+                            <li><a ng-if="isPageHeaderLoaded && userObj" href="" class="header-elements paddingnone"><img ng-src="{{userObj.facebook_profile.picture.data.url}}" class="img-circle profile_topleft"></a></li>
                         </ul>
                     </div><!-- /.navbar-collapse -->
                 </div><!-- /.container-fluid -->
@@ -213,7 +216,7 @@
 
         <!-- Angular Dependencies -->
         <!-- JS-->
-        <script src="js/angular.min.js"></script><!--js/angular.js-->
+        <script src="js/angular.js"></script><!--js/angular.js-->
         <script src="js/angular-messages.min.js"></script>
         <script src="js/angular-route.min.js"></script>
         <script src="js/angular-cookies.js"></script>
@@ -227,14 +230,14 @@
         <!--Map API Dependencies-->
         <script src="js/angular-simple-logger.js"></script>
         <script src="js/angular-google-maps.min.js"></script>
-        <script src="js/ngAutocomplete/ngAutocomplete.js"></script>
-
+        <script src="js/ngAutocomplete/ngAutocomplete.js"></script> 
 
         <!--Angular Routing-->
         <!--Main-->
         <script src="app.js"></script>
         <!--Services-->
         <script src="app/services/gearService.js"></script>
+        <script src="app/services/accountService.js"></script>
         <script src="app/services/parse-angular/ParseServices.js"></script>
 
         <!--Directives-->
@@ -242,12 +245,19 @@
         <script src="app/components/colorbox/modalDialogDirective.js"></script>
 
         <!--Controller-->
+        <script src="app/components/headerCtrl.js"></script>
         <script src="app/components/gearChecklist/gearChecklistCtrl.js"></script>
         <script src="app/components/tempLanding/tempLandingCtrl.js"></script>
         <script src="app/components/gearChecklist/gearChecklistForm/gearChecklistFormCtrl.js"></script>
+        <script src="app/components/chatWithCampture/chatWithCamptureCtrl.js"></script>
         <!--Main Route-->
         <script src="app.route.js"></script>
         <script src="configMap.js"></script>
+        <!--Form Dependencies-->
+        <script src="js/chatWithCampture/modernizr.custom.js"></script>
+        <script src="js/chatWithCampture/classie.js"></script>
+		<script src="js/chatWithCampture/stepsForm.js"></script>
+
         <!-- endbuild -->
         <script type="text/javascript">
             $(document).ready(function () {
@@ -257,7 +267,7 @@
     if( $(e.target).is('a') && $(e.target).attr('class') != 'dropdown-toggle' ) {
         $(this).collapse('hide');
     }
-});           
+});                      		
         </script>
     </body>
 </html>

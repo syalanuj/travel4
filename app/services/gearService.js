@@ -3,7 +3,8 @@ app.factory('GearService', ['$http', '$q', function ($http, $q) {
 
     return {
         getWeatherDataFromCloud: getWeatherDataFromCloud,
-        gearBuyPoll: gearBuyPoll
+        gearBuyPoll: gearBuyPoll,
+        postGearlistEntries: postGearlistEntries
     };
 
     function getWeatherDataFromCloud(coordinates, dateTime, duration, callback) {
@@ -39,6 +40,21 @@ app.factory('GearService', ['$http', '$q', function ($http, $q) {
             },
             error: function (gameScore, error) {
                 console.log(error.message);
+            }
+        });
+    }
+
+    function  postGearlistEntries (gearlistEntryData,callback){
+        var GearlistEntries = Parse.Object.extend("Gearlist_Entries");
+        var gearlistEntry = new GearlistEntries();
+        gearlistEntry.set("place_id", gearlistEntryData.place_id);
+        gearlistEntry.set("place_details", gearlistEntryData);
+        gearlistEntry.save(null, {
+            success: function (parseObject) {
+                callback(parseObject.id);
+            },
+            error: function (gameScore, error) {
+                alert('Failed to create new object, with error code: ' + error.message);
             }
         });
     }

@@ -4,7 +4,7 @@
     app.run(['$cookies', '$rootScope', '$window', '$location',
         function ($cookies, $rootScope, $window, $location) {
             $rootScope.isPageHeaderLoaded = false;
-            Parse.initialize("zhYKWWWvzEbPKwbO0GYFxHcQeiwnfSMz1F2nKQ6j", "ZmqJlIcQb5c9nPJ2DrVGVDshOxgQSRHlVijgnNVg");
+            Parse.initialize("hqRCJWWJJhduQBOceJYMnKUh8rt5prJ2WyUfDkmp", "M7ZPrFMJoEopzBvOGCmynUbN5qwedkTeY32hFmpy");
             $rootScope.fbInit = false;
             $window.fbAsyncInit = function () {
                 if($rootScope.fbInit) {
@@ -20,7 +20,20 @@
                     frictionlessRequests: true // recommended
                 });
                 $rootScope.fbInit = true;                
-            };            
+            };
+            //(function(doc, script) {
+            //    var js,
+            //        fjs = doc.getElementsByTagName(script)[0],
+            //        add = function(url, id) {
+            //            if (doc.getElementById(id)) {return;}
+            //            js = doc.createElement(script);
+            //            js.src = url;
+            //            id && (js.id = id);
+            //            fjs.parentNode.insertBefore(js, fjs);
+            //        };
+            //    // Facebook SDK
+            //    add('//connect.facebook.net/en_US/all.js', 'facebook-jssdk');
+            //}(document, 'script'));            
 
         } ]);
 })();

@@ -23,7 +23,7 @@
         <meta property="og:title" content="Campture" />
         <meta property="og:description" content="Your Guide To Everything Outdoors" />
         <meta property="og:image" content="http://res.cloudinary.com/dzseog4g3/image/upload/v1462101606/gear_list/meta_img-low.jpg" />
-        <meta name="author" content="anujs">
+        <meta name="author" content="Campture">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta charset="utf-8" />
         <script>
@@ -73,7 +73,7 @@
                         </ul>
                         <ul class="nav navbar-nav navbar-right">
                             <li class="navbar-fonts"><a style="color:white;" target="_blank" href="https://sunaljain.typeform.com/to/FHeNgQ">CAMPTURE PARTNERS PROGRAM</a></li>
-                            <li><a ng-show="isPageHeaderLoaded && userObj == undefined" href="" class="header-elements loginwithfacebook" ng-click="loginWithFacebook()"><i class="fa fa-facebook-square"></i> <span>Login with Facebook</span></a></li>
+                            <!--<li><a ng-show="isPageHeaderLoaded && userObj == undefined" href="" class="header-elements loginwithfacebook" ng-click="loginWithFacebook()"><i class="fa fa-facebook-square"></i> <span>Login with Facebook</span></a></li>-->
                             <li><a href="" ng-if="isPageHeaderLoaded && userObj" ng-click="logout()" class="header-elements power_switch navbar-link" style="color: color: rgb(106, 106, 106)!important;"><i class="fa fa-power-off"></i></a></li>
                             <li><a ng-if="isPageHeaderLoaded && userObj" href="" class="header-elements paddingnone"><img ng-src="{{userObj.facebook_profile.picture.data.url}}" class="img-circle profile_topleft"></a></li>
                         </ul>
@@ -249,7 +249,6 @@
         <script src="app/components/gearChecklist/gearChecklistCtrl.js"></script>
         <script src="app/components/tempLanding/tempLandingCtrl.js"></script>
         <script src="app/components/gearChecklist/gearChecklistForm/gearChecklistFormCtrl.js"></script>
-        <script src="app/components/chatWithCampture/chatWithCamptureCtrl.js"></script>
         <!--Main Route-->
         <script src="app.route.js"></script>
         <script src="configMap.js"></script>

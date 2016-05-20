@@ -441,7 +441,7 @@ body{
 }
 .gearResults{
 	padding:0;
-	font-family:lato;
+	font-family:lato-light;
 }
 .gearCategory{
 	font-size:4.2rem;
@@ -604,6 +604,7 @@ transform:rotate(-30deg);
 }
 .productThumbnail h4{
 	font-family:lato;
+	color:#6d6d6d;
 }
 .productThumbnail:hover .productCaption {
     top:0%;

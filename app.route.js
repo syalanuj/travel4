@@ -28,6 +28,7 @@
             templateUrl:'app/components/error/errorPage.html'
         })
         .otherwise({redirectTo : '/pageNotFound/'});
+        // $locationProvider.html5Mode(true);
     });
 
 })();

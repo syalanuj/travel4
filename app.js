@@ -6,6 +6,9 @@
             $rootScope.isPageHeaderLoaded = false;
             Parse.initialize("hqRCJWWJJhduQBOceJYMnKUh8rt5prJ2WyUfDkmp", "M7ZPrFMJoEopzBvOGCmynUbN5qwedkTeY32hFmpy");
             $rootScope.fbInit = false;
+            $rootScope.$on('$routeChangeSuccess', function(){
+                ga('send', 'pageview', $location.path());
+            });
             $window.fbAsyncInit = function () {
                 if($rootScope.fbInit) {
                     return;

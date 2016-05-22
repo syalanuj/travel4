@@ -13,19 +13,19 @@
                 var x = attrs;
                 new stepsForm(theForm, {
                     onSubmit: function (form) {
-                        // hide form
+                        // hide form		
                         scope;
                         x;
                         scope.$parent.submitForm(scope.ngModel);
                         classie.addClass(theForm.querySelector('.simform-inner'), 'hide');
 
-                        /*
-                        form.submit()
-                        or
-                        AJAX request (maybe show loading indicator while we don't have an answer..)
+                        /*		
+                        form.submit()		
+                        or		
+                        AJAX request (maybe show loading indicator while we don't have an answer..)		
                         */
 
-                        // let's just simulate something...
+                        // let's just simulate something...		
                         var messageEl = theForm.querySelector('.final-message');
                         messageEl.innerHTML = 'Thank you! We\'ll be in touch.';
                         classie.addClass(messageEl, 'show');
@@ -36,8 +36,8 @@
     });
     app.controller('ChatWithCamptureCtrl', ['$scope', controller]);
     function controller($scope) {
-        //====== Scope Variables==========
-        //================================
+        //====== Scope Variables==========		
+        //================================		
         $scope.form = new Object();
         $scope.userObj = JSON.parse(JSON.stringify(Parse.User.current()));
         var placeId;
@@ -53,7 +53,32 @@
             $scope.map = { center: { latitude: $scope.coordinates.latitude, longitude: $scope.coordinates.longitude }, zoom: 12 }
             placeId = details.place_id;
         };
+        $scope.loginForChat = function () {
 
+            Parse.FacebookUtils.logIn(null, {
+                success: function (user) {
+                    if (!user.existed()) {
+                        accountService.getMyProfile().then(function (response) {
+                            accountService.updateUserFacebookProfile(response, user.id, function (data) {
+                                $scope.$apply(function () {
+                                    if (data) {
+                                        var x = data;
+                                        $scope.userObj = JSON.parse(JSON.stringify(Parse.User.current()));
+                                    }
+                                });
+                            });
+                        });
+                    }
+                    else {
+                        $scope.userObj = JSON.parse(JSON.stringify(Parse.User.current()));
+                        $scope.$apply();
+                    }
+                },
+                error: function (user, error) {
+                    console.log("Cancelled");
+                }
+            });
+        };
         $scope.submitForm = function (form) {
             var data = {
                 formData: form,

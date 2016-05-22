@@ -72,7 +72,7 @@
                             <li class=""><a href="#/location" style="color:white;" class="navbar-fonts">TRIPS</a></li>
                         </ul>
                         <ul class="nav navbar-nav navbar-right">
-                            <li class="navbar-fonts"><a style="color:white;" target="_blank" href="https://sunaljain.typeform.com/to/FHeNgQ">CAMPTURE PARTNERS PROGRAM</a></li>
+                            <li class="navbar-fonts"><a style="color:white;" target="_blank" href="https://sunaljain.typeform.com/to/FHeNgQ">CAMPTURE PARTNERS PROGRAM</a></li>                           
                             <li><a ng-show="isPageHeaderLoaded && userObj == undefined" href="" class="header-elements loginwithfacebook" ng-click="loginWithFacebook()"><i class="fa fa-facebook-square"></i> <span>Login with Facebook</span></a></li>
                             <li><a href="" ng-if="isPageHeaderLoaded && userObj" ng-click="logout()" class="header-elements power_switch navbar-link" style="color: color: rgb(106, 106, 106)!important;"><i class="fa fa-power-off"></i></a></li>
                             <li><a ng-if="isPageHeaderLoaded && userObj" href="" class="header-elements paddingnone"><img ng-src="{{userObj.facebook_profile.picture.data.url}}" class="img-circle profile_topleft"></a></li>
@@ -210,16 +210,18 @@
         <!--Map API Dependencies-->
         <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCRpJLhktqH2XbHlB4WLvZ169ECwqOG-BE&libraries=places"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.8.0/lodash.min.js"></script>
-        <!--build:js js/main.min.js -->
-        <script src="js/bootstrap-datepicker.js"></script>
-        <script src="js/bootstrap-timepicker.js"></script>
+        
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.1/js/bootstrap-datepicker.min.js"></script>
+        
 
         <!-- Angular Dependencies -->
         <!-- JS-->
-        <script src="js/angular.js"></script><!--js/angular.js-->
+        <!--build:js js/dependencies.min.js -->
+        <script src="js/angular.min.js"></script><!--js/angular.js-->        
+        <script src="js/bootstrap-timepicker.min.js"></script>
         <script src="js/angular-messages.min.js"></script>
         <script src="js/angular-route.min.js"></script>
-        <script src="js/angular-cookies.js"></script>
+        <script src="js/angular-cookies.min.js"></script>
         <script src="js/ui-bootstrap-tpls-0.14.3.js"></script>
         <script src="js/angular-animate.min.js"></script>
         <!--New Dependencies-->
@@ -231,9 +233,11 @@
         <script src="js/angular-simple-logger.js"></script>
         <script src="js/angular-google-maps.min.js"></script>
         <script src="js/ngAutocomplete/ngAutocomplete.js"></script> 
+        <!-- endbuild -->
 
         <!--Angular Routing-->
         <!--Main-->
+        <!--build:js js/main.min.js -->
         <script src="app.js"></script>
         <!--Services-->
         <script src="app/services/gearService.js"></script>
@@ -257,7 +261,6 @@
         <script src="js/chatWithCampture/modernizr.custom.js"></script>
         <script src="js/chatWithCampture/classie.js"></script>
 		<script src="js/chatWithCampture/stepsForm.js"></script>
-
         <!-- endbuild -->
         <script type="text/javascript">
             $(document).ready(function () {

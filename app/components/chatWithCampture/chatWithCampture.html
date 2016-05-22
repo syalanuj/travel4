@@ -1,164 +1,231 @@
-<div class="container">
-			<!-- Top Navigation -->
-			
-			<section class="question">
-            	<form ng-submit="submitForm()" id="theForm" class="simform" autocomplete="off">
-					<div class="simform-inner">
-						<ol class="questions">
-							<li>
-								<span class="bubble"><label for="q1">First of all: Where did you go?</label></span>
-                                <span class="bubble bubble--alt">
-                                    <input id="q1" class="locationInput" name="q1" type="text"  ng-autocomplete ng-model="form.location" options="options" details="details" autofocus required>
-								<input id="q1" name="q1" type="text"/>
-                                </span>
-							</li>
-							<li>
-								<span class="bubble"><label for="q2">For how long?</label></span>
-                                <span class="bubble bubble--alt">
-								<input ng-model="form.duration" id="q2" name="q2" type="number"/>
-                                </span>
-							</li>
-							<li>
-								<span class="bubble"><label for="q3">Backpack or suitcase?</label></span><br>
-                                <span class="bubble bubble--alt">
-								<span class="radios">
-                                <input id="q3a" ng-model="form.isBackPackOrSuitcase" name="q3" type="radio" required value="Backpack"/>
-                                <label for="q3a" style= "background-image:url(css/images/Interview%20Icons/Backpack.png); background-position:center" class="customLabel" value="backpack">
-                                Backpack
-                                </label>
-                                </span>
-                                <span class="radios">
-                                <input id="q3b" ng-model="form.isBackPackOrSuitcase" name="q3" type="radio" required value="Suitcase"/>
-                                <label for="q3b" style="background-image:url(css/images/Interview%20Icons/suitcase.png); background-position:center" class="customLabel" value="suitcase">
-                                Suitcase
-                                </label>
-                                </span>
-								</span>
-                            </li>
-							<li>
-								<span><label for="q4">Camping or Hotel?</label></span><br>
-                                <span class="bubble bubble--alt">
-                                <span class="radios">
-                                <input id="q4a" ng-model="form.isCampingOrHotel" name="q4" type="radio" value="Camping"/>
-                                <label for="q4a" style="background-image:url(css/images/Interview%20Icons/tent.png); background-position:center" class="customLabel">
-                                Camping
-                                </label>
-                                </span>
-								<span class="radios">
-                                <input id="q4b" ng-model="form.isCampingOrHotel" name="q4" type="radio" value="Hotel"/>
-                                <label for="q4b" style="background-image:url(css/images/Interview%20Icons/hotel.png); background-position:center" class="customLabel">					
-                                Hotel
-                                </label>
-                                </span>
-                                </span>
-							</li>
-							<li>
-								<span class="bubble"><label for="q5">How did you travel?</label></span><br/>
-                                <span class="bubble bubble--alt">
-								<span class="radios">
-                                <input id="q5a" ng-model="form.transportMode" name="q5" type="radio" value="Airplane"/>
-                                <label for="q5a" style="background-image:url(css/images/Interview%20Icons/airplane.png); background-position:center" class="customLabel">					
-                                Airplane
-                                </label>
-                                </span>
-                                <span class="radios">
-                                <input id="q5b" ng-model="form.transportMode" name="q5" type="radio" value="Bicycle"/>
-                                <label for="q5b" style="background-image:url(css/images/Interview%20Icons/bicycle.png); background-position:center" class="customLabel">					
-                                Bicycle
-                                </label>
-                                </span>
-                                <span class="radios">
-                                <input id="q5c" ng-model="form.transportMode" name="q5" type="radio" value="Bus"/>
-                                <label for="q5c" style="background-image:url(css/images/Interview%20Icons/bus.png); background-position:center" class="customLabel">					
-                                Bus
-                                </label>
-                                </span>
-                                <span class="radios">
-                                <input id="q5d" ng-model="form.transportMode" name="q5" type="radio" value="Car"/>
-                                <label for="q5d" style="background-image:url(css/images/Interview%20Icons/car.png); background-position:center" class="customLabel">					
-                                Car
-                                </label>
-                                </span>
-                                <span class="radios">
-                                <input id="q5e" ng-model="form.transportMode" name="q5" type="radio" value="Motorbike"/>
-                                <label for="q5e" style="background-image:url(css/images/Interview%20Icons/motorbike.png); background-position:center" class="customLabel">					
-                                Motorbike
-                                </label>
-                                </span>
-                                <span class="radios">
-                                <input id="q5f" ng-model="form.transportMode" name="q5" type="radio" value="Train"/>
-                                <label for="q5f" style="background-image:url(css/images/Interview%20Icons/train.png); background-position:center" class="customLabel">					
-                                Train
-                                </label>
-                                </span>
-                                </span>
-							</li>
-							<li>
-								<span class="bubble"><label for="q6">Any local speciality you found?</label></span>
-                                <span class="bubble bubble--alt">
-								<input id="q6" ng-model="form.speciality" name="q6" type="text"/>
-                                </span>
-							</li>
-                            <li>
-								<span class="bubble"><label for="q7">Review: What would you return here for?</label></span>
-                                <span class="bubble bubble--alt">
-								<input id="q7" ng-model="form.returnReason" name="q7" type="text"/>
-                                </span>
-							</li>
-                            <li>
-								<span class="bubble"><label for="q8">Review Rating:</label></span><br>
-                                <span class="bubble bubble--alt">
-								<span class="radios">
-                                <input id="q8a" ng-model="form.reviewRating" name="q8" type="radio" value="1"/>
-                                <label for="q8a" class="customLabel">1 </label>
-                                </span>
-                                <span class="radios">
-                                <input id="q8b" ng-model="form.reviewRating" name="q8" type="radio" value="2"/>
-                                <label for="q8b" class="customLabel">2</label>
-                                </span>
-                                <span class="radios">
-                                <input id="q8c" ng-model="form.reviewRating" name="q8" type="radio" value="3"/>
-                                <label for="q8c" class="customLabel">3 </label>
-                                </span>
-                                <span class="radios">
-                                <input id="q8d" ng-model="form.reviewRating" name="q8" type="radio" value="4"/>
-                                <label for="q8d" class="customLabel">4 </label>
-                                </span>
-                                <span class="radios">
-                                <input id="q8e" ng-model="form.reviewRating" name="q8" type="radio" value="5"/>
-                                <label for="q8e" class="customLabel">5 </label>
-                                </span>
-                                </span>
-							</li>
-                            <li>
-								<span class="bubble"><label for="q9">Tips for other travellers?</label></span>
-                                <span class="bubble bubble--alt">
-								<input id="q9" ng-model="form.tip" name="q9" type="text"/>
-                                </span>
-							</li>
-                            <li>
-								<span><label for="q10">Your Next Adventure?</label></span>
-                                <span class="bubble bubble--alt">
-								<input id="q10" ng-model="form.nextAdventure" name="q10" type="text"/>
-                                </span>
-							</li>
-						</ol><!-- /questions -->
-						<button class="submit" ng-click="submitForm()" type="submit">Send answers</button>
-						<div class="controls">
-							<button class="next"></button>
-							<div class="progress"></div>
-							<span class="number">
-								<span class="number-current"></span>
-								<span class="number-total"></span>
-							</span>
-							<span class="error-message"></span>
-						</div><!-- / controls -->
-					</div><!-- /simform-inner -->
-					<span class="final-message"></span>
-                    <div form-submit ng-model="form"></div>
-				</form><!-- /simform -->	
-                	
-			</section>
-		</div><!-- /container -->
+<div ng-show="userObj == undefined" class="jumbotron">
+    <div class="container">
+        <h1>Hey There, Let’s get to know you better!</h1>
+        <p>We are tracking down all travellers from all over the world to feature them in our series of blog posts.</p>
+        <p>Let’s start the quick interview with Campture.</p>
+        <button ng-click="loginForChat()" class="btn btn-danger">Click here to start the interview</button>
+        <span> Press Enter to continue</span>
+    </div>
+</div>
+<div ng-show="userObj" class="container">
+    <!-- Top Navigation -->
+    <div class="text-center">
+        <h2>Interview with Campture</h2>
+    </div>
 
-		<!--<div load-chat-with-campture></div>-->
+    <section class="question">
+        <form id="theForm" class="simform" autocomplete="off">
+            <div class="simform-inner">
+                <ol class="questions">
+                    <li>
+                        <span class="bubble">
+                            <div class="col-md-1">
+                                <img src="Images/Badge.png" class="img-circle pull-left img-responsive">
+                            </div>
+                            <div class="col-md-11">
+                                <label for="q1">First of all: Where did you go?</label>
+                            </div>
+                        </span>
+                        <span class="bubble bubble--alt">
+                            <input id="q1" name="q1" type="text" />
+                        </span>
+                    </li>
+                    <li>
+                        <span class="bubble">
+                            <div class="col-md-1">
+                                <img src="Images/Badge.png" class="img-circle pull-left img-responsive">
+                            </div>
+                            <div class="col-md-11">
+                                <label for="q2">For how long?</label>
+                            </div>
+                        </span>
+                        <span class="bubble bubble--alt">
+                            <input id="q2" name="q2" type="number" />
+                        </span>
+                    </li>
+                    <li>
+                        <span class="bubble">
+                            <div class="col-md-1">
+                                <img src="Images/Badge.png" class="img-circle pull-left img-responsive">
+                            </div>
+                            <div class="col-md-11">
+                                <label for="q3">Backpack or suitcase?</label>
+                            </div></span><br>
+                        <span class="bubble bubble--alt">
+                            <span class="radios">
+                                <input id="q3a" name="q3" type="radio" required />
+                                <label for="q3a" style="background-image:url(css/images/Interview%20Icons/Backpack.png); background-position:center" class="customLabel" value="backpack">
+                               Backpack
+                                </label>
+                            </span>
+                            <span class="radios">
+                                <input id="q3b" name="q3" type="radio" required />
+                                <label for="q3b" style="background-image:url(css/images/Interview%20Icons/suitcase.png); background-position:center" class="customLabel" value="suitcase">
+                               Suitcase
+                                </label>
+                            </span>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="bubble"><label for="q4">Camping or Hotel?</label></span><br>
+                        <span class="bubble bubble--alt">
+                            <span class="radios">
+                                <input id="q4a" name="q4" type="radio" />
+                                <label for="q4a" style="background-image:url(css/images/Interview%20Icons/tent.png); background-position:center" class="customLabel">
+                               Camping
+                                </label>
+                            </span>
+                            <span class="radios">
+                                <input id="q4b" name="q4" type="radio" />
+                                <label for="q4b" style="background-image:url(css/images/Interview%20Icons/hotel.png); background-position:center" class="customLabel">
+                               Hotel
+                                </label>
+                            </span>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="bubble">
+                            <div class="col-md-1">
+                                <img src="Images/Badge.png" class="img-circle pull-left img-responsive">
+                            </div>
+                            <div class="col-md-11">
+                                <label for="q5">How did you travel?</label>
+                            </div></span><br />
+                        <span class="bubble bubble--alt">
+                            <span class="radios">
+                                <input id="q5a" name="q5" type="radio" />
+                                <label for="q5a" style="background-image:url(css/images/Interview%20Icons/airplane.png); background-position:center" class="customLabel">
+                               Airplane
+                                </label>
+                            </span>
+                            <span class="radios">
+                                <input id="q5b" name="q5" type="radio" />
+                                <label for="q5b" style="background-image:url(css/images/Interview%20Icons/bicycle.png); background-position:center" class="customLabel">
+                               Bicycle
+                                </label>
+                            </span>
+                            <span class="radios">
+                                <input id="q5c" name="q5" type="radio" />
+                                <label for="q5c" style="background-image:url(css/images/Interview%20Icons/bus.png); background-position:center" class="customLabel">
+                               Bus
+                                </label>
+                            </span>
+                            <span class="radios">
+                                <input id="q5d" name="q5" type="radio" />
+                                <label for="q5d" style="background-image:url(css/images/Interview%20Icons/car.png); background-position:center" class="customLabel">
+                               Car
+                                </label>
+                            </span>
+                            <span class="radios">
+                                <input id="q5e" name="q5" type="radio" />
+                                <label for="q5e" style="background-image:url(css/images/Interview%20Icons/motorbike.png); background-position:center" class="customLabel">
+                               Motorbike
+                                </label>
+                            </span>
+                            <span class="radios">
+                                <input id="q5f" name="q5" type="radio" />
+                                <label for="q5f" style="background-image:url(css/images/Interview%20Icons/train.png); background-position:center" class="customLabel">
+                               Train
+                                </label>
+                            </span>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="bubble">
+                            <div class="col-md-1">
+                                <img src="Images/Badge.png" class="img-circle pull-left img-responsive">
+                            </div>
+                            <div class="col-md-11">
+                                <label for="q6">Any local speciality you found?</label>
+                            </div>
+                        </span>
+                        <span class="bubble bubble--alt">
+                            <input id="q6" name="q6" type="text" />
+                        </span>
+                    </li>
+                    <li>
+                        <span class="bubble">
+                            <div class="col-md-1">
+                                <img src="Images/Badge.png" class="img-circle pull-left img-responsive">
+                            </div>
+                            <div class="col-md-11">
+                                <label for="q7">Review: What would you return here for?</label>
+                            </div>
+                        </span>
+                        <span class="bubble bubble--alt">
+                            <input id="q7" name="q7" type="text" />
+                        </span>
+                    </li>
+                    <li>
+                        <span class="bubble">
+                            <div class="col-md-1">
+                                <img src="Images/Badge.png" class="img-circle pull-left img-responsive">
+                            </div>
+                            <div class="col-md-11">
+                                <label for="q8">Review Rating:</label>
+                            </div>
+                        </span><br>
+                        <span class="bubble bubble--alt">
+                            <span class="radios">
+                                <input id="q8a" name="q8" type="radio" />
+                                <label for="q8a" class="customLabel">1 </label>
+                            </span>
+                            <span class="radios">
+                                <input id="q8b" name="q8" type="radio" />
+                                <label for="q8b" class="customLabel">2</label>
+                            </span>
+                            <span class="radios">
+                                <input id="q8c" name="q8" type="radio" />
+                                <label for="q8c" class="customLabel">3 </label>
+                            </span>
+                            <span class="radios">
+                                <input id="q8d" name="q8" type="radio" />
+                                <label for="q8d" class="customLabel">4 </label>
+                            </span>
+                            <span class="radios">
+                                <input id="q8e" name="q8" type="radio" />
+                                <label for="q8e" class="customLabel">5 </label>
+                            </span>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="bubble">
+                            <div class="col-md-1">
+                                <img src="Images/Badge.png" class="img-circle pull-left img-responsive">
+                            </div>
+                            <div class="col-md-11">
+                                <label for="q9">Tips for other travellers?</label>
+                            </div></span>
+                        <span class="bubble bubble--alt">
+                            <input id="q9" name="q9" type="text" />
+                        </span>
+                    </li>
+                    <li>
+                        <span class="bubble">
+                            <div class="col-md-1">
+                                <img src="Images/Badge.png" class="img-circle pull-left img-responsive">
+                            </div>
+                            <div class="col-md-11">
+                                <label for="q10">Your Next Adventure?</label>
+                            </div></span>
+                        <span class="bubble bubble--alt">
+                            <input id="q10" name="q10" type="text" />
+                        </span>
+                    </li>
+                </ol><!-- /questions -->
+                <button class="submit" type="submit">Send answers</button>
+                <div class="controls">
+                    <button class="next"></button>
+                    <div class="progress"></div>
+                    <span class="number">
+                        <span class="number-current"></span>
+                        <span class="number-total"></span>
+                    </span>
+                    <span class="error-message"></span>
+                </div><!-- / controls -->
+            </div><!-- /simform-inner -->
+            <span class="final-message"></span>
+            <div form-submit ng-model="form"></div>
+        </form><!-- /simform -->
+    </section>
+</div><!-- /container -->

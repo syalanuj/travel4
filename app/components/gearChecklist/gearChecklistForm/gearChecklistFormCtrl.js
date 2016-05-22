@@ -29,13 +29,13 @@
             $scope.location = new Object();
             $scope.coordinates = { latitude: details.geometry.location.lat(), longitude: details.geometry.location.lng() };
             $scope.location.locationDetails = details;
+            $scope.locationDetails = details
             $scope.location.formatted_address = details.formatted_address;
             $scope.marker = {
                 id: 1,
                 coords: $scope.coordinates
             }
-            $scope.map = { center: { latitude: $scope.coordinates.latitude, longitude: $scope.coordinates.longitude }, zoom: 12 }
-
+            $scope.map = { center: { latitude: $scope.coordinates.latitude, longitude: $scope.coordinates.longitude }, zoom: 12 }        
         };
 
 
@@ -50,6 +50,7 @@
             $scope.submitted = true;
             if ($scope.coordinates && $scope.coordinates.latitude && $scope.coordinates.longitude) {
                 if (isValid && $scope.location && $scope.date && $scope.duration) {
+                    gearService.postGearlistEntries($scope.locationDetails,function(data){})
                     var dateString = $scope.date.toISOString();
                     var dateString = dateString.substr(0, dateString.indexOf('T')) + 'T12:00:00-0400';
                     $location.path('/gearChecklistResults/' + $scope.coordinates.latitude + '/' + $scope.coordinates.longitude + '/' + $scope.location + '/' + $scope.duration + '/' + dateString);

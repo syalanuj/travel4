@@ -23,6 +23,11 @@
         .when('/location/',{
             templateUrl:'app/components/locationComingSoon/locationComingSoon.html'
         })
+        .when('/chatWithCampture/',{		
+             controller: 'ChatWithCamptureCtrl',		
+             templateUrl:'app/components/chatWithCampture/chatWithCampture.html'		
+         })
+
         .when('/pageNotFound/',{
             controller: 'ErrorPageCtrl',
             templateUrl:'app/components/error/errorPage.html'

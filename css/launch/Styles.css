@@ -847,7 +847,6 @@ a{
 .simform {
 	position: relative;
 	margin: 0 auto;
-	padding: 2em 0;
 	max-width: 860px;
 	width: 100%;
 	text-align: left;
@@ -1229,7 +1228,6 @@ input[type=text]::-ms-clear {
 .bubble--alt {
 	background:#0B93F6;
 	width:100%;
-	float:right;
 	}
 
 .bubble--alt:before {
@@ -1250,4 +1248,10 @@ input[type=text]::-ms-clear {
 }
 .interview-bg{
 	background-image:url(../images/hero-img.jpg);
+	padding-top:40px;
+	min-height:100vh;
+}
+.img-user{
+}
+.img-us{
 }

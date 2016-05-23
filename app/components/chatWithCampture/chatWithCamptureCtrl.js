@@ -98,7 +98,6 @@
                     $('#feedbackModal').modal('hide');
                     console.log(error);
                     $('#response').html('Error! Email not sent!').addClass('error').fadeIn('fast');
-                    $route.reload();
                 }
             });
         }

@@ -38,7 +38,7 @@
                         <span class="bubble">
                             
                            
-                                <label for="q2">For how long?</label>
+                                <label for="q2">For how many days?</label>
                             </span>
                         <span class="bubble bubble--alt">
                             <input id="q2" name="q2" type="number" ng-model="form.duration"  pattern="\d*"/>
@@ -57,7 +57,7 @@
                             </span>
                             <span class="radios">
                                 <input id="q3b" name="q3" type="radio" ng-model="form.isBackPackOrSuitcase" value="Suitcase" required />
-                                <label for="q3b" style="background-image:url(css/images/Interview%20Icons/suitcase.png); background-position:center" class="customLabel" value="suitcase"><br>
+                                <label for="q3b" style="background-image:url(css/images/Interview%20Icons/suitcase.png); background-position:center" class="customLabel" value="suitcase">
                                Suitcase
                                 </label>
                             </span>
@@ -150,23 +150,23 @@
                         <span class="bubble bubble--alt">
                             <span class="radios">
                                 <input id="q8a" ng-model="form.reviewRating" name="q8" type="radio" value="1" />
-                                <label for="q8a" class="customLabel" style="background-image:url(../../../css/images/Interview%20Icons/01.png)">1 </label>
+                                <label for="q8a" class="customLabel" style="background-image:url(../../../css/images/Interview%20Icons/01.png)"></label>
                             </span>
                             <span class="radios">
                                 <input id="q8b" ng-model="form.reviewRating" name="q8" type="radio" value="2" />
-                                <label for="q8b" class="customLabel" style="background-image:url(../../../css/images/Interview%20Icons/02.png)">2</label>
+                                <label for="q8b" class="customLabel" style="background-image:url(../../../css/images/Interview%20Icons/02.png)"></label>
                             </span>
                             <span class="radios">
                                 <input id="q8c" ng-model="form.reviewRating" name="q8" type="radio" value="3" />
-                                <label for="q8c" class="customLabel" style="background-image:url(../../../css/images/Interview%20Icons/03.png)">3 </label>
+                                <label for="q8c" class="customLabel" style="background-image:url(../../../css/images/Interview%20Icons/03.png)"></label>
                             </span>
                             <span class="radios">
                                 <input id="q8d" ng-model="form.reviewRating" name="q8" type="radio" value="4" />
-                                <label for="q8d" class="customLabel" style="background-image:url(../../../css/images/Interview%20Icons/04.png)">4 </label>
+                                <label for="q8d" class="customLabel" style="background-image:url(../../../css/images/Interview%20Icons/04.png)"></label>
                             </span>
                             <span class="radios">
                                 <input id="q8e" ng-model="form.reviewRating" name="q8" type="radio" value="5" />
-                                <label for="q8e" class="customLabel" style="background-image:url(../../../css/images/Interview%20Icons/05.png)">5 </label>
+                                <label for="q8e" class="customLabel" style="background-image:url(../../../css/images/Interview%20Icons/05.png)"></label>
                             </span>
                         </span>
                     </li>
@@ -206,8 +206,13 @@
         </form><!-- /simform -->
     </section>
     </div>
+    <div class="col-md-5 col-sm-10 col-xs-10 col-md-offset-4">
+    <span> Press Enter to continue</span>
+    </div>
+    
     <div class="col-md-2 col-sm-2 col-xs-2 pull-right">
         <img ng-src="{{userObj.facebook_profile.picture.data.url}}" class="img-responsive img-circle">
     </div>
+    
 </div><!-- /container -->
 </div>

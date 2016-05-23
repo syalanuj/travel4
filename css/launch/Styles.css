@@ -898,9 +898,9 @@ a{
 .customLabel{
 	font-size: .7em;
 	font-family:lato-light;
-    min-width: 120px;
-    height: 100%;
-    padding-top: 100%;
+    min-width: 50px;
+    height: 60px;
+    padding-top: 50%;
     display: block;
 	background-repeat:no-repeat;
 	background-size:contain;

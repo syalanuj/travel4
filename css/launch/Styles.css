@@ -1209,6 +1209,7 @@ input[type=text]::-ms-clear {
 	content: '';
 	display: block;
 	position: absolute;
+	
 }
 
 .bubble:before {
@@ -1216,6 +1217,7 @@ input[type=text]::-ms-clear {
 	bottom: 0;
 	left: -7px;
 	z-index: -2;
+	border-bottom-color: rgba(0, 0, 0, 0.5);
 }
 
 .bubble:after {

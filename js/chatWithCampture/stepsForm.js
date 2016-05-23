@@ -200,6 +200,15 @@
 	// the validation function
 	stepsForm.prototype._validade = function() {
 		// current question´s input
+        if(this.questions[ this.current ].querySelectorAll( 'input' )[0].type == "radio"){
+            for(var i  = 0; i< this.questions[ this.current ].querySelectorAll( 'input' ).length; i++){
+                if (this.questions[ this.current ].querySelectorAll( 'input' )[i].checked == true){
+                    return true;
+                }
+            }
+            this._showError( 'EMPTYSTR' );
+			return false;
+        }
 		var input = this.questions[ this.current ].querySelector( 'input' ).value;
 		if( input === '' ) {
 			this._showError( 'EMPTYSTR' );

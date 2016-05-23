@@ -897,6 +897,7 @@ a{
 /* Labels */
 .customLabel{
 	font-size: .7em;
+	font-family:lato-light;
     min-width: 120px;
     height: 100%;
     padding-top: 100%;
@@ -964,9 +965,10 @@ a{
     width: 100%;
     height: 100%;
 	opacity:0!important;
+	font-family:lato-light;
 	}
  .questions input[type="radio"]:checked + label {
-  color: #f56c36;
+  color: white;
   font-style: normal;
   border: 1px solid black;
 } 
@@ -1198,7 +1200,6 @@ input[type=text]::-ms-clear {
 	margin-bottom: 20px;
 	padding: 8px 30px;
 	position: relative;
-	text-shadow: 0 1px 1px rgba(255, 255, 255, 0.7);
 	width: auto;
 	max-width: 100%;
 	word-wrap: break-word;
@@ -1217,8 +1218,7 @@ input[type=text]::-ms-clear {
 	bottom: 0;
 	left: -7px;
 	z-index: -2;
-	border-bottom-color: rgba(0, 0, 0, 0.5);
-}
+	}
 
 .bubble:after {
 	border: 8px solid transparent;
@@ -1252,6 +1252,7 @@ input[type=text]::-ms-clear {
 	background-image:url(../images/hero-img.jpg);
 	padding-top:40px;
 	min-height:100vh;
+	padding-bottom:40px;
 }
 .img-user{
 }

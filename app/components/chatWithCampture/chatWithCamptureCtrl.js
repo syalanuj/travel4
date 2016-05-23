@@ -34,8 +34,8 @@
             }
         };
     });
-    app.controller('ChatWithCamptureCtrl', ['$scope','AccountService', controller]);
-    function controller($scope,  accountService) {
+    app.controller('ChatWithCamptureCtrl', ['$scope', 'AccountService', controller]);
+    function controller($scope, accountService) {
         //====== Scope Variables==========		
         //================================		
         $scope.form = new Object();
@@ -59,10 +59,14 @@
                 success: function (user) {
                     if (!user.existed()) {
                         accountService.getMyProfile().then(function (response) {
+                            $scope.fbResponse = response
                             accountService.updateUserFacebookProfile(response, user.id, function (data) {
                                 $scope.$apply(function () {
                                     if (data) {
                                         var x = data;
+                                        var currentUser = Parse.User.current();
+                                        currentUser.set('facebook_profile', $scope.fbResponse);
+                                        currentUser.save();
                                         $scope.userObj = JSON.parse(JSON.stringify(Parse.User.current()));
                                     }
                                 });
@@ -70,7 +74,7 @@
                         });
                     }
                     else {
-                        $scope.userObj = JSON.parse(JSON.stringify(Parse.User.current()));                        
+                        $scope.userObj = JSON.parse(JSON.stringify(Parse.User.current()));
                         $scope.$apply();
                     }
                 },

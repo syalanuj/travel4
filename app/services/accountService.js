@@ -180,17 +180,19 @@ app.factory('AccountService', ['$http', '$q', function ($http, $q) {
 
     };
     function updateUserFacebookProfile(profile, userId, callback) {
-        user.id = userId;
-        user.set("facebook_profile", profile);
-        user.save(null, {
-            success: function (parseObject) {
-                callback(parseObject.id);
+        var data = {
+            profile: profile,
+            userId: userId
+        }
+        Parse.Cloud.run("updateUserFacebookProfile", data, {
+            success: function (object) {
+                callback(object);
             },
-            error: function (gameScore, error) {
-                alert('Failed to create new object, with error code: ' + error.message);
+
+            error: function (object, error) {
+                console.log(object + ' ' + error);
             }
         });
-
     }
     function getUserById(userId, callback) {
         var query = new Parse.Query(user);

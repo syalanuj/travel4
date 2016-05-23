@@ -41,7 +41,7 @@
                                 <label for="q2">For how many days?</label>
                             </span>
                         <span class="bubble bubble--alt">
-                            <input id="q2" name="q2" type="number" ng-model="form.duration" />
+                            <input id="q2" name="q2" type="number" ng-model="form.duration"  pattern="\d*"/>
                         </span>
                     </li>
                     <li>
@@ -192,7 +192,7 @@
                 </ol><!-- /questions -->
                 <button class="submit" type="submit">Send answers</button>
                 <div class="controls">
-                    <button class="next"></button>
+                    <button class="next"><i class="fa fa-arrow-right"></i></button>
                     <div class="progress"></div>
                     <span class="number">
                         <span class="number-current"></span>

@@ -34,8 +34,8 @@
             }
         };
     });
-    app.controller('ChatWithCamptureCtrl', ['$scope', controller]);
-    function controller($scope) {
+    app.controller('ChatWithCamptureCtrl', ['$scope','AccountService', controller]);
+    function controller($scope,  accountService) {
         //====== Scope Variables==========		
         //================================		
         $scope.form = new Object();
@@ -70,7 +70,7 @@
                         });
                     }
                     else {
-                        $scope.userObj = JSON.parse(JSON.stringify(Parse.User.current()));
+                        $scope.userObj = JSON.parse(JSON.stringify(Parse.User.current()));                        
                         $scope.$apply();
                     }
                 },

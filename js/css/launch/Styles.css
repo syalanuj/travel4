@@ -1246,3 +1246,14 @@ input[type=text]::-ms-clear {
 	width:25%;
 	display:inline-block;
 }
+.loginwithfacebook{
+    border-radius: 4px;
+    background-color: rgb(59, 89, 152)!important;
+	margin-top:10px;
+    margin-left:30px;
+    color: rgb(255, 255, 255)!important;
+    font-family:lato;
+    letter-spacing:0.04em;
+    font-size:16px;
+	padding:0!important;
+}

@@ -1,13 +1,14 @@
 <div ng-show="userObj == undefined" class="interview-bg">
-    <div class="container text-center" style="padding-top:20px;">
-    <div class="bubble">
-        <h3>Hey there, we are tracking down travellers from all over the world to feature them in our series of blog posts.</h3>
+    <div class="container text-center" style="padding-top:8%;">
+    <h1>Interview with Campture</h1>
+    <div class="" style="color:#525354;">
+        <h2>Hey there, we are tracking down travellers from all over the world to feature them in our series of blog posts.</h2>
         </div>
-        <img src="../../../css/images/image-56aa090b8531f-default.gif">
+        <img src="../../../css/images/image-56aa090b8531f-big.gif">
     
-        <h4> Let’s get to know you better!</h4>
-        <h4>Let’s start the quick interview with Campture.</h4>
-        <button ng-click="loginForChat()" class="btn btn-danger">Click here to start the interview</button>
+        <h3 style="color:#f56c36;"> Let’s get to know you better!</h3>
+        <h4 style="color:#525354;">Login with Facebook to start your interview with Campture.</h4>
+        <button ng-click="loginForChat()" class="btn loginwithfacebook"><i class="fa fa-facebook"></i> Let's talk travel</button>
         
     </div>
 </div>
@@ -145,7 +146,7 @@
                     <li>
                         <span class="bubble">
                             
-                                <label for="q8">Review Rating:</label>
+                                <label for="q8">How was the experience of the trip?</label>
                             </span><br>
                         <span class="bubble bubble--alt">
                             <span class="radios">
@@ -205,9 +206,6 @@
             <div form-submit ng-model="form"></div>
         </form><!-- /simform -->
     </section>
-    </div>
-    <div ng-show="!isFormSubmitted" class="col-md-5 col-sm-10 col-xs-10 col-md-offset-4">
-    <span> Press Enter to continue</span>
     </div>
     
     <div class="col-md-2 col-sm-2 col-xs-2 pull-right">

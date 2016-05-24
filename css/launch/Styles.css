@@ -1238,7 +1238,20 @@ input[type=text]::-ms-clear {
 	min-height:100vh;
 	padding-bottom:40px;
 }
-.img-user{
+.loginwithfacebook{
+    border-radius: 4px;
+    background-color: rgb(59, 89, 152)!important;
+	margin-top:10px;
+    color: rgb(255, 255, 255)!important;
+    font-family:lato-light;
+    letter-spacing:0.04em;
+    font-size:16px;
+	padding:6px 12px;
 }
-.img-us{
+.interview-promo{
+	background-image:url(../images/interview_cover_low_quality.jpg);
+	background-position:center;
+	background-repeat:no-repeat;
+	background-size:cover;
+	height:100vh;
 }

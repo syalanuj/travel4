@@ -14,8 +14,7 @@
                 new stepsForm(theForm, {
                     onSubmit: function (form) {
                         // hide form		
-                        scope;
-                        x;
+
                         scope.$parent.submitForm(scope.ngModel);
                         classie.addClass(theForm.querySelector('.simform-inner'), 'hide');
 
@@ -29,6 +28,7 @@
                         var messageEl = theForm.querySelector('.final-message');
                         messageEl.innerHTML = 'Thank you! We\'ll be in touch.';
                         classie.addClass(messageEl, 'show');
+                        scope.$parent.isFormSubmitted = true;
                     }
                 });
             }

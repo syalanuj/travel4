@@ -26,7 +26,7 @@
 
                         // let's just simulate something...		
                         var messageEl = theForm.querySelector('.final-message');
-                        messageEl.innerHTML = 'Thank you! We\'ll be in touch.';
+                        messageEl.innerHTML = 'Hey, that was pretty good! <br />It was a pleasure speaking to you! <h4>Keep a lookout at our Blog, we might just feature your trip with the world!</h4><h4>Travel - Explore - Repeat<br />Cheers!</h4></br> ';
                         classie.addClass(messageEl, 'show');
                         scope.$parent.isFormSubmitted = true;
                     }

@@ -1,5 +1,9 @@
 @charset "UTF-8";
 /* CSS Document */
+@font-face{
+	font-family:"Lato Semibold";
+	src: url(../../fonts/Lato-Semibold.woff);
+}
 html{
     overflow-x: hidden;
 	font-family:lato!important;
@@ -909,8 +913,8 @@ a{
 }
 .questions li > span {
 	display: inline-block;
-	padding-left:10px;
-	padding-right:10px;
+	padding-left:35px;
+	padding-right:35px;
 }
 
 .questions li > span label {
@@ -947,7 +951,6 @@ a{
 /* Input field */
 .questions input {
 	display: block;
-	margin: 0.3em 0 0 0;
 	padding: 0.5em 1em 0.5em 0.7em;
 	width: calc(100% - 2em);
 	border: none;
@@ -987,14 +990,14 @@ a{
 .next {
 	position: absolute;
 	right: 0;
-	bottom: 2.15em; /* padding-bottom of form plus progress bar height */
+	bottom: 0em; /* padding-bottom of form plus progress bar height */
 	display: block;
 	padding: 0;
 	width: 2em;
 	height: 2em;
 	border: none;
 	background: none;
-	color: rgba(0,0,0,0.4);
+	color:white;
 	text-align: center;
 	opacity: 0;
 	z-index: 100;
@@ -1172,24 +1175,36 @@ input[type=text]::-ms-clear {
 	}
 }
 /* .bubble */
-
+label{
+	margin-bottom:0;
+}
 .bubble {
-	background:#E5E5EA;
+	border-style: solid;
+  border-width: 1px;
+  border-color: rgba(164, 164, 164,0.15);
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255,0.15);
+  box-shadow: 0px 2px 2px 0px rgba(160, 160, 160, 0.3);
+	font-size: 24px;
+  font-family: "Lato Semibold";
+  color: rgb(82, 83, 84);
 	
-	border-radius: 20px;
 	/* vendor rules */
 	/* vendor rules */
 	box-sizing: border-box;
 	clear: both;
 	margin-bottom: 20px;
-	padding: 8px 30px;
+	padding-left:20px;
+	padding-right:20px;
+	padding-bottom:12px;
+	padding-top:12px;
 	position: relative;
 	width: auto;
 	max-width: 100%;
 	word-wrap: break-word;
 }
 
-.bubble:before, .bubble:after {
+/*.bubble:before, .bubble:after {
 	border-radius: 20px / 10px;
 	content: '';
 	display: block;
@@ -1209,14 +1224,22 @@ input[type=text]::-ms-clear {
 	border-bottom-color: #E5E5EA;
 	bottom: 1px;
 	left: -5px;
-}
+}*/
 
 .bubble--alt {
-	background:#0B93F6;
-	width:100%;
+	border-radius: 8px;
+  background-color: rgb(255, 110, 64);
+  box-shadow: 0px 2px 2px 0px rgba(160, 160, 160, 0.3);
+  width:100%;
+  font-size: 24px;
+  font-family: "Lato Semibold";
 	}
-
-.bubble--alt:before {
+.bubble--alt input::-webkit-input-placeholder {
+	font-size: 24px;
+  font-family: "Lato Semibold";
+  color: rgb(255, 255, 255);
+}
+/*.bubble--alt:before {
 	border-radius: 20px / 10px;
 	left: auto;
 	right: -7px;
@@ -1227,13 +1250,13 @@ input[type=text]::-ms-clear {
 	border-radius: 20px / 10px;
 	left: auto;
 	right: -5px;
-}
+}*/
 .radios{
 	width:25%;
 	display:inline-block;
 }
 .interview-bg{
-	background-image:url(../images/hero-img.jpg);
+	background-image:url(../images/cover.jpg);
 	padding-top:40px;
 	min-height:100vh;
 	padding-bottom:40px;

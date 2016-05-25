@@ -4,6 +4,10 @@
 	font-family:"Lato Semibold";
 	src: url(../../fonts/Lato-Semibold.woff);
 }
+@font-face{
+	
+	src: url(../../fonts/Lato-Semibold.woff);
+}
 html{
     overflow-x: hidden;
 	font-family:lato!important;
@@ -1246,9 +1250,10 @@ label{
   color: rgb(255, 255, 255);
 }
 .bubble--alt input::-webkit-input-placeholder {
-	font-size: 24px;
-  font-family: "Lato Semibold";
+	font-size: 20px;
+  font-family: lato-light;
   color: rgb(255, 255, 255);
+  font-style:italic;
 }
 /*.bubble--alt:before {
 	border-radius: 20px / 10px;

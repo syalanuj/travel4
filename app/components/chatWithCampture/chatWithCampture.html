@@ -29,9 +29,9 @@
                     <li>
                         <span class="bubble">
                             
-                                <label for="q1">First of all: Where did you go?</label>
+                                <label for="q1">First of all, Where did you go?</label>
                             </span>
-                        <span class="bubble bubble--alt">
+                        <span class="bubble--alt">
                             <input id="q1" name="q1" type="text" ng-autocomplete ng-model="form.location" options="options" details="details" autofocus required/>
                         </span>
                     </li>
@@ -39,17 +39,26 @@
                         <span class="bubble">
                             
                            
-                                <label for="q2">For how many days?</label>
+                                <label for="q2">Awesome! For how many days?</label>
                             </span>
-                        <span class="bubble bubble--alt">
+                        <span class="bubble--alt">
                             <input id="q2" name="q2" type="number" ng-model="form.duration"  pattern="\d*"/>
                         </span>
                     </li>
                     <li>
                         <span class="bubble">
-                            <label for="q3">Backpack or suitcase?</label>
+                            
+                                <label for="q7">Tell us a lil bit about this place..</label>
+                            </span>
+                        <span class="bubble--alt">
+                            <input id="q7" name="q7" type="text" ng-model="form.returnReason" />
+                        </span>
+                    </li>
+                    <li>
+                        <span class="bubble">
+                            <label for="q3">What was your travel style for this trip? Backpacking or Suitcase?</label>
                             </span><br>
-                        <span class="bubble bubble--alt">
+                        <span class="bubble--alt">
                             <span class="radios">
                                 <input id="q3a" name="q3" type="radio" ng-model="form.isBackPackOrSuitcase" value="Backpack" required />
                                 <label for="q3a" style="background-image:url(css/images/Interview%20Icons/bag.png); background-position:center" class="customLabel" value="backpack">
@@ -65,8 +74,8 @@
                         </span>
                     </li>
                     <li>
-                        <span class="bubble"><label for="q4">Camping or Hotel?</label></span><br>
-                        <span class="bubble bubble--alt">
+                        <span class="bubble"><label for="q4">Camping or Guesthouse/hotel?</label></span><br>
+                        <span class="bubble--alt">
                             <span class="radios">
                                 <input id="q4a" name="q4" type="radio" ng-model="form.isCampingOrHotel" value="Camping" />
                                 <label for="q4a" style="background-image:url(css/images/Interview%20Icons/tent.png); background-position:center" class="customLabel"><br>
@@ -84,9 +93,9 @@
                     <li>
                         <span class="bubble">
                             
-                                <label for="q5">How did you travel?</label>
+                                <label for="q5"> How did you get to this awesome place?</label>
                            </span><br />
-                        <span class="bubble bubble--alt">
+                        <span class="bubble--alt">
                             <span class="radios">
                                 <input id="q5a" name="q5" type="radio" ng-model="form.transportMode" value="Airplane" />
                                 <label for="q5a" style="background-image:url(css/images/Interview%20Icons/airplane.png); background-position:center" class="customLabel"><br>
@@ -128,27 +137,18 @@
                     <li>
                         <span class="bubble">
                             
-                                <label for="q6">Any local speciality you found?</label>
+                                <label for="q6">What was your best moment of the trip?</label>
                             </span>
-                        <span class="bubble bubble--alt">
+                        <span class="bubble--alt">
                             <input id="q6" name="q6" type="text" ng-model="form.speciality" />
                         </span>
-                    </li>
+                    </li>                    
                     <li>
                         <span class="bubble">
                             
-                                <label for="q7">Review: What would you return here for?</label>
-                            </span>
-                        <span class="bubble bubble--alt">
-                            <input id="q7" name="q7" type="text" ng-model="form.returnReason" />
-                        </span>
-                    </li>
-                    <li>
-                        <span class="bubble">
-                            
-                                <label for="q8">How was the experience of the trip?</label>
+                                <label for="q8">How would you describe the experience of your trip?</label>
                             </span><br>
-                        <span class="bubble bubble--alt">
+                        <span class="bubble--alt">
                             <span class="radios">
                                 <input id="q8a" ng-model="form.reviewRating" name="q8" type="radio" value="1" />
                                 <label for="q8a" class="customLabel" style="background-image:url(../../../css/images/Interview%20Icons/01.png)"></label>
@@ -174,26 +174,26 @@
                     <li>
                         <span class="bubble">
                             
-                                <label for="q9">Tips for other travellers?</label>
+                                <label for="q9">Any tips from your experience for other travellers?</label>
                             </span>
-                        <span class="bubble bubble--alt">
+                        <span class="bubble--alt">
                             <input id="q9" ng-model="form.tip" name="q9" type="text" />
                         </span>
                     </li>
                     <li>
                         <span class="bubble">
                             
-                                <label for="q10">Your Next Adventure?</label>
+                                <label for="q10">Lastly, what’s next on your bucket list?</label>
                             
                             </span>
-                        <span class="bubble bubble--alt">
+                        <span class="bubble--alt">
                             <input id="q10" ng-model="form.nextAdventure" name="q10" type="text" />
                         </span>
                     </li>
                 </ol><!-- /questions -->
                 <button class="submit" type="submit">Send answers</button>
                 <div class="controls">
-                    <button class="next"><i class="fa fa-arrow-right"></i></button>
+                    <button class="next"><i class="fa fa-angle-right"></i></button>
                     <div class="progress"></div>
                     <span class="number">
                         <span class="number-current"></span>

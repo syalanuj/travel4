@@ -26,7 +26,7 @@
 
                         // let's just simulate something...		
                         var messageEl = theForm.querySelector('.final-message');
-                        messageEl.innerHTML = 'Hey, that was pretty good! <br />It was a pleasure speaking to you! <h4>Keep a lookout at our Blog, we might just feature your trip with the world!</h4><h4>Travel - Explore - Repeat<br />Cheers!</h4></br> ';
+                        messageEl.innerHTML = '<h4>Hey, that was pretty good, hope this was fun for you too!</br>We would love to know more about your travel experiences. please reach out to us at info@campture.com.</h4>';
                         classie.addClass(messageEl, 'show');
                         scope.$parent.isFormSubmitted = true;
                     }

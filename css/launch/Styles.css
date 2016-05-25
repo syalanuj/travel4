@@ -910,6 +910,7 @@ a{
 	background-size:contain;
 	text-align:center;
 	cursor:pointer;
+	color:white;
 }
 .questions li > span {
 	display: inline-block;
@@ -923,7 +924,7 @@ a{
 	transition: transform 0.4s;
 	-webkit-transform: translateY(-100%);
 	transform: translateY(-100%);
-}
+	}
 
 .questions li.current > span label,
 .no-js .questions li > span label {
@@ -951,7 +952,7 @@ a{
 /* Input field */
 .questions input {
 	display: block;
-	padding: 0.5em 1em 0.5em 0.7em;
+	padding: 1.5em 1em 1.5em 0.7em;
 	width: calc(100% - 2em);
 	border: none;
 	background: transparent;
@@ -1183,21 +1184,17 @@ label{
   border-width: 1px;
   border-color: rgba(164, 164, 164,0.15);
   border-radius: 8px;
-  background-color: rgba(255, 255, 255,0.15);
+  background-color: rgb(255, 255, 255);
   box-shadow: 0px 2px 2px 0px rgba(160, 160, 160, 0.3);
 	font-size: 24px;
   font-family: "Lato Semibold";
   color: rgb(82, 83, 84);
-	
+  padding:1.5em 1em 1.5em 0.7em;  
 	/* vendor rules */
 	/* vendor rules */
 	box-sizing: border-box;
 	clear: both;
 	margin-bottom: 20px;
-	padding-left:20px;
-	padding-right:20px;
-	padding-bottom:12px;
-	padding-top:12px;
 	position: relative;
 	width: auto;
 	max-width: 100%;
@@ -1234,6 +1231,20 @@ label{
   font-size: 24px;
   font-family: "Lato Semibold";
 	}
+.bubble--alt input{
+	color:rgb(255, 255, 255);
+}
+.bubble--alt textarea{
+	color:rgb(255, 255, 255);
+	    width: 100%;
+    background: transparent;
+    border: none;
+}
+.bubble--alt textarea::-webkit-input-placeholder {
+	font-size: 24px;
+  font-family: "Lato Semibold";
+  color: rgb(255, 255, 255);
+}
 .bubble--alt input::-webkit-input-placeholder {
 	font-size: 24px;
   font-family: "Lato Semibold";

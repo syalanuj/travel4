@@ -1,7 +1,6 @@
 <div ng-show="userObj == undefined" class="interview-bg">
     <div class="container text-center" style="padding-top:8%;">
-    <h1>Interview with Campture</h1>
-    <div class="" style="color:#525354;">
+    <img src="../../../css/images/interview-assets/heading.png" class="img-responsive" style="margin:auto; padding-top:20px;"><div class="" style="color:#525354;">
         <h2>Hey there, we are tracking down travellers from all over the world to feature them in our series of blog posts.</h2>
         </div>
         <img src="../../../css/images/image-56aa090b8531f-big.gif">
@@ -16,7 +15,7 @@
 <div ng-show="userObj" class="container">
     <!-- Top Navigation -->
     <div class="text-center">
-        <h2>Interview with Campture</h2>
+        <img src="../../../css/images/interview-assets/heading.png" class="img-responsive" style="margin:auto; padding-top:20px;">
     </div>
     <div class="col-md-2 col-sm-2 col-xs-2 img-us">
     <img src="../../../css/images/image-56aa090b8531f-default.gif" class="img-responsive">
@@ -32,7 +31,7 @@
                                 <label for="q1">First of all, Where did you go?</label>
                             </span>
                         <span class="bubble--alt">
-                            <input id="q1" name="q1" type="text" ng-autocomplete ng-model="form.location" options="options" details="details" autofocus required/>
+                            <input id="q1" name="q1" type="text" ng-autocomplete ng-model="form.location" options="options" details="details" autofocus required placeholder="enter location name and select"/>
                         </span>
                     </li>
                     <li>
@@ -42,7 +41,7 @@
                                 <label for="q2">Awesome! For how many days?</label>
                             </span>
                         <span class="bubble--alt">
-                            <input id="q2" name="q2" type="number" ng-model="form.duration"  pattern="\d*"/>
+                            <input id="q2" name="q2" type="number" ng-model="form.duration"  pattern="\d*" placeholder="no. of days"/>
                         </span>
                     </li>
                     <li>
@@ -51,7 +50,7 @@
                                 <label for="q7">Tell us a lil bit about this place..</label>
                             </span>
                         <span class="bubble--alt">
-                            <input id="q7" name="q7" type="text" ng-model="form.returnReason" />
+                            <input id="q7" name="q7" type="text" ng-model="form.returnReason" placeholder="eg: Tirthan ValleyTirthan Valley is a destination with plethora of delights. this place is abundant in adventurous activities and a paradise for nature lovers"/>
                         </span>
                     </li>
                     <li>
@@ -60,7 +59,7 @@
                             </span><br>
                         <span class="bubble--alt">
                             <span class="radios">
-                                <input id="q3a" name="q3" type="radio" ng-model="form.isBackPackOrSuitcase" value="Backpack" required />
+                                <input id="q3a" name="q3" type="radio" ng-model="form.isBackPackOrSuitcase" value="Backpack" required placeholder="Best moment - Eg: During my recent trek to Triund, we woke up to fresh snow.."/>
                                 <label for="q3a" style="background-image:url(css/images/Interview%20Icons/bag.png); background-position:center" class="customLabel" value="backpack">
                                Backpack
                                 </label>
@@ -140,7 +139,7 @@
                                 <label for="q6">What was your best moment of the trip?</label>
                             </span>
                         <span class="bubble--alt">
-                            <input id="q6" name="q6" type="text" ng-model="form.speciality" />
+                            <input id="q6" name="q6" type="text" ng-model="form.speciality" placeholder="Best moment - Eg: During my recent trek to Triund, we woke up to fresh snow.."/>
                         </span>
                     </li>                    
                     <li>
@@ -177,7 +176,7 @@
                                 <label for="q9">Any tips from your experience for other travellers?</label>
                             </span>
                         <span class="bubble--alt">
-                            <input id="q9" ng-model="form.tip" name="q9" type="text" />
+                            <input id="q9" ng-model="form.tip" name="q9" type="text" placeholder="tips - eg: recommend to carry food & water on this trek as there is no food available throughout."/>
                         </span>
                     </li>
                     <li>

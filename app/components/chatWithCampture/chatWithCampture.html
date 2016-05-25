@@ -17,7 +17,7 @@
     <div class="text-center">
         <img src="../../../css/images/interview-assets/heading.png" class="img-responsive" style="margin:auto; padding-top:20px;">
     </div>
-    <div class="col-md-2 col-sm-2 col-xs-2 img-us">
+    <div ng-show="!isFormSubmitted" class="col-md-2 col-sm-2 col-xs-2 img-us">
     <img src="../../../css/images/image-56aa090b8531f-default.gif" class="img-responsive">
     </div>
 	<div class="col-md-11 col-sm-11 col-xs-11 img-user">
@@ -50,7 +50,7 @@
                                 <label for="q7">Tell us a lil bit about this place..</label>
                             </span>
                         <span class="bubble--alt">
-                            <input id="q7" name="q7" type="text" ng-model="form.returnReason" placeholder="eg: Tirthan ValleyTirthan Valley is a destination with plethora of delights. this place is abundant in adventurous activities and a paradise for nature lovers"/>
+                            <input id="q7" name="q7" type="text" ng-model="form.returnReason" placeholder="eg: Tirthan Valley is a destination with plethora of delights. this place is abundant in adventurous activities and a paradise for nature lovers"/>
                         </span>
                     </li>
                     <li>
@@ -207,9 +207,41 @@
     </section>
     </div>
     
-    <div class="col-md-2 col-sm-2 col-xs-2 pull-right">
+    <div ng-show="!isFormSubmitted" class="col-md-2 col-sm-2 col-xs-2 pull-right">
         <img ng-src="{{userObj.facebook_profile.picture.data.url}}" class="img-responsive img-circle">
     </div>
-    
+    <div style="margin: auto">
+    <div ng-show="isFormSubmitted" class="col-md-2 col-sm-2 col-xs-2 img-us col-md-offset-5"  style="margin-top: 150px;">
+    <img src="../../../css/images/image-56aa090b8531f-default.gif" class="img-responsive">
+    </div>
+        <div ng-show="isFormSubmitted"  class="row" style="clear:both">
+        <div class="col-md-3 col-sm-4 col-xs-4 col-md-offset-1">
+            <a href="#/gearChecklistForm">
+            <div class="thumbnail">
+            <img src="../../../css/images/interview-assets/gear_checklist.jpg">
+                <div  class="caption text-center">Heading outdoor? Make sure you have the right gear.</div>
+            </div>
+                </a>
+        </div>
+        <div class="col-md-3 col-sm-4 col-xs-4">
+            <a  href="" ng-click="reloadChatWithCampture()">
+            <div class="thumbnail">
+            <img src="../../../css/images/interview-assets/blog.jpg">
+                <div  class="caption text-center"> Have another experience to share? Lets talk again!
+</div>
+            </div>
+                </a>
+        </div>
+        <div class="col-md-3 col-sm-4 col-xs-4">
+            <a  href="http://www.campture.com/blog">
+            <div  class="thumbnail">
+            <img src="../../../css/images/interview-assets/campture_talk_retake.jpg">
+                <div style="padding-bottom: 29px" class="caption  text-center">Check out the latest travel buzz.</div>
+            </div>
+                </a>
+        </div>
+        
+        </div>
+      </div>
 </div><!-- /container -->
 </div>

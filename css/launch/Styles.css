@@ -1112,14 +1112,9 @@ a{
 }
 
 .final-message {
-	top: 50%;
-	left: 0;
-	padding: 0.5em;
 	width: 100%;
 	text-align: center;
-	-webkit-transform: translateY(-50%);
-	transform: translateY(-50%);
-}
+	}
 
 .error-message.show,
 .final-message.show {

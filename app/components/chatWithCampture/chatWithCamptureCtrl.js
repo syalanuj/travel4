@@ -26,7 +26,7 @@
 
                         // let's just simulate something...		
                         var messageEl = theForm.querySelector('.final-message');
-                        messageEl.innerHTML = '<h2 style="margin-top:100px;">Hey, that was pretty good, hope this was fun for you too!</br><h3>We would love to know more about your travel experiences.</h3><h3>Please reach out to us at <a href="mailto:info@campture.com?Subject=Query%int-form" target="_top">info@campture.com</a></h3> ';
+                        //messageEl.innerHTML = '<h2 style="margin-top:100px;">Hey, that was pretty good, hope this was fun for you too!</br><h3>We would love to know more about your travel experiences.</h3><h3>Please reach out to us at <a href="mailto:info@campture.com?Subject=Query%int-form" target="_top">info@campture.com</a></h3>';
                         classie.addClass(messageEl, 'show');
                         scope.$parent.isFormSubmitted = true;
                         scope.$parent.$apply();

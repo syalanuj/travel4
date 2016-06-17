@@ -14,8 +14,7 @@
                 new stepsForm(theForm, {
                     onSubmit: function (form) {
                         // hide form		
-                        scope;
-                        x;
+
                         scope.$parent.submitForm(scope.ngModel);
                         classie.addClass(theForm.querySelector('.simform-inner'), 'hide');
 
@@ -27,15 +26,17 @@
 
                         // let's just simulate something...		
                         var messageEl = theForm.querySelector('.final-message');
-                        messageEl.innerHTML = '<h4>Hey, that was pretty good, hope this was fun for you too!</br>We would love to know more about your travel experiences. please reach out to us at info@campture.com.</h4>';
+                        //messageEl.innerHTML = '<h2 style="margin-top:100px;">Hey, that was pretty good, hope this was fun for you too!</br><h3>We would love to know more about your travel experiences.</h3><h3>Please reach out to us at <a href="mailto:info@campture.com?Subject=Query%int-form" target="_top">info@campture.com</a></h3>';
                         classie.addClass(messageEl, 'show');
+                        scope.$parent.isFormSubmitted = true;
+                        scope.$parent.$apply();
                     }
                 });
             }
         };
     });
-    app.controller('ChatWithCamptureCtrl', ['$scope', 'AccountService', controller]);
-    function controller($scope, accountService) {
+    app.controller('ChatWithCamptureCtrl', ['$scope', '$window', 'AccountService', controller]);
+    function controller($scope, $window, accountService) {
         //====== Scope Variables==========		
         //================================		
         $scope.form = new Object();
@@ -104,6 +105,9 @@
                     $('#response').html('Error! Email not sent!').addClass('error').fadeIn('fast');
                 }
             });
+        }
+        $scope.reloadChatWithCampture = function () {
+            $window.location.reload();
         }
     };
 })();

@@ -23,10 +23,10 @@
     	<div class="sale-info bottom-zero sticker2" style="z-index:1;">
         	<div class="container">
         		<ul class="nav nav-pills i-pills">
-    				<li class="active"><a data-toggle="pill" href="#home"><i class="fa fa-file-text-o"></i> Summary</a></li>
-    				<li><a data-toggle="pill" href="#menu1"><i class="fa fa-map-o" aria-hidden="true"></i> Itinerary
+    				<li ng-class="{'active': pillTabIndex == 0}"><a data-toggle="pill"  ng-click="updatePillTabPos(0)" href=""><i class="fa fa-file-text-o"></i> Summary</a></li>
+    				<li ng-class="{'active': pillTabIndex == 1}"><a  data-toggle="pill" ng-click="updatePillTabPos(1)" href=""><i class="fa fa-map-o" aria-hidden="true"></i> Itinerary
 </a> </li>
-    				<li><a data-toggle="pill" href="#menu2"><i class="fa fa-align-left"></i> Details</a></li>
+    				<li ng-class="{'active': pillTabIndex == 2}"><a data-toggle="pill" ng-click="updatePillTabPos(2)" href=""><i class="fa fa-align-left"></i> Details</a></li>
     			</ul>
             </div>   
         </div>
@@ -38,7 +38,7 @@
         	<div class="col-md-12">
             	<div class="col-md-8 green-bodah">
     				<div class="tab-content">
-    					<div id="home" class="tab-pane fade in active">
+    					<div id="home" ng-show="pillTabIndex == 0" class="">
                         	<div class="col-md-12">
                             <div class="lato-light">
                             	<h1>Markha Valley Trek</h1>
@@ -308,7 +308,7 @@
                             </iframe>
                 			</div>
       					</div>
-    					<div id="menu1" class="tab-pane fade">
+    					<div id="menu1" ng-show="pillTabIndex == 1" class="">
       						<div class="timeline-card col-md-12">
                                 <div class="col-md-5">
                                     <div class="card-desc">
@@ -563,7 +563,7 @@ time- 3-4 hrs.
                             </div>
                     		
       					</div>
-    					<div id="menu2" class="tab-pane fade lato-light">
+    					<div id="menu2" ng-show="pillTabIndex == 2" class="">
       						<h1>Markha Valley</h1>
                             <p class="">
                                 Markha Valley is one of the most famous treks of Ladakh Region. It is an amazing trip to get introduced with magical and remote Buddhist Kingdom of Ladakh. While trekking on through this trek tourists passes through beautiful Buddhist Monasteries, Mountain Villages, High altitude pastures of Nimaling and High altitude peak Kangyatse.
@@ -746,9 +746,6 @@ time- 3-4 hrs.
                     </div>
                 </div>
             </div>
-            
-            
-            
         </div>    
     </div>
   </div>

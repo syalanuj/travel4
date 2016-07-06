@@ -1288,3 +1288,264 @@ label{
 	background-size:cover;
 	height:100vh;
 }
+/*markha*/
+
+.intro-photo-wrap {
+    height: 100vh;
+}
+
+.intro-photo {
+    background-image: url(images/Markha_hero/markha_valley_hero_img.jpg);
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.sale-info {
+    position: relative;
+    width: 100%;
+    background: #fff;
+    z-index: 1;
+    box-shadow: 0px 0px 7px 0px rgba(166, 166, 166, 0.4);
+}
+
+#aa_particles {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.i-pills {
+    color: #000000;
+    letter-spacing: 0.14em;
+    display: flex;
+}
+
+.i-pills>li>a {
+    border-radius: 0!important;
+    font-family: lato;
+    color: #000000;
+    text-transform: uppercase;
+}
+
+.i-pills>li.active>a,
+.i-pills>li.active>a:focus,
+.i-pills>li.active>a:hover {
+    color: #169f8d!important;
+    background-color: #FFFFFF!important;
+    padding-bottom: 7px;
+    border-bottom: 3px #169f8d solid;
+    transition: ease-in .2s;
+}
+
+.sale-content {
+    padding-top: 20px;
+}
+
+.tour-pricing h3 {
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    font-family: lato;
+}
+
+.insp-panel {
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(235, 235, 235);
+    border-radius: 6px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.05), 0 2px 10px 0 rgba(0, 0, 0, 0.05);
+}
+
+.sell-panel {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(235, 235, 235);
+    border-radius: 6px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.05), 0 2px 10px 0 rgba(0, 0, 0, 0.05);
+}
+
+.sell-panel>.table>tbody>tr>td {
+    border-bottom: 1px solid #ddd!important;
+    border-top: 0!important;
+    font-family: lato;
+    color: rgb(82, 83, 84);
+}
+
+.green {
+    color: rgb(22, 159, 141)!important;
+}
+
+.i-tabs>li>a {
+    color: rgb(82, 83, 84);
+    font-size: 18px;
+    font-family: Lato;
+}
+
+.i-tabs>li.active>a,
+.i-tabs>li.active>a:focus,
+.i-tabs>li.active>a:hover {
+    color: #169f8d!important;
+    background-color: #FFFFFF!important;
+    border-bottom: 1px #169f8d solid !important;
+    transition: ease-in .2s;
+}
+
+.lato {
+    font-family: lato;
+}
+
+.date-month {
+    width: 50%;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.flex {
+    display: flex;
+}
+
+.date-month2 {
+    width: 100%;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.inr {
+    background-color: rgb(22, 159, 141);
+    color: #FFFFFF;
+    font-size: 16px;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    text-transform: uppercase;
+}
+
+.dark-green-bg {
+    background-color: rgb(20, 140, 124)!important;
+}
+
+.spinner {
+    width: 100%;
+}
+
+.spinner input {
+    text-align: right;
+}
+
+.input-group-btn-vertical {
+    position: relative;
+    white-space: nowrap;
+    width: 1%;
+    vertical-align: middle;
+    display: table-cell;
+}
+
+.input-group-btn-vertical > .btn {
+    display: block;
+    float: none;
+    width: 100%;
+    max-width: 100%;
+    padding: 8px;
+    margin-left: -1px;
+    position: relative;
+    border-radius: 0;
+}
+
+.input-group-btn-vertical > .btn:first-child {
+    border-top-right-radius: 4px;
+}
+
+.input-group-btn-vertical > .btn:last-child {
+    margin-top: -2px;
+    border-bottom-right-radius: 4px;
+}
+
+.input-group-btn-vertical i {
+    position: absolute;
+    top: 0;
+    left: 4px;
+}
+
+.card-desc {
+    font-family: lato;
+}
+
+.view-det {
+    position: relative;
+    bottom: 100px;
+    font-family: lato;
+    font-size: 16px;
+    color: #fff;
+    font-style: italic;
+    z-index: 100000;
+    cursor: pointer;
+}
+
+.view-det a {
+    color: #fff;
+}
+
+.view-det a:hover {
+    color: #fff;
+}
+
+.bottom-zero {
+    bottom: 104px;
+}
+
+.lato-light {
+    font-family: lato-light;
+}
+
+.sum-card {}
+
+.no-border {
+    border: 0;
+}
+
+.fixed-top {
+    position: fixed;
+    top: 0px;
+}
+
+#home p,
+#home li,
+#menu2 p,
+#menu2 li,
+#menu2 td {
+    font-size: 16px;
+}
+
+.badge-det {
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.badge-det p{
+    font-family: lato;
+    color: #fff;
+    font-size: 18px;
+}
+.badge-det span{
+    font-size: 18px;
+    color: #fff;
+}
+.green-bodah{
+    border-right-style: solid;
+    border-right-color: rgb(22, 159, 141);
+    border-right-width: 1px;
+}

@@ -4,7 +4,8 @@ app.factory('GearService', ['$http', '$q', function ($http, $q) {
     return {
         getWeatherDataFromCloud: getWeatherDataFromCloud,
         gearBuyPoll: gearBuyPoll,
-        postGearlistEntries: postGearlistEntries
+        postGearlistEntries: postGearlistEntries,
+        getFullGearList: getFullGearList
     };
 
     function getWeatherDataFromCloud(coordinates, dateTime, duration, callback) {
@@ -55,6 +56,21 @@ app.factory('GearService', ['$http', '$q', function ($http, $q) {
             },
             error: function (gameScore, error) {
                 alert('Failed to create new object, with error code: ' + error.message);
+            }
+        });
+    }
+
+    function getFullGearList (callback){
+        var Gears = Parse.Object.extend("Gears");
+        var gears = new Gears();
+        var query = new Parse.Query(gears);
+
+        query.find({
+            success: function (parseObject) {
+                callback(JSON.parse(JSON.stringify(parseObject)));
+            },
+            error: function (object, error) {
+                // The object was not retrieved successfully.
             }
         });
     }

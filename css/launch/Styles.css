@@ -620,7 +620,6 @@ transform:rotate(-30deg);
 .nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover{
 	background:transparent;
 	color:#f56c36;
-	border:solid 1px black;
 }
 a{
 	color:black;
@@ -1295,7 +1294,7 @@ label{
 }
 
 .intro-photo {
-    background-image: url(images/Markha_hero/markha_valley_hero_img.jpg);
+    background-image:url(../images/Markha_hero/markha_valley_hero_img.jpg);
     width: 100%;
     height: 100%;
     background-size: cover;

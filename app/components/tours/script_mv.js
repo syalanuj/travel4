@@ -1,7 +1,8 @@
 $(document).ready(function () {
+    var naji = $('.asfeatured').height() + $('.sectionsix').height() + $('.footer').height() + 260 ;
     $("#sticker").sticky({
         topSpacing: 40,
-        bottomSpacing:570
+        bottomSpacing: naji
     });
 });
 (function ($) {
@@ -16,7 +17,14 @@ $(window).scroll(function () {
     var scroll = $(window).scrollTop();
     var leftDo = $(window).width() - $('.son-width').width()
     var leftDoTwo = leftDo/2;
-    if (scroll >= $(".intro-photo").height() - 90) {
+    if (scroll >= $(".intro-photo").height() - 40 && $(window).width() < 990){
+        $(".sale-info").css('width','100%');
+        $(".sale-info").css('left','0');
+        $(".sale-info").addClass("fixed-top");
+        $(".sale-info").removeClass("bottom-zero");
+        $("#sticker").removeAttr('id');
+    }
+    else if (scroll >= $(".intro-photo").height()) {
         $(".sale-info").removeClass("bottom-zero");
         $(".sale-info").addClass("fixed-top");
         $('.sale-info').css('z-index', '3');
@@ -26,7 +34,7 @@ $(window).scroll(function () {
     else {
         $(".sale-info").addClass("bottom-zero");
         $(".sale-info").removeClass("fixed-top");
-        $('.sale-info').css('width', '100%');
-        $('.sale-info').css('left', '');
+        $(".sale-info").css('width','100%')
+        $(".sale-info").css('left','0%')
     }
 });

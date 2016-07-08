@@ -27,6 +27,7 @@
              controller: 'ChatWithCamptureCtrl',		
              templateUrl:'app/components/chatWithCampture/chatWithCampture.html'		
          })
+
          .when('/tours/markhaTrek', {
              controller: 'MarkhaValleyTrekCtrl',
             templateUrl: 'app/components/tours/markhaValleyTrek.html'

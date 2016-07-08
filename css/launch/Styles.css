@@ -1325,6 +1325,7 @@ label{
     color: #000000;
     letter-spacing: 0.14em;
     display: flex;
+    cursor: pointer;
 }
 
 .i-pills>li>a {
@@ -1387,6 +1388,9 @@ label{
 
 .green {
     color: rgb(22, 159, 141)!important;
+}
+.i-tabs{
+    cursor: pointer;
 }
 
 .i-tabs>li>a {

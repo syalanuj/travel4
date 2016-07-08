@@ -7,6 +7,7 @@
         //====== Scope Variables==========
         //================================
         $scope.pillTabIndex = 0;
+        $scope.privateGroupTabIndex = 0;
 
         $scope.scrollTo = function (id) {
             $location.hash(id);
@@ -14,6 +15,10 @@
         }
         $scope.updatePillTabPos = function (pos) {
             $scope.pillTabIndex = pos;
+            $scope.$apply()
+        }
+        $scope.updatePrivateGroupTab = function (pos) {
+            $scope.privateGroupTabIndex = pos;
             $scope.$apply()
         }
     };

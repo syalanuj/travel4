@@ -15,11 +15,9 @@
         }
         $scope.updatePillTabPos = function (pos) {
             $scope.pillTabIndex = pos;
-            $scope.$apply()
         }
         $scope.updatePrivateGroupTab = function (pos) {
             $scope.privateGroupTabIndex = pos;
-            $scope.$apply()
         }
     };
 })();

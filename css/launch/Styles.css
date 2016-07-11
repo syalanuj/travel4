@@ -1324,8 +1324,9 @@ label{
 .i-pills {
     color: #000000;
     letter-spacing: 0.14em;
-    display: flex;
+    display: block;
     cursor: pointer;
+    text-overflow: ellipsis;
 }
 
 .i-pills>li>a {
@@ -1556,4 +1557,8 @@ label{
 }
 .sale-wrap{
     position: relative;
+}
+.iti-sum td{
+    padding-left: 10px;
+    padding-bottom: 10px;
 }

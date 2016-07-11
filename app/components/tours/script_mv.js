@@ -24,7 +24,7 @@ $(window).scroll(function () {
         $(".sale-info").removeClass("bottom-zero");
         $("#sticker").removeAttr('id');
     }
-    else if (scroll >= $(".intro-photo").height()) {
+    else if (scroll >= $(".intro-photo").height() - 90 ) {
         $(".sale-info").removeClass("bottom-zero");
         $(".sale-info").addClass("fixed-top");
         $('.sale-info').css('z-index', '3');

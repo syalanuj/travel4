@@ -32,6 +32,14 @@
              controller: 'MarkhaValleyTrekCtrl',
             templateUrl: 'app/components/tours/markhaValleyTrek.html'
         })
+        .when('/tours/lehTour', {
+             controller: 'LehTourCtrl',
+            templateUrl: 'app/components/tours/lehTour/lehTour.html'
+        })
+        .when('/tours/stokTrek', {
+             controller: 'StokTrekCtrl',
+            templateUrl: 'app/components/tours/stokTrek/stokTrek.html'
+        })
         .when('/pageNotFound/',{
             controller: 'ErrorPageCtrl',
             templateUrl:'app/components/error/errorPage.html'

@@ -30,7 +30,7 @@
 
          .when('/tours/markhaTrek', {
              controller: 'MarkhaValleyTrekCtrl',
-            templateUrl: 'app/components/tours/markhaValleyTrek.html'
+            templateUrl: 'app/components/tours/markhaTrek/markhaValleyTrek.html'
         })
         .when('/tours/lehTour', {
              controller: 'LehTourCtrl',

@@ -2,7 +2,7 @@
     'use strict';
 
     var app = angular.module('campture');
-    app.controller('LehTourCtrl', ['$scope', '$location', '$anchorScroll', '$route', 'TourService', controller]);
+    app.controller('MarkhaValleyTrekCtrl', ['$scope', '$location', '$anchorScroll', '$route', 'TourService', controller]);
     function controller($scope, $location, $anchorScroll, $route, tourService) {
         //====== Scope Variables==========
         //================================
@@ -10,7 +10,7 @@
         $scope.privateGroupTabIndex = 0;
         $scope.numberOfPeople = 1;
         $scope.peoplesCost = 0
-        var tourPriceId = "0KcEzwlZdi"//LehId
+        var tourPriceId = "ER0eK6MkTl"
         $scope.tourPrice;
         $scope.selectedAccomodation = { cost: 0 }
         $scope.totalCost;

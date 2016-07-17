@@ -674,21 +674,9 @@ Assisted transfer to the airport.
                         <div class="sell-panel" style="margin-bottom:30px;">
                             <table class="table">
                                 <tbody>
-                                    <tr>
-                                        <td>2 People</td>
-                                        <td class="green">INR 16000 Per Person</td>
-                                    </tr>
-                                    <tr>
-                                        <td>4 People</td>
-                                        <td class="green">INR 12500 Per Person</td>
-                                    </tr>
-                                    <tr>
-                                        <td>6 People</td>
-                                        <td class="green">INR 10500 Per Person</td>
-                                    </tr>
-                                    <tr>
-                                        <td>8 People</td>
-                                        <td class="green">INR <span style="margin-right:8px;">6500</span> Per Person</td>
+                                    <tr ng-repeat="tourPriceDetails in tourPrice.price_list">
+                                        <td>{{tourPriceDetails.no_of_people}} People</td>
+                                        <td class="green">INR {{tourPriceDetails.price}} Per Person</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -704,75 +692,61 @@ Assisted transfer to the airport.
                                     <div class="date-month2 lato" style="">
                                         <label for="sel1">No. of People:</label>
                                         <div class="input-group spinner">
-                                            <input type="text" class="form-control" value="1" style="text-align:left;">
-                                            <div class="input-group-btn-vertical">
-                                                <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
-                                                <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
-                                            </div>
+                                            <input type="number" ng-model="numberOfPeople" min="1" class="form-control" style="text-align:left;" ng-change="calculatePeoplesCost()">
+                                            {{peoplesCost}}
                                         </div>
                                     </div>
                                     <hr>
                                     <div class="date-month2 lato" style="">
                                         <label for="sel1">Accommodation:</label>
-                                        <select class="form-control" id="sel5">
-                                            <option>1</option>
-                                            <option>2</option>
-                                            <option>3</option>
-                                            <option>4</option>
+                                        <select class="form-control" ng-model="selectedAccomodation" ng-options="tourAccomodation.type for tourAccomodation in tourPrice.accomodation">
+                                            <option ng-click="selectedAccomodation.cost = 0" value="">-- Select Accomodation --</option>
                                         </select>
+                                        <div ng-show="selectedAccomodation.cost">{{3 * selectedAccomodation.cost * numberOfRooms }} for 3 Nights on twin sharing basis</div>
                                     </div>
                                     <hr>
                                     <div class="date-month2 lato" style="">
                                         <label for="sel1">Sleeping Bags:</label>
                                         <div class="input-group spinner">
-                                            <input type="text" class="form-control" value="1" style="text-align:left;">
-                                            <div class="input-group-btn-vertical">
-                                                <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
-                                                <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
-                                            </div>
+                                            <input ng-model="totalSleepingBags" type="number" min="0" class="form-control" style="text-align:left;">
+                                            {{totalSleepingBags * tourPrice.sleeping_bag_cost}}
                                         </div>
                                     </div>
                                 </div>
                                 <div ng-show="privateGroupTabIndex == 1" id="groupbuy" class="">
                                     <div class="green text-center lato">
-                                        <h3 class="green">INR 6500</h3>
+                                        <h3 class="green">INR {{tourPrice.group_cost}}</h3>
                                         <p>per person</p>
                                     </div>
                                     <hr>
                                     <div class="lato flex" style="padding-left:20px; padding-right:20px;">
+                                        <div class="date-month2 lato" style="">
+                                            <label for="sel1">No. of People:</label>
+                                            <div class="input-group spinner">
+                                                <input type="number" ng-model="numberOfPeopleInGroup" min="1" class="form-control" style="text-align:left;" >
+                                            </div>
+                                        </div>
                                         <div class="date-month">
                                             <label for="sel1">Month:</label>
-                                            <select class="form-control" id="sel1">
-                                                <option>1</option>
-                                                <option>2</option>
-                                                <option>3</option>
-                                                <option>4</option>
+                                            <select class="form-control" id="sel1" ng-model="selectedMonth" ng-options="groupMonth.Value for groupMonth in groupMonthsList">
                                             </select>
                                         </div>
                                         <div class="date-month">
                                             <label for="sel1">Date:</label>
-                                            <select class="form-control" id="sel2">
-                                                <option>1</option>
-                                                <option>2</option>
-                                                <option>3</option>
-                                                <option>4</option>
+                                            <select class="form-control" id="sel2" ng-model="selectedDate" ng-options="groupDate for groupDate in groupDateList">
                                             </select>
                                         </div>
                                     </div>
                                     <hr>
                                     <div class="date-month2 lato" style="">
                                         <label for="sel1">Sleeping Bag:</label>
-                                        <select class="form-control" id="sel3">
-                                            <option>1</option>
-                                            <option>2</option>
-                                            <option>3</option>
-                                            <option>4</option>
-                                        </select>
+                                        <input ng-model="totalSleepingBagsGroup" type="number" min="0" class="form-control">
+                                            {{totalSleepingBagsGroup * tourPrice.sleeping_bag_cost}}
                                     </div>
                                 </div>
                                 <br>
                                 <div class="flex lato text-center">
-                                    <div class="date-month inr" style="border-bottom-left-radius:6px;"> <i class="fa fa-shopping-cart"></i> INR 24,000 </div>
+                                    <div  class="date-month inr" style="border-bottom-left-radius:6px;"> <i class="fa fa-shopping-cart"></i> <span ng-show="privateGroupTabIndex == 0 && numberOfPeople">INR {{(peoplesCost + (3 * selectedAccomodation.cost * numberOfRooms) + (totalSleepingBags * tourPrice.sleeping_bag_cost))/numberOfPeople | number:0}} per person</span> <span ng-show="privateGroupTabIndex == 1 &&numberOfPeopleInGroup"> INR {{ ((numberOfPeopleInGroup * tourPrice.group_cost) + (totalSleepingBagsGroup * tourPrice.sleeping_bag_cost))/numberOfPeopleInGroup | number:0}} per person</span></div>
                                     <div class="date-month inr dark-green-bg" style="border-bottom-right-radius:6px; cursor:pointer;" data-toggle="modal" data-target="#enqModal"> checkout <i class="fa fa-angle-right"></i> </div>
                                 </div>
                             </div>

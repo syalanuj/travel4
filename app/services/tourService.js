@@ -4,13 +4,13 @@ app.factory('TourService', ['$http', '$q', function ($http, $q) {
     //var tourPrice = TourPrice();    
 
     return {
-        getMarkhaTrekPriceDetails: getMarkhaTrekPriceDetails
+        getTourPriceDetails: getTourPriceDetails
     };
 
-    function getMarkhaTrekPriceDetails(callback) {
-        var tourPrice = TourPrice();
+    function getTourPriceDetails(tourPriceId, callback) {
+        var tourPrice = new TourPrice();
         var query = new Parse.Query(tourPrice);
-        query.get("ER0eK6MkTl", {
+        query.get(tourPriceId, {
             success: function (parseObject) {
                 callback(JSON.parse(JSON.stringify(parseObject)));
             },

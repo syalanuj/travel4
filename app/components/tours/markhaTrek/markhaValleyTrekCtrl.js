@@ -59,20 +59,36 @@
         $scope.updatePrivateGroupTab = function (pos) {
             $scope.privateGroupTabIndex = pos;
         }
-        $scope.priceList = [{ people: 2, cost_per_person: 16000 }, { people: 4, cost_per_person: 12500 }, { people: 6, cost_per_person: 10500 }, { people: 8, cost_per_person: 6500}]
         $scope.calculatePeoplesCost = function () {
 
             if ($scope.numberOfPeople <= 3) {
-                $scope.peoplesCost = 16000 * $scope.numberOfPeople
+                angular.forEach($scope.tourPrice.price_list,function(priceObject,key){
+                    if (priceObject.no_of_people == 2){
+                        $scope.peoplesCost = priceObject.price * $scope.numberOfPeople
+                    }
+                })
+                
             }
             else if ($scope.numberOfPeople <= 5) {
-                $scope.peoplesCost = 12500 * $scope.numberOfPeople
+                angular.forEach($scope.tourPrice.price_list,function(priceObject,key){
+                    if (priceObject.no_of_people == 4){
+                        $scope.peoplesCost = priceObject.price * $scope.numberOfPeople
+                    }
+                })
             }
             else if ($scope.numberOfPeople <= 7) {
-                $scope.peoplesCost = 10500 * $scope.numberOfPeople
+                angular.forEach($scope.tourPrice.price_list,function(priceObject,key){
+                    if (priceObject.no_of_people == 6){
+                        $scope.peoplesCost = priceObject.price * $scope.numberOfPeople
+                    }
+                })
             }
             else {
-                $scope.peoplesCost = 6500 * $scope.numberOfPeople
+                angular.forEach($scope.tourPrice.price_list,function(priceObject,key){
+                    if (priceObject.no_of_people == 8){
+                        $scope.peoplesCost = priceObject.price * $scope.numberOfPeople
+                    }
+                })
             }
         }
 

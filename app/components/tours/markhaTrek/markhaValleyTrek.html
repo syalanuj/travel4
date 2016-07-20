@@ -776,18 +776,19 @@ Assisted transfer to the airport.
                                     </div>
                                     <hr>
                                     <div class="date-month2 lato" style="">
+                                        <label for="sel1">Date:</label>
+                                        <div class="input-group spinner">
+                                            <input style="text-align: left" name="travelDate" type="text" placeholder="Enter Date" uib-datepicker-popup="dd-MMMM-yyyy" ng-model="tourDate" is-open="status.opened" min-date="minDate" max-date="maxDate" datepicker-options="dateOptions" ng-required="true" close-text="Close" ng-click="open($event)" id="date" required>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    
+                                    <div class="date-month2 lato" style="">
                                         <label for="sel1">Accommodation:</label>
                                         <select class="form-control" ng-model="selectedAccomodation" ng-options="tourAccomodation.type for tourAccomodation in tourPrice.accomodation">
                                             <option ng-click="selectedAccomodation.cost = 0" value="">-- Select Accomodation --</option>
                                         </select>
                                         <div ng-show="selectedAccomodation.cost">{{3 * selectedAccomodation.cost * numberOfRooms }} for 3 Nights on twin sharing basis</div>
-                                    </div>
-                                    <hr>
-                                    <div class="date-month2 lato" style="">
-                                        <label for="sel1">Date:</label>
-                                        <div class="input-group spinner">
-                                            <input style="text-align: left" name="travelDate" type="text" placeholder="Enter Date" uib-datepicker-popup="dd-MMMM-yyyy" ng-model="tourDate" is-open="status.opened" min-date="minDate" max-date="maxDate" datepicker-options="dateOptions" ng-required="true" close-text="Close" ng-click="open($event)" id="date" required>
-                                        </div>
                                     </div>
                                 </div>
                                 <div ng-show="privateGroupTabIndex == 1" id="groupbuy" class="">

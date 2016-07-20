@@ -170,7 +170,7 @@
                         totalSleepingBagsCost: $scope.totalSleepingBagsGroup * $scope.tourPrice.sleeping_bag_cost
                     }
                 }
-                tourService.sendUserTourQuery($scope.userQuery,function(data){
+                tourService.sendUserTourQueryRest($scope.userQuery,function(data){
                     if(data){
                         console.log(data)
                         $('#enqModal').modal('hide')

@@ -41,7 +41,7 @@ app.factory('TourService', ['$http', '$q', function ($http, $q) {
         var data = {
             userQuery: userQuery
         }
-        Parse.Cloud.run("sendTourUserQuery", data, {
+        Parse.Cloud.run("sendTourUserQueryRest", data, {
             success: function (object) {
                 callback(object);
             },

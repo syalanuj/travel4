@@ -1,6 +1,9 @@
 <div class="bodywrap">
-    <div class="jumbotron">
-        <div class="screen mute" id="tv"></div>
+    <div class="jumbotro">
+        <!--<div class="screen mute" id="tv"></div>-->
+        <video autoplay="autoplay" loop="loop" width="640px" height="360px" muted="muted">
+        	<source src="http://res.cloudinary.com/dsykpguat/video/upload/v1469524691/leh_ladakh_final_site_v2d6w9.mp4" type="video/mp4"/>
+        </video>
         <div class="nav">
             <div class="text-center yourguide">
                 <img src="Images/Logo 2-min.png" class="img-responsive herologo input-group">
@@ -212,5 +215,10 @@ Locations</p>
       } else {
         tv.unMute();
       }
+    });
+</script>
+<script>$(function(){
+        // Helper function to Fill and Center the HTML5 Video
+        jQuery('video').maximage('maxcover');
     });
 </script>

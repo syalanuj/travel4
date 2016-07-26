@@ -98,6 +98,7 @@ html {
     font: lato;
     font-weight: 200;
     color: #FFFFFF;
+    border-radius: 4px!important;
 }
 
 .btn-campture:hover {
@@ -146,8 +147,15 @@ html {
     font-size: 20px;
     font-family: "Lato";
     color: rgb(255, 255, 255);
-    font-style: italic;
     text-transform: uppercase;
+}
+.yourguide img{
+    position: relative;
+    z-index: 2;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: 60px;
 }
 
 .btn-orange {
@@ -155,10 +163,15 @@ html {
     font-family: "lato"!important;
     font-weight: 100!important;
     font-style: normal;
-    text-transform: uppercase;
+    text-transform: capitalize;
     letter-spacing: 0.040em;
     height: 50px;
     overflow: hidden;
+    border-radius: 4px!important;
+    font-size: 20px;
+}
+.btn-orange:hover{
+    color: white;
 }
 
 .text-center.yourguide .input-group.col-md-4.col-md-offset-4.col-sm-4.col-sm-offset-4.col-xs-6.col-xs-offset-4 .form-control.form-control-camptureme {
@@ -352,6 +365,7 @@ html {
     margin-left: auto!important;
     margin-right: auto!important;
     min-width: 300px;
+    top: 70px;
 }
 
 .mockups.container p {
@@ -374,6 +388,9 @@ html {
     text-transform: none;
     font-size: 30px;
     margin-bottom: 40px;
+    position: relative;
+    z-index: 2;
+    top: 80px;
 }
 
 
@@ -1950,4 +1967,20 @@ video{
     object-fit: contain;
     object-position: center;
     -webkit-filter: brightness(.5);
+}
+.leh-section{
+    padding-top: 60px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 30px;
+}
+.leh-section h1{
+    font-weight: bold;
+    font-size: 48px;
+    text-align: left;
+}
+.leh-section h2{
+    font-size: 28px;
+    text-align: left;
+    
 }

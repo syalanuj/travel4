@@ -31,6 +31,7 @@
                     <li ng-class="{'active': pillTabIndex == 3}" class="hidden-xs hidden-sm"><a data-toggle="pill" ng-click="updatePillTabPos(3)"><i class="fa fa-umbrella" aria-hidden="true"></i> What to Carry</a></li>
                     <li ng-class="{'active': pillTabIndex == 4}" class="hidden-xs hidden-sm"><a data-toggle="pill" ng-click="updatePillTabPos(4)"><i class="fa fa-ban" aria-hidden="true"></i>Cancellation Policy</a></li>
                 </ul>
+                
             </div>
         </div>
         <div id="aa_particles">
@@ -798,7 +799,7 @@ Assisted transfer to the airport.
                                     </div>
                                     <hr>
                                     <div class="lato flex" style="padding-left:20px; padding-right:20px;">
-                                        <div class="date-month2 lato" style="">
+                                        <div class="date-month2 lato" style="padding-left: 0px;padding-right: 0px;">
                                             <label for="sel1">No. of People:</label>
                                             <div class="input-group spinner">
                                                 <input type="number" ng-model="numberOfPeopleInGroup" min="1" class="form-control" style="text-align:left;">
@@ -806,7 +807,7 @@ Assisted transfer to the airport.
                                         </div>
                                         <div class="date-month">
                                             <label for="sel1">Date:</label>
-                                            <select class="form-control" id="sel2" ng-model="selectedDate" ng-options="groupDate for groupDate in tourPrice.groupDates">
+                                            <select class="form-control" id="sel2" ng-model="selectedDate" ng-options="groupDate for groupDate in tourPrice.groupDates" style="width: 110%;">
                                             </select>
                                         </div>
                                     </div>

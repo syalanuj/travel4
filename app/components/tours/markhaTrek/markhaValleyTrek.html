@@ -28,8 +28,8 @@
                     <li ng-class="{'active': pillTabIndex == 1}"><a data-toggle="pill" ng-click="updatePillTabPos(1)"><i class="fa fa-map-o" aria-hidden="true"></i> Itinerary
                         </a> </li>
                     <li ng-class="{'active': pillTabIndex == 2}"><a data-toggle="pill" ng-click="updatePillTabPos(2)"><i class="fa fa-align-left"></i> Details</a></li>
-                    <li ng-class="{'active': pillTabIndex == 3}" class="hidden-xs hidden-sm"><a data-toggle="pill" ng-click="updatePillTabPos(3)"><i class="fa fa-umbrella" aria-hidden="true"></i> What to Carry</a></li>
-                    <li ng-class="{'active': pillTabIndex == 4}" class="hidden-xs hidden-sm"><a data-toggle="pill" ng-click="updatePillTabPos(4)"><i class="fa fa-ban" aria-hidden="true"></i>Cancellation Policy</a></li>
+                    <li ng-class="{'active': pillTabIndex == 3}"><a data-toggle="pill" ng-click="updatePillTabPos(3)"><i class="fa fa-umbrella" aria-hidden="true"></i> What to Carry</a></li>
+                    <li ng-class="{'active': pillTabIndex == 4}"><a data-toggle="pill" ng-click="updatePillTabPos(4)"><i class="fa fa-ban" aria-hidden="true"></i>Cancellation Policy</a></li>
                 </ul>
                 
             </div>
@@ -828,6 +828,14 @@ Assisted transfer to the airport.
                     </div>
                 </div>
             </div>
+            <div class="container text-center">
+                <div class="comments-wrap" id="comments">
+                    <div class="comments container">
+                        <div id="fb-comment-box" dynamic-fb-comment-box page-href="{{pageUrl}}" numposts="5" colorscheme="light">
+                        </div>
+                    </div>
+                </div>
+            </div>   
         </div>
     </div>
 </div>

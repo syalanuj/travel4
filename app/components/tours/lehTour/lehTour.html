@@ -24,8 +24,8 @@
                     <li ng-class="{'active': pillTabIndex == 1}"><a data-toggle="pill" ng-click="updatePillTabPos(1)"><i class="fa fa-map-o" aria-hidden="true"></i> Itinerary
                         </a> </li>
                     <li ng-class="{'active': pillTabIndex == 2}"><a data-toggle="pill" ng-click="updatePillTabPos(2)"><i class="fa fa-align-left"></i> Details</a></li>
-                    <li ng-class="{'active': pillTabIndex == 3}" class="hidden-xs hidden-sm"><a data-toggle="pill" ng-click="updatePillTabPos(3)"><i class="fa fa-umbrella" aria-hidden="true"></i> What to Carry</a></li>
-                    <li ng-class="{'active': pillTabIndex == 4}" class="hidden-xs hidden-sm"><a data-toggle="pill" ng-click="updatePillTabPos(4)"><i class="fa fa-ban" aria-hidden="true"></i>Cancellation Policy</a></li>
+                    <li ng-class="{'active': pillTabIndex == 3}"><a data-toggle="pill" ng-click="updatePillTabPos(3)"><i class="fa fa-umbrella" aria-hidden="true"></i> What to Carry</a></li>
+                    <li ng-class="{'active': pillTabIndex == 4}"><a data-toggle="pill" ng-click="updatePillTabPos(4)"><i class="fa fa-ban" aria-hidden="true"></i>Cancellation Policy</a></li>
                 </ul>
             </div>
         </div>
@@ -493,11 +493,11 @@
                         <div id="menu2" ng-show="pillTabIndex == 2" class="lato-light">
                             <hr>
                             <h1>Stay</h1>
-                            <p>Luxury- Ladakh Residency, Lharisa, Druk</p>
-                            <p> Budget- Kanglhachen, Glacier View </p>
-                             <p>   Homestay- Mandarava</p>
+                            <p>Luxury- <a href="https://www.tripadvisor.in/Hotel_Review-g297625-d1795359-Reviews-Ladakh_Residency-Leh_Ladakh_Jammu_and_Kashmir.html">Ladakh Residency</a>, <a href="https://www.tripadvisor.in/Hotel_Review-g297625-d1462682-Reviews-Lha_Ri_Sa_Resort-Leh_Ladakh_Jammu_and_Kashmir.html">Lha-Ri-Sa</a>, <a href="https://www.tripadvisor.in/Hotel_Review-g297625-d2207553-Reviews-The_Druk_Ladakh-Leh_Ladakh_Jammu_and_Kashmir.html">The Druk</a></p>
+                            <p> Budget- <a href="https://www.tripadvisor.in/Hotel_Review-g297625-d2182588-Reviews-Hotel_Kang_La_Chen-Leh_Ladakh_Jammu_and_Kashmir.html">Hotel Kanglhachen</a>, <a href="https://www.tripadvisor.in/Hotel_Review-g297625-d4843541-Reviews-Hotel_Glacier_View-Leh_Ladakh_Jammu_and_Kashmir.html">Glacier View</a> </p>
+                            <p> Homestay- <a href="https://www.tripadvisor.in/Hotel_Review-g297625-d8500817-Reviews-Mandarava_Homestay-Leh_Ladakh_Jammu_and_Kashmir.html">Mandarava</a></p>
                             <p>Pangong Lake: Camp Redstart or similar</p>
-                             <p>   Nubra Valley: Hunder resort or similar</p>
+                            <p>   Nubra Valley: <a href="https://www.tripadvisor.in/Hotel_Review-g297625-d2547239-Reviews-Double_Humped_Camp_Hunder-Leh_Ladakh_Jammu_and_Kashmir.html">Hunder resort</a> or similar</p>
                             <h1>Transport</h1>
                             <p class="">Airport pick-up and drop.</p>
                                <p> SUV/Innova vehicles for sightseeing.</p>
@@ -781,10 +781,17 @@
                         </div>
                     </div>
                 </div>
+            <div class="container text-center">
+                <div class="comments-wrap" id="comments">
+                    <div class="comments container">
+                        <div id="fb-comment-box" dynamic-fb-comment-box page-href="{{pageUrl}}" numposts="5" colorscheme="light">
+                        </div>
+                    </div>
+                </div>
+            </div>   
             </div>
         </div>
-    </div>
-</div>   
+    </div>  
 <!-- Enquire Modal -->
 <div class="modal fade" id="enqModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-dialog" role="document">

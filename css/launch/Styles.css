@@ -1539,7 +1539,7 @@ label {
     display: flex;
     cursor: pointer;
     text-overflow: ellipsis;
-    overflow-x: scroll;
+    overflow-x: hidden;
     max-height: 60px;
     overflow-y: hidden;
 }

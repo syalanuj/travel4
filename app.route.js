@@ -33,7 +33,7 @@
             templateUrl: 'app/components/tours/markhaTrek/markhaValleyTrek.html'
         })
         .when('/tours/leh/lehtourwithrafting', {
-             controller: 'LehTourCtrl',
+             controller: 'LehTourAlternateCtrl',
             templateUrl: 'app/components/tours/lehTour/lehTour.html'
         })
         .when('/tours/leh/stoklatrek', {
@@ -41,7 +41,7 @@
             templateUrl: 'app/components/tours/stokTrek/stokTrek.html'
         })
         .when('/tours/leh/lehtour', {
-             controller: 'LehTourAlternateCtrl',
+             controller: 'LehTourCtrl',
             templateUrl: 'app/components/tours/lehTourAlternate/lehTourAlternate.html'
         })
         .when('/pageNotFound/',{

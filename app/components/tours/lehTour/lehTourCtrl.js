@@ -14,7 +14,7 @@
         $scope.privateGroupTabIndex = 0;
         $scope.numberOfPeople = 1;
         $scope.peoplesCost = 0
-        var tourPriceId = "0KcEzwlZdi"//LehId
+        var tourPriceId = "Ta3YEI0TVD"//LehId
         $scope.tourPrice;
         $scope.selectedAccomodation = { cost: 0 }
         $scope.totalCost;

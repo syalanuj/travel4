@@ -7,11 +7,12 @@
         //====== Scope Variables==========
         //================================
         $scope.tourList = new Array();
-
+        $scope.isSiteLoaded = false;
         function getAllTours() {
             tourService.getAllTours(function (data) {
                 if (data) {
                     $scope.tourList = data;
+                    $scope.isSiteLoaded = true;
                     $scope.$apply();
                 }
             })
